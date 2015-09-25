@@ -1,4 +1,4 @@
-/* fonts */
+/* fonts ---------------------------------------------------------*/
 @font-face {
 	font-family: "Century Gothic";
 	src: url("../font/century_gothic.ttf");
@@ -14,15 +14,22 @@ h1 {
   font-size: 3rem;
 }
 
+/* Large menu items */
 .top-bar-section .right li a {
   font-family: 'Century Gothic';
 }
+
+/* Small menu items */
+.off-canvas-list li a, {
+  font-family: 'Century Gothic';
+}
+
 
 .cio-unbold {
   font-family: 'Century Gothic';
 }
 
-/* top cover */
+/* top cover ------------------------------------------------------*/
 #cio-cover { 
   background: url(../img/cover.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
