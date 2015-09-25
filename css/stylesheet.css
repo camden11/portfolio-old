@@ -1,0 +1,42 @@
+/* fonts */
+@font-face {
+	font-family: "Century Gothic";
+	src: url("../font/century_gothic.ttf");
+}
+
+@font-face {
+	font-family: "Century Gothic Bold";
+	src: url("../font/century_gothic_bold.ttf");
+}
+
+h1 {
+  font-family: 'Century Gothic Bold';
+  font-size: 3rem;
+}
+
+.top-bar-section .right li a {
+  font-family: 'Century Gothic';
+}
+
+.cio-unbold {
+  font-family: 'Century Gothic';
+}
+
+/* top cover */
+#cio-cover { 
+  background: url(../img/cover.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+#cio-cover h1 {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+ 
