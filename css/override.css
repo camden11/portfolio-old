@@ -28,22 +28,14 @@ h1 {
 .cio-unbold {
   font-family: 'Century Gothic';
 }
-
-/* top cover ------------------------------------------------------*/
-#cio-cover { 
-  background: url(../img/cover.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   
-  padding-top: 250px;
-  padding-bottom: 250px;
+/* ------------------------------------------------------------ */
+  
+/* for full page cover */
+.off-canvas-wrap {
+  height: 100%
 }
 
-#cio-cover h1 {
-  margin-top: 0;
-  color: white;
-  text-align: center;
+.inner-wrap {
+  height: 100%;
 }
- 
