@@ -19,6 +19,10 @@ h6 {
   color: white;
 }
 
+.button {
+  font-family: 'Century Gothic';
+}
+
 /* Large menu items */
 .top-bar-section .right li a {
   font-family: 'Century Gothic';

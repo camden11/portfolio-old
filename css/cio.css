@@ -3,6 +3,7 @@
   font-family: 'Century Gothic';
 }
 
+/* Vertical center text */
 .cio-vc-container {
   display: table;
 }
@@ -30,24 +31,45 @@
 @media only screen and (max-width: 640px) {
   #cio-cover {
     padding-bottom: 90px;
+    height: -moz-calc(100% - 45px);
+    height: -webkit-calc(100% - 45px);
+    height: calc(100% - 45px);
   }
 }
 
 #cio-cover h1 {
   margin-top: 0;
   color: white;
-  text-align: center;
   margin-bottom: 0;
 }
 
 #cio-cover h6 {
-  text-align: center;
   margin-top: 0;
 }
 
-/* All sections --------------------------------------------------*/
+#cio-cover .cio-button-outline {
+  margin-top: 10px;
+}
+
+
+/* Layout --------------------------------------------------------*/
 .cio-content {
   height: 600px;
 }
 
+/* Objects -------------------------------------------------------*/
+.cio-button-outline {
+  background-color: transparent;
+  outline: 2px solid white;
+}
+
+.cio-button-outline:hover {
+  background-color: darkorange;
+  outline: none;
+}
+
+.cio-button-outline:focus {
+  background-color: darkorange;
+  outline: none;
+}
  
