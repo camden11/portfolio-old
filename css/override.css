@@ -14,6 +14,11 @@ h1 {
   font-size: 3rem;
 }
 
+h6 {
+  font-family: 'Century Gothic';
+  color: white;
+}
+
 /* Large menu items */
 .top-bar-section .right li a {
   font-family: 'Century Gothic';
@@ -24,18 +29,23 @@ h1 {
   font-family: 'Century Gothic';
 }
 
-
-.cio-unbold {
-  font-family: 'Century Gothic';
+/* Nav ---------------------------------------------------------*/
+body.f-topbar-fixed {
+  padding-top: 0px;
 }
   
 /* ------------------------------------------------------------ */
   
 /* for full page cover */
 .off-canvas-wrap {
-  height: 100%
+  height: 100%;
+  padding-top: 0px;
 }
 
 .inner-wrap {
   height: 100%;
+}
+
+.off-canvas-wrap {
+  overflow: scroll;
 }
