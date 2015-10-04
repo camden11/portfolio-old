@@ -1,18 +1,8 @@
+/* Typography -----------------------------------------------------*/
+
 /* Unbold for logo */
 .cio-unbold {
   font-family: 'Century Gothic';
-}
-
-/* Vertical center text */
-.cio-vc-container {
-  display: table;
-}
-
-.cio-vc {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
-  width: 100%;
 }
 
 /* top cover ------------------------------------------------------*/
@@ -53,11 +43,27 @@
 
 
 /* Layout --------------------------------------------------------*/
-.cio-content {
-  height: 600px;
+@media (min-width: 640px) {
+  .cio-content {
+    margin-top: 45px;
+  }
+}
+
+/* Vertical center text */
+.cio-vc-container {
+  display: table;
+}
+
+.cio-vc {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  width: 100%;
 }
 
 /* Objects -------------------------------------------------------*/
+
+/* Button for image overlay */
 .cio-button-outline {
   background-color: transparent;
   outline: 2px solid white;
@@ -71,5 +77,19 @@
 .cio-button-outline:focus {
   background-color: darkorange;
   outline: none;
+}
+
+/* Link box */
+.cio-box {
+  display: block;
+}
+
+.cio-box p {
+  margin-top: 5px;
+}
+
+/* Social network icon */
+.cio-social-icon {
+  width: 75px;
 }
  
