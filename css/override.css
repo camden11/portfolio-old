@@ -32,6 +32,10 @@ h6 {
   color: white;
 }
 
+p {
+  font-family: 'Century Gothic';
+}
+
 a {
   color: darkorange;
   font-family: "Century Gothic";
@@ -39,6 +43,10 @@ a {
 
 a:hover {
   color: #d66a00;
+}
+
+ul li a {
+  font-family: "Century Gothic" !important;
 }
 
 em {
@@ -57,6 +65,15 @@ em {
 /* Small menu items */
 .off-canvas-list li a, {
   font-family: 'Century Gothic';
+}
+
+/* Accordion */
+.accordion li a {
+  color: darkorange !important;
+}
+
+.accordion li a:hover {
+  color: #d66a00 !important;
 }
 
 /* Nav ---------------------------------------------------------*/
@@ -86,4 +103,23 @@ body.f-topbar-fixed {
 
 .off-canvas-wrap {
   overflow: scroll;
+}
+
+/* Accordion styling ------------------------------------------ */
+.accordion .accordion-navigation > a {
+  padding-left: 0px;
+  padding-right: 0px;
+  background: transparent;
+  border-bottom: 2px solid #6f6f6f;
+  font-size: 1.2em;
+}
+
+.accordion .accordion-navigation > a:hover {
+  background: transparent;
+  border-bottom: 2px solid black;
+}
+
+.accordion .accordion-navigation > a:focus {
+  background: transparent;
+  border-bottom: 2px solid black;
 }

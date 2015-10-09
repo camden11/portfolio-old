@@ -5,6 +5,11 @@
   font-family: 'Century Gothic';
 }
 
+/* Black in a subheader */
+.cio-black {
+  color:black;
+}
+
 /* top cover ------------------------------------------------------*/
 #cio-cover { 
   background: url(../img/cover.gif) no-repeat center center fixed; 
@@ -92,4 +97,12 @@
 .cio-social-icon {
   width: 75px;
 }
+
+/* Accordion */
+.cio-accordion {
+  margin: 0;
+}
+
+/* Images ----------------------------------------------------------- */
+
  
