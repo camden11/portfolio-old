@@ -45,12 +45,20 @@ a:hover {
   color: #d66a00;
 }
 
+div {
+  font-family: "Century Gothic";
+}
+
 ul li a {
   font-family: "Century Gothic" !important;
 }
 
 em {
   font-family: "Century Gothic Italic";
+}
+
+strong {
+  font-family: "Century Gothic Bold";
 }
 
 .button {
