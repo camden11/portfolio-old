@@ -1,92 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-    
+<html>
+  
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Camden Phalen</title>
-
-  <!-- Foundation  CSS-->
-  <link href="css/foundation.min.css" rel="stylesheet">
-  
-  <!-- Nomalize -->
-  <link href="css/normalize.css" rel="stylesheet">
-  
-  <!-- Foundation modifications -->
-  <link href="css/override.css" rel="stylesheet">
-  
-  <!-- camden11.github.io css -->
-  <link href="css/cio.css" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-    
-<body>
-  
-  <div class="off-canvas-wrap" data-offcanvas>
-    <div class="inner-wrap">
-      
-      <nav class="tab-bar show-for-small-only">
-        <section class="left-small">
-          <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-        </section>
-        
-        <section class="middle tab-bar-section">
-          <h1 class="title"><span class="cio-unbold">Camden</span> Phalen</h1>
-        </section>
-      </nav>
-      
-      <aside class="left-off-canvas-menu">
-        <ul class="off-canvas-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="projects.html">Projects</a></li>
-        </ul>
-      </aside>
-      
-      <!-- Top Nav Bar -->
-      <div class="fixed">
-      <nav class="top-bar show-for-medium-up" data-topbar role="navigation">
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="index.html"><span class="cio-unbold">Camden</span> Phalen</a></h1>
-          </li>
-        </ul>
 
-        <section class="top-bar-section">
-          <ul class="right">
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-          </ul>
-        </section>
-      </nav>
-      </div>
-      
-      <section id="cio-cover" class="cio-vc-container">
-        <div class="cio-vc text-center">
-          <h1>CAMDEN PHALEN</h1>
-          <h6>Computer science and interaction design student at Northeastern University</h6>
-          <a href="about.html" class="button cio-button-outline">Learn more</a>
-        </div>
-      </section>
-      
-      <a class="exit-off-canvas"></a>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Camden Phalen</li>
+      </ul>
+    </div>
+    <div class="top-bar-right hide-for-small-only">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Code</a></li>
+        <li><a href="#">Design</a></li>
+      </ul>
+    </div>
+    
+    <div class="top-bar-right show-for-small-only">
     </div>
   </div>
-
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   
-  <!-- Foundation js -->
-  <script src="js/foundation.min.js"></script>
-  <script src="js/foundation.offcanvas.js"></script>
-  
-  <script>
-    $(document).foundation();
-  </script>
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js"></script>
+  <script>$(document).foundation();</script>
 </body>
   
 </html>

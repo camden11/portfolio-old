@@ -1,0 +1,38 @@
+/* Fonts */
+@font-face {
+  font-family: Avenir;
+  src: url(/font/AvenirNext-Regular.ttf)
+}
+
+@font-face {
+  font-family: Avenir-DemiBold;
+  src: url(/font/AvenirNext-DemiBold.ttf)
+}
+
+strong {
+  font-family: Avenir-DemiBold;
+}
+
+/* Body */
+body {
+  font-family: Avenir;
+  background-color: #fff;
+}
+
+/* Nav */
+.top-bar {
+  background-color: transparent;
+}
+
+.top-bar .menu {
+  background-color: transparent;
+}
+
+.top-bar .menu .menu-text {
+  font-family: Avenir-DemiBold;
+}
+
+.top-bar .menu li a {
+  color: black;
+}
+
