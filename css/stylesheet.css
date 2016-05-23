@@ -1,38 +1,31 @@
-/* Fonts */
+/* typography */
 @font-face {
-  font-family: Avenir;
-  src: url(/font/AvenirNext-Regular.ttf)
+  font-family: "AvenirNext Medium";
+  src: url("../font/AvenirNext-Medium.ttf");
 }
 
 @font-face {
-  font-family: Avenir-DemiBold;
-  src: url(/font/AvenirNext-DemiBold.ttf)
+  font-family: "AvenirNext Regular";
+  src: url("../font/AvenirNext-Regular.ttf");
 }
 
-strong {
-  font-family: Avenir-DemiBold;
+html, body {
+  font-family: "AvenirNext Regular";
 }
 
-/* Body */
-body {
-  font-family: Avenir;
-  background-color: #fff;
+h1 {
+  margin: 0;
+  font-size: 18px;
 }
 
-/* Nav */
-.top-bar {
-  background-color: transparent;
+/* nav */
+nav {
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.top-bar .menu {
-  background-color: transparent;
-}
-
-.top-bar .menu .menu-text {
-  font-family: Avenir-DemiBold;
-}
-
-.top-bar .menu li a {
-  color: black;
+nav .row {
+  height: 100%;
 }
 

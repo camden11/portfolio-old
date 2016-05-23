@@ -1,0 +1,59 @@
+/* body 
+----------------------------------------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* various layout
+----------------------------------------------------*/
+.site-container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vc-outer {
+  display: table;
+  height: 100%;
+}
+
+.vc-outer .vc-inner {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.right {
+  float: right;
+}
+
+/* grid
+----------------------------------------------------*/
+
+.row .columns {
+  float: left;
+}
+
+.row .columns.four {
+  width: 33.333333%;
+}
+
+.row .columns.eight {
+  width: 66.666666%;
+}
+
+/* lists
+----------------------------------------------------*/
+.horizontal {
+  list-style-type: none;
+}
+
+.horizontal li {
+  float: left;
+}
