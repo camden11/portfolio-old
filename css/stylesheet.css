@@ -29,3 +29,18 @@ nav .row {
   height: 100%;
 }
 
+nav .row ul li a {
+  padding: 1px 10px 0px 10px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  border-color: rgba(0,0,0,0);
+  transition: border-color .2s;
+}
+
+nav .row ul li a:hover {
+  border-color: rgba(0,0,0,1);
+}
+
+
+

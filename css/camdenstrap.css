@@ -44,6 +44,14 @@ ul {
   width: 33.333333%;
 }
 
+.row .columns.five {
+  width: 41.666666%;
+}
+
+.row .columns.seven {
+  width: 58.333333%;
+}
+
 .row .columns.eight {
   width: 66.666666%;
 }
