@@ -22,6 +22,20 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   src: url('../fonts/Avenir-Heavy.ttf');
 }
 
+/* typography */
 h1 {
-  font-family: "Avenir Book";
+  font-family: "Avenir Light";
+  color: #3D3D3D;
+  font-size: 48px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: #515151;
+}
+
+p.cp-large-text {
+  font-size: 20px;
 }
