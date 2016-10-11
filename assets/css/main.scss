@@ -5,3 +5,23 @@
 @charset "utf-8";
 $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap";
+
+/* import ttf fonts */
+@font-face {
+  font-family: "Avenir Book";
+  src: url('../fonts/Avenir-Book.ttf');
+}
+
+@font-face {
+  font-family: "Avenir Light";
+  src: url('../fonts/Avenir-Light.ttf');
+}
+
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url('../fonts/Avenir-Heavy.ttf');
+}
+
+h1 {
+  font-family: "Avenir Book";
+}
