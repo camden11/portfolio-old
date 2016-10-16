@@ -11,7 +11,7 @@ html, body {
 }
 
 .cp-cover {
-  @media #{$xs-screen-only} { height: auto; }
+  @media #{$xs-screen-only} { height: auto; display: block; }
   margin: 0 auto;
   height: 100px;
   div {
