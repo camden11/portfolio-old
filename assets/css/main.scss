@@ -57,11 +57,28 @@ p {
   color: $light-gray;
 }
 
+a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: $light-gray;
+
+  &:hover {
+    color: $light-gray;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $light-gray;
+    text-decoration: underline;
+  }
+}
+
 p.cp-large-text {
   font-size: 22px;
 }
 
-p.cp-xl-text {
+.cp-xl-text {
   font-size: 30px;
 }
 
@@ -166,14 +183,11 @@ nav.navbar.navbar-default {
   .cp-color-block {
     width: 12px;
     align-items: stretch;
+    flex-direction: column;
+    display: flex;
     .cp-color {
-      width: 100%;
-      height: 25%;
+      flex-grow: 1;
       float: left;
-    }
-
-    &.cp-color-block-small {
-      .cp-color { height: 50%; }
     }
   }
 
@@ -182,9 +196,11 @@ nav.navbar.navbar-default {
     .cp-color-block-responsive {
       width: 100%;
       height: 12px;
+      display: block;
 
       .cp-color {
         width: 25%;
+        display: block;
         height: 100%;
       }
     }
