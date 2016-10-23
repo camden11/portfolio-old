@@ -41,5 +41,65 @@ stylesheet: about
       </div>
     </div>
   {% endfor %}
+  </div>
 
-</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>/ About / Skills</h3>
+    </div>
+  </div>
+
+  <div class="row cp-skills">
+  {% for category in site.data.skills %}
+    <div class="col-md-6">
+      <div class="cp-color-container">
+        <div class="cp-color-block">
+          <div class="cp-color" style="background-color: {{ category.color1 }};"></div>
+          <div class="cp-color" style="background-color: {{ category.color2 }};"></div>
+          <div class="cp-color" style="background-color: {{ category.color3 }};"></div>
+          <div class="cp-color" style="background-color: {{ category.color4 }};"></div>
+        </div>
+        <div class="cp-skill-content">
+          <h4>{{ category.name }}</h4>
+          <p>{{ category.skills }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+  <div class="row cp-resume">
+    <div class="col-xs-12">
+      <h3>/ About / Resume</h3>
+      <div class="cp-color-container">
+        <div class="cp-color-block">
+          <div class="cp-color" style="background-color: #63774C;"></div>
+          <div class="cp-color" style="background-color: #567FAE;"></div>
+        </div>
+<!--         <a href="#" class="cp-large-text cp-underline">Download .pdf</a> -->
+        <p class="cp-large-text">Coming soon</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row cp-contact">
+    <div class="col-xs-12">
+      <h3>/ About / Contact</h3>
+    </div>
+  </div>
+
+  <div class="row cp-contact">
+  {% for contact in site.data.contact %}
+    <div class="col-sm-6">
+      <div class="cp-color-container">
+        <div class="cp-color-block">
+          <div class="cp-color" style="background-color: {{ contact.color1 }};"></div>
+          <div class="cp-color" style="background-color: {{ contact.color2 }};"></div>
+        </div>
+        <a href="{{ contact.link }}" target='_blank' class="cp-large-text cp-underline">{{ contact.type }} / {{ contact.account }}</a>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+
+</div>   

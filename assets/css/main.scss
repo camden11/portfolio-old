@@ -74,7 +74,16 @@ a {
   }
 }
 
-p.cp-large-text {
+a.cp-underline {
+  text-decoration: underline;
+  transition: color .5s;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.cp-large-text {
   font-size: 22px;
 }
 
