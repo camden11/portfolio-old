@@ -2,6 +2,14 @@
 ---
 @import "variables";
 
+h3 {
+  margin-top: 50px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
 .cp-education {
 
   h3 {
@@ -10,9 +18,6 @@
 
   h4 {
     margin-bottom: 5px;
-  }
-  p {
-    margin-bottom: 0;
   }
 
   img {
@@ -23,43 +28,59 @@
 
   .col-sm-6 {
     margin-bottom: 50px;
+
+    @media #{$small-screen} {
+      margin-bottom: 0;
+    }
   }
   .cp-color-block {
     padding-bottom: 2px; 
   } 
 }
 
+.cp-education-header {
+  margin-bottom: 15px;
+}
+
 .cp-skills {
+
   .cp-color-block {
-    padding-bottom: 12px; 
+    padding-bottom: 2px; 
+  }
+
+  .col-md-6 {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .cp-resume {
 
-  h3 {
-    margin-top: 30px;
-  }
-
   p {
-    margin-top: 0px;
-    margin-bottom: 0;
+    margin-top: 10px;
   }
   
   .cp-color-block {
-    padding-top: 0px;
+    padding-top: 10px;
     padding-bottom: 0px;
   }
 }
 
 .cp-contact {
 
-  h3 {
-    margin-top: 30px;
+  .col-sm-6 {
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    @media #{$small-screen} {
+      margin-bottom: 20px;
+    }
   }
 
-  .col-sm-6 {
-    margin-bottom: 20px;
+  a {
   }
 
   .cp-color-block {
