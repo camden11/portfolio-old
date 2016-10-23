@@ -1,3 +1,14 @@
+{% assign about_active = "" %}
+{% assign articles_active = "" %}
+{% assign portfolio_active = "" %}
+{% if page.section == "about" %}
+{% assign about_active = "cp-nav-active" %}
+{% elsif page.section == "articles" %}
+{% assign articles_active = "cp-nav-active" %}
+{% else %}
+{% assign portfolio_active = "cp-nav-active" %}
+{% endif %}
+
 <nav class="navbar navbar-default">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,9 +33,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="/about" class="{{ about_active }}">About</a></li>
+        <li><a href="#" class="{{ articles_active }}">Articles</a></li>
+        <li><a href="/portfolio" class="{{ portfolio_active }}">Portfolio</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

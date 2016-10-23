@@ -169,14 +169,28 @@ nav.navbar.navbar-default {
     }
 
     .navbar-collapse {
-      ul li {
+      ul {
+
+        &:hover li a.cp-nav-active {
+          border-color: transparent;
+        } 
+        li {
         
-        a {
-          border-bottom: 2px solid transparent;
-          transition: border-color .5s, color .5s;
-          @media #{$small-screen} {
-            &:hover {
+          a {
+            border-bottom: 2px solid transparent;
+            transition: border-color .5s, color .5s;
+            @media #{$small-screen} {
+              &:hover {
+                border-color: $dark-gray;
+              }
+            }
+
+            &.cp-nav-active {
               border-color: $dark-gray;
+
+              &:hover {
+                border-color: $dark-gray;
+              }
             }
           }
         }
@@ -190,7 +204,7 @@ nav.navbar.navbar-default {
   display: flex;
 
   .cp-color-block {
-    width: 12px;
+    width: 14px;
     align-items: stretch;
     flex-direction: column;
     display: flex;
