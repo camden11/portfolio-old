@@ -29,6 +29,10 @@ p {
   .col-sm-6 {
     margin-bottom: 50px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media #{$small-screen} {
       margin-bottom: 0;
     }
