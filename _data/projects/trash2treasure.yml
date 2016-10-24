@@ -1,0 +1,9 @@
+name: Trash2Treasure
+category: Code
+preview_photo: "/assets/images/projects/trash2treasure/t2t.jpg"
+preview_text: An online checkout system for Northeastern University’s annual Trash2Treasure sale. Built in Ruby on Rails.   
+priority: 1
+color1: "#2F2F2F"
+color2: "#898989"
+color3: "#AB2D3D"
+color4: "#B88D68"

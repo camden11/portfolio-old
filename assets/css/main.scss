@@ -204,7 +204,10 @@ nav.navbar.navbar-default {
   display: flex;
 
   .cp-color-block {
+    flex-basis: 14px;
     width: 14px;
+    flex-grow: 0;
+    flex-shrink: 0;
     align-items: stretch;
     flex-direction: column;
     display: flex;

@@ -1,0 +1,9 @@
+name: Are You Alone?
+category: Code
+preview_photo: "/assets/images/projects/are_you_alone/are_you_alone.jpg"
+preview_text: An interactive story that seeks to induce emotion and provoke thought in the participant. Written in Javascript.
+priority: 6  
+color1: "#D8D8D8"
+color2: "#D0C533"
+color3: "#191F2E"
+color4: "#870F0F"
