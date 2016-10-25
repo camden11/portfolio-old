@@ -1,5 +1,8 @@
 ---
 ---
+
+@import "variables";
+
 .cp-color-block {
   margin-right: 10px;
   padding-top: 10px;
@@ -7,6 +10,22 @@
 
 .col-sm-6 {
   margin-bottom: 60px;
+  height: auto;
+  @media #{$small-screen} {
+    height: 400px;
+  }
+
+  @media #{$med-screen} {
+    height: 450px;
+  }
+
+  @media #{$med-screen} {
+    height: 400px;
+  }
+}
+
+h2 {
+  margin-bottom: 40px;
 }
 
 .row {
