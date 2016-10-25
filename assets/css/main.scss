@@ -45,9 +45,9 @@ h3 {
 }
 
 h4 {
-  font-family: "Avenir Light";
+  font-family: "Avenir Book";
   color: $dark-gray;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 p {
@@ -92,7 +92,7 @@ a.cp-underline {
 }
 
 .navbar-default a.navbar-brand {
-  font-family: "Avenir Book";
+  font-family: "Avenir Light";
   font-size: 24px;
   color: $dark-gray;
 
@@ -118,6 +118,10 @@ a.cp-underline {
   &:focus {
     color: $light-gray;
   }
+}
+
+.cp-gray {
+  color: #A9A9A9;
 }
 
 /* layout helpers */
