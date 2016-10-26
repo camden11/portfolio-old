@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="cp-project-title">
+            {{ page.project_name }}
+            <br>
+            <small class="text-muted cp-gray">{{ page.project_categories}} / {{ page.year }}</small>
+          </h2>
+          <p class="cp-large-text">{{ page.blurb }}</p>
+        </div>
+      </div>
+
+      <div class="row cp-project-links">
+        <div class="col-xs-12">
+          <h3 class="cp-project-links">Links</h3>
+
+          {% for link in page.links %}
+          <div class="cp-color-container">
+            <div class="cp-color-block">
+              <div class="cp-color" style="background-color: {{ link.color1 }};"></div>
+              <div class="cp-color" style="background-color: {{ link.color2 }};"></div>
+            </div>
+            <a href="{{ link.href }}" target='_blank' class="cp-large-text cp-underline">{{ link.display }}</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

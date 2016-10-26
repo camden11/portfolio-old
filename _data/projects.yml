@@ -1,0 +1,98 @@
+- name: Trash2Treasure
+  category: Code
+  preview_photo: "/assets/images/projects/trash2treasure/t2t.jpg"
+  preview_text: An online checkout system for Northeastern University’s annual Trash2Treasure sale built in Ruby on Rails.   
+  priority: 1
+  color1: "#2F2F2F"
+  color2: "#898989"
+  color3: "#AB2D3D"
+  color4: "#B88D68"
+  link: /portfolio/trash2treasure
+
+- name: Alignable
+  category: Experience
+  preview_photo: "/assets/images/projects/alignable/alignable.jpg"
+  preview_text: Full stack web development in Ruby on Rails for the Boston-based “social network for small businesses”.
+  priority: 2
+  color1: "#855B5E"
+  color2: "#544560"
+  color3: "#C6D7F1"
+  color4: "#13D1B2"
+  link: /portfolio/alignable
+
+- name: In The Ceiling
+  category: Code
+  preview_photo: "/assets/images/projects/in_the_ceiling/in_the_ceiling.jpg"
+  preview_text: A research project that examines how pedestrians interact with their environment through the use of motion detection and data visualization. 
+  priority: 3
+  color1: "#1C1C20"
+  color2: "#21293D"
+  color3: "#3D3C3C"
+  color4: "#B4B4B4"
+  link: /portfolio/in_the_ceiling
+
+- name: Scotland
+  category: Photography
+  preview_photo: "/assets/images/projects/scotland/loch.jpg"
+  preview_text: Photos taken during my study abroad in Scotland, including Edinburgh, Isle of Skye, and Inverness.
+  priority: 4
+  color1: "#A0ACBE"
+  color2: "#183009"
+  color3: "#DBAB2E"
+  color4: "#643F3B"
+  link: /portfolio/scotland
+
+- name: Are You Alone?
+  category: Code
+  preview_photo: "/assets/images/projects/are_you_alone/are_you_alone.jpg"
+  preview_text: An interactive story that seeks to induce emotion and provoke thought in the participant. Written in Javascript.
+  priority: 6  
+  color1: "#D8D8D8"
+  color2: "#D0C533"
+  color3: "#191F2E"
+  color4: "#870F0F"
+  link: /portfolio/are_you_alone
+
+- name: Northeastern Energy Flows
+  category: Code
+  preview_photo: "/assets/images/projects/northeastern_energy_flows/nef.png"
+  preview_text: A prototype for a project seeking to visualize energy consumption at Northeastern University.
+  priority: 5
+  color1: "#323232"
+  color2: "#89DC57"
+  color3: "#E4BF5E"
+  color4: "#DA675D"
+  link: /portfolio/northeastern_energy_flows
+
+- name: A Move For Life
+  category: Experience
+  preview_photo: "/assets/images/projects/a_move_for_life/amfl.jpg"
+  preview_text: Web devloper internship at an LA-based nonprofit that helps organize charity events.
+  priority: 8
+  color1: "#48C8D3"
+  color2: "#78BC87"
+  color3: "#EE9632"
+  color4: "#DB4549"
+  link: /portfolio/a_move_for_life
+
+- name: Student Groups
+  category: Design
+  preview_photo: "/assets/images/projects/student_groups/pse.jpg"
+  preview_text: Designs done for student groups at Northeastern, including Pi Sigma Epsilon, Huskies for Alternative Transportation, and Dance Marathon.
+  priority: 9
+  color1: "#4E2E79"
+  color2: "#A49232"
+  color3: "#BC4241"
+  color4: "#46CED9"
+  link: /portfolio/student_groups
+  
+- name: Stillness
+  category: Photography
+  preview_photo: "/assets/images/projects/stillness/carousel.jpg"
+  preview_text: Photos of stillness in environments of motion. The final project for my Photo Basics class at Northeastern.
+  priority: 7
+  color1: "#6A717D"
+  color2: "#FF67B1"
+  color3: "#46CED9"
+  color4: "#CF4319"
+  link: /portfolio/stillness

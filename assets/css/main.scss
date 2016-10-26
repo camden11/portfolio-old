@@ -36,6 +36,14 @@ h2 {
   color: $dark-gray;
   font-size: 36px;
   margin-top: 0;
+
+  small.text-muted {
+    font-family: "Avenir Book";
+  }
+}
+
+h2.cp-project-title {
+  line-height: .9;
 }
 
 h3 {
@@ -74,8 +82,11 @@ a {
   }
 }
 
-a.cp-underline {
+.cp-underline {
   text-decoration: underline;
+}
+
+a.cp-underline {
   transition: color .5s;
 
   &:hover {
