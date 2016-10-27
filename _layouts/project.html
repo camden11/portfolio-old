@@ -19,6 +19,42 @@
         </div>
       </div>
 
+
+      <div class="row cp-project-images">
+        <div class="col-xs-12">
+          {% if page.images %}
+          <h3>Images</h3>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="row cp-project-images">
+        {% for image in page.images %}
+        <div class="col-xs-6 col-sm-4 col-md-3" data-toggle="modal" data-target="#{{ page.project_name }}-{{ image.id }}">
+          <div class="cp-project-image {{ image.classes }}" style="
+            background-image: url({{ image.url }});
+            background-position: {{image.offsetx }} {{ image.offsety }};
+          "></div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {% for image in page.images %}
+      <div class="modal fade" id="{{ page.project_name }}-{{ image.id }}">
+        <div class="modal-dialog {{ image.modal_classes }}" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{ image.title }}</h4>
+            </div>
+            <div class="modal-body">
+              <img src="{{ image.url }}" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
       <div class="row cp-project-technologies">
         <div class="col-xs-12">
           {% if page.technologies %}
