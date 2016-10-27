@@ -8,6 +8,11 @@ project_categories: Code, Design
 year: 2015
 blurb: An interactive story that seeks to induce emotion and provoke thought in the participant. Written in Javascript.
 
+technologies:
+  list: HTML, CSS, Javascript
+  color1: "#105EA9"
+  color2: "#DD921F"
+
 links:
   - display: Try Are You Alone?
     href: http://camdenphalen.com/are-you-alone/

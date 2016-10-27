@@ -201,10 +201,12 @@ nav.navbar.navbar-default {
             }
 
             &.cp-nav-active {
-              border-color: $dark-gray;
-
-              &:hover {
+              @media #{$small-screen} {
                 border-color: $dark-gray;
+
+                &:hover {
+                  border-color: $dark-gray;
+                }
               }
             }
           }

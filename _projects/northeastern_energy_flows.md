@@ -8,6 +8,11 @@ project_categories: Code
 year: 2015
 blurb: A prototype for a project seeking to visualize energy consumption at Northeastern University.
 
+technologies:
+  list: Java, Processing
+  color1: "#062D4C"
+  color2: "#EB2D2D"
+
 links:
   - display: Github repository
     href: https://github.com/camden11/northeastern-energy-flows

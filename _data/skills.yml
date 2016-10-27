@@ -1,20 +1,20 @@
-- name: Front End Web
-  skills: HTML & CSS, javascript, coffeescript, sass, angular
+- name: Front End Web Development
+  skills: HTML & CSS, Javascript, Coffeescript, Sass, Angular, Jekyll
   color1: "#DC3A1E"
   color2: "#DD921F"
   color3: "#105EA9"
   color4: "#29344C"
 
-- name: Back End Web
-  skills: ruby, rails, node, mongoDB, SQL
+- name: Back End Web Development
+  skills: Ruby, Rails, Node, MongoDB, SQL
   color1: "#B02B2C"
   color2: "#669F64"
   color3: "#69B23F"
   color4: "#5E87A1"
 
 
-- name: Data Visualization
-  skills: java, python, processing, D3js
+- name: "Data Processing & Visualization"
+  skills: Java, Python, Processing, D3js, OpenCV
   color1: "#F68E45"
   color2: "#D6AD43"
   color3: "#062D4C"
@@ -22,14 +22,14 @@
 
 
 - name: Design
-  skills: photoshop, illustrator, indesign, invision, sketch
+  skills: Photoshop, Illustrator, Indesign, Invision, Sketch
   color1: "#56ADE4"
   color2: "#E69C1F"
   color3: "#E436A6"
   color4: "#F09E20"
 
 - name: Other Tech Skills
-  skills: C, bash, git
+  skills: C, Bash, Git
   color1: "#A8B9CC"
   color2: "#30D92A"
   color3: "#545454"

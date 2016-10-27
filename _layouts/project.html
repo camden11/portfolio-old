@@ -19,9 +19,24 @@
         </div>
       </div>
 
+      <div class="row cp-project-technologies">
+        <div class="col-xs-12">
+          {% if page.technologies %}
+          <h3>Technologies Used</h3>
+          <div class="cp-color-container">
+            <div class="cp-color-block">
+              <div class="cp-color" style="background-color: {{ page.technologies.color1 }};"></div>
+              <div class="cp-color" style="background-color: {{ page.technologies.color2 }};"></div>
+            </div>
+            <p class="cp-large-text">{{ page.technologies.list }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
       <div class="row cp-project-links">
         <div class="col-xs-12">
-          <h3 class="cp-project-links">Links</h3>
+          <h3>Links</h3>
 
           {% for link in page.links %}
           <div class="cp-color-container">

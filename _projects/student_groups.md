@@ -8,6 +8,11 @@ project_categories: Design
 year: 2015 - 2016
 blurb: Designs done for student groups at Northeastern, including Pi Sigma Epsilon, Huskies for Alternative Transportation, and Dance Marathon.
 
+technologies:
+  list: Photoshop, Illustrator
+  color1: "#56ADE4"
+  color2: "#E69C1F"
+
 links:
   - display: Lightroom gallery
     href: http://lightroom.adobe.com/shares/edb3fe60b6fe43b7a32489842ebbc401

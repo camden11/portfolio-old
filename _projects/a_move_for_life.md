@@ -8,6 +8,11 @@ project_categories: Experience, Design, Code
 year: 2015
 blurb: Web devloper internship at an LA-based nonprofit that helps organize charity events.
 
+technologies:
+  list: HTML, CSS, Javascript, Bootstrap, Photoshop, Illustrator
+  color1: "#DC3A1E"
+  color2: "#DD921F"
+
 links:
   - display: A Move For Life website
     href: http://amoveforlife.org/index.html

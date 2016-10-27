@@ -8,6 +8,11 @@ project_categories: Code, Design
 year: 2016
 blurb: An online checkout system for Northeastern University’s annual Trash2Treasure sale built in Ruby on Rails.
 
+technologies:
+  list: Ruby, Rails, SQL, Haml, Sass, Coffeescript, Bootstrap, Git, Sketch
+  color1: "#B02B2C"
+  color2: "#F09E20"
+
 links: 
   - display: Trash2Treasure webapp
     href: https://pacific-ravine-67111.herokuapp.com
