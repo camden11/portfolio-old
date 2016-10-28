@@ -30,7 +30,7 @@
 
       <div class="row cp-project-images">
         {% for image in page.images %}
-        <button class="col-xs-6 col-sm-4 col-md-3" data-toggle="modal" data-target="#{{ page.project_name }}-{{ image.id }}">
+        <button class="col-xs-6 col-sm-4 col-md-3" data-toggle="modal" data-target="#{{ image.id }}">
           <div class="cp-project-image {{ image.classes }}" style="
             background-image: url({{ image.url }});
             background-position: {{image.offsetx }} {{ image.offsety }};
@@ -40,7 +40,7 @@
       </div>
 
       {% for image in page.images %}
-      <div class="modal fade" id="{{ page.project_name }}-{{ image.id }}">
+      <div class="modal fade" id="{{ image.id }}">
         <div class="modal-dialog {{ image.modal_classes }}" role="document">
           <div class="modal-content">
             <div class="modal-header">

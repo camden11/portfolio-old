@@ -13,6 +13,50 @@ technologies:
   color1: "#56ADE4"
   color2: "#E69C1F"
 
+images:
+  - url: /assets/images/projects/student_groups/cover_photo_new.jpg
+    id: recruit
+    title: PSE recruitment cover photo
+    offsety: 0
+    offsetx: 10%
+    classes: "cp-horizontal"
+    modal_classes: "modal-lg"
+  - url: /assets/images/projects/student_groups/panel_coverphoto.jpg
+    id: panel
+    title: PSE speaker panel cover photo
+    offsety: 0
+    offsetx: 0
+    classes: "cp-horizontal"
+    modal_classes: "modal-lg"
+  - url: /assets/images/projects/student_groups/panel_poster.jpg
+    id: panel-poster
+    title: PSE speaker panel poster
+    offsety: 0
+    offsetx: 50%
+    classes: "cp-horizontal"
+    modal_classes: "modal-md"
+  - url: /assets/images/projects/student_groups/cover_photo_UPass.jpg
+    id: upass
+    title: UPass Cover Photo
+    offsety: 0
+    offsetx: 6%
+    classes: "cp-horizontal"
+    modal_classes: "modal-lg"
+  - url: /assets/images/projects/student_groups/upass.jpg
+    id: upass-poster
+    title: UPass Poster
+    offsety: 0
+    offsetx: -1%
+    classes: "cp-horizontal cp-border"
+    modal_classes: "modal-md"
+  - url: /assets/images/projects/student_groups/nudm.jpg
+    id: nudm
+    title: Dance Marathon catering packet
+    offsety: 15%
+    offsetx: 0
+    classes: "cp-vertical cp-border"
+    modal_classes: "modal-md"
+
 links:
   - display: Lightroom gallery
     href: http://lightroom.adobe.com/shares/edb3fe60b6fe43b7a32489842ebbc401

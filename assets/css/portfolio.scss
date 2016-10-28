@@ -143,6 +143,10 @@ h2 {
 
     .modal-body {
       padding-top: 0;
+
+      img {
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -152,9 +156,14 @@ h2 {
   }
 }
 
+.modal-md {
+  @media #{$small-screen} {
+    width: 60%;
+  }
+}
+
 .modal-lg {
   @media #{$small-screen} {
-    width: 90%;
+    width: 80%;
   }
-  
 }

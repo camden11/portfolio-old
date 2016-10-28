@@ -13,6 +13,15 @@ technologies:
   color1: "#062D4C"
   color2: "#EB2D2D"
 
+images:
+  - url: /assets/images/projects/northeastern_energy_flows/nef_running.png
+    id: running
+    title: Northeastern Energy Flows
+    offsety: 0
+    offsetx: 0
+    classes: "cp-horizontal"
+    modal_classes: "modal-md"
+
 links:
   - display: Github repository
     href: https://github.com/camden11/northeastern-energy-flows

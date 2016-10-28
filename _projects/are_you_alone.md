@@ -13,6 +13,15 @@ technologies:
   color1: "#105EA9"
   color2: "#DD921F"
 
+images:
+  - url: /assets/images/projects/are_you_alone/screenshot.png
+    id: landing
+    title: Are you alone?
+    offsety: 0
+    offsetx: 0
+    classes: "cp-horizontal cp-border"
+    modal_classes: "modal-md"
+
 links:
   - display: Try Are You Alone?
     href: http://camdenphalen.com/are-you-alone/
