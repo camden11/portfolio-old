@@ -153,5 +153,8 @@ h2 {
 }
 
 .modal-lg {
-  width: 90%;
+  @media #{$small-screen} {
+    width: 90%;
+  }
+  
 }
