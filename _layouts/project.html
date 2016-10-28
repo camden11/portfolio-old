@@ -30,12 +30,12 @@
 
       <div class="row cp-project-images">
         {% for image in page.images %}
-        <div class="col-xs-6 col-sm-4 col-md-3" data-toggle="modal" data-target="#{{ page.project_name }}-{{ image.id }}">
+        <button class="col-xs-6 col-sm-4 col-md-3" data-toggle="modal" data-target="#{{ page.project_name }}-{{ image.id }}">
           <div class="cp-project-image {{ image.classes }}" style="
             background-image: url({{ image.url }});
             background-position: {{image.offsetx }} {{ image.offsety }};
           "></div>
-        </div>
+        </button>
         {% endfor %}
       </div>
 
