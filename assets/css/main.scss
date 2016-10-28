@@ -135,6 +135,10 @@ a.cp-underline {
   color: #A9A9A9;
 }
 
+.cp-footer {
+  font-family: "Cormorant Garamond";
+}
+
 /* layout helpers */
 .cp-vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -248,4 +252,12 @@ nav.navbar.navbar-default {
       }
     }
   }
+}
+
+.cp-footer {
+  width: 100%;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
 }
