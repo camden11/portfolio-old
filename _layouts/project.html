@@ -19,7 +19,6 @@
         </div>
       </div>
 
-
       <div class="row cp-project-images">
         <div class="col-xs-12">
           {% if page.images %}
@@ -55,38 +54,62 @@
       </div>
       {% endfor %}
 
-      <div class="row cp-project-technologies">
-        <div class="col-xs-12">
-          {% if page.technologies %}
-          <h3>Technologies Used</h3>
-          <div class="cp-color-container">
-            <div class="cp-color-block">
-              <div class="cp-color" style="background-color: {{ page.technologies.color1 }};"></div>
-              <div class="cp-color" style="background-color: {{ page.technologies.color2 }};"></div>
+      <!-- <div class="row"> -->
+        {% if page.background %}
+<!--         <div class="col-lg-6"> -->
+
+          <div class="row cp-project-background">
+            <div class="col-xs-12">
+              <h3>Background</h3>
+              <div class="cp-color-container">
+                <div class="cp-color-block">
+                  <div class="cp-color" style="background-color: {{ page.color1 }};"></div>
+                  <div class="cp-color" style="background-color: {{ page.color2 }};"></div>
+                  <div class="cp-color" style="background-color: {{ page.color3 }};"></div>
+                  <div class="cp-color" style="background-color: {{ page.color4 }};"></div>
+                </div>
+                {{ content }}
+              </div>
             </div>
-            <p class="cp-large-text">{{ page.technologies.list }}</a>
           </div>
-          {% endif %}
-        </div>
-      </div>
 
-      <div class="row cp-project-links">
-        <div class="col-xs-12">
-          <h3>Links</h3>
+<!--         </div> -->
+        {% endif %}
+<!--         <div class="col-lg-6"> -->
 
-          {% for link in page.links %}
-          <div class="cp-color-container">
-            <div class="cp-color-block">
-              <div class="cp-color" style="background-color: {{ link.color1 }};"></div>
-              <div class="cp-color" style="background-color: {{ link.color2 }};"></div>
+          <div class="row cp-project-technologies">
+            <div class="col-xs-12">
+              {% if page.technologies %}
+              <h3>Technologies Used</h3>
+              <div class="cp-color-container">
+                <div class="cp-color-block">
+                  <div class="cp-color" style="background-color: {{ page.technologies.color1 }};"></div>
+                  <div class="cp-color" style="background-color: {{ page.technologies.color2 }};"></div>
+                </div>
+                <p class="cp-large-text">{{ page.technologies.list }}</a>
+              </div>
+              {% endif %}
             </div>
-            <a href="{{ link.href }}" target='_blank' class="cp-large-text cp-underline">{{ link.display }}</a>
           </div>
-          {% endfor %}
+
+          <div class="row cp-project-links">
+            <div class="col-xs-12">
+              <h3>Links</h3>
+
+              {% for link in page.links %}
+              <div class="cp-color-container">
+                <div class="cp-color-block">
+                  <div class="cp-color" style="background-color: {{ link.color1 }};"></div>
+                  <div class="cp-color" style="background-color: {{ link.color2 }};"></div>
+                </div>
+                <a href="{{ link.href }}" target='_blank' class="cp-large-text cp-underline">{{ link.display }}</a>
+              </div>
+              {% endfor %}
+            </div>
+<!--           </div>
+
         </div>
-      </div>
-
-
+      </div> -->
 
     </div>
 

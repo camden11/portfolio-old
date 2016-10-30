@@ -7,6 +7,7 @@ project_name: A Move For Life
 project_categories: Experience, Design, Code
 year: 2015
 blurb: Web devloper internship at an LA-based nonprofit that helps organize charity events.
+background: true
 
 images:
   - url: /assets/images/projects/a_move_for_life/landing.png
