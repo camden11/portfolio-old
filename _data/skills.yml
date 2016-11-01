@@ -14,7 +14,7 @@
 
 
 - name: "Data Processing & Visualization"
-  skills: Java, Python, Processing, D3js, OpenCV
+  skills: Java, Python, Processing, OpenCV
   color1: "#F68E45"
   color2: "#D6AD43"
   color3: "#062D4C"
