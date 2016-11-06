@@ -14,7 +14,7 @@ color3: "#AB2D3D"
 color4: "#B88D68"
 
 images:
-  - url: /assets/images/projects/trash2treasure/landing.png
+  - url: /assets/images/projects/trash2treasure/landing.jpg
     id: landing
     title: Landing page
     offsety: 50%

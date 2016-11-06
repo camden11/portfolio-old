@@ -10,28 +10,28 @@ blurb: Web devloper internship at an LA-based nonprofit that helps organize char
 background: true
 
 images:
-  - url: /assets/images/projects/a_move_for_life/landing.png
+  - url: /assets/images/projects/a_move_for_life/landing.jpg
     id: landing
     title: Landing page - desktop
     offsety: 0
     offsetx: 50%
     classes: "cp-horizontal"
     modal_classes: "modal-md"
-  - url: /assets/images/projects/a_move_for_life/landing_mobile.png
+  - url: /assets/images/projects/a_move_for_life/landing_mobile.jpg
     id: landing-mobile
     title: Landing page - mobile
     offsety: 23%
     offsetx: 0
     classes: "cp-vertical"
     modal_classes: "modal-sm"
-  - url: /assets/images/projects/a_move_for_life/events.png
+  - url: /assets/images/projects/a_move_for_life/events.jpg
     id: events
     title: Events page - desktop
     offsety: 0
     offsetx: 50%
     classes: "cp-horizontal"
     modal_classes: "modal-md"
-  - url: /assets/images/projects/a_move_for_life/events_mobile.png
+  - url: /assets/images/projects/a_move_for_life/events_mobile.jpg
     id: events-mobile
     title: Events page - mobile
     offsety: 23%

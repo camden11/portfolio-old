@@ -31,6 +31,16 @@
   color4: "#B4B4B4"
   link: /portfolio/in_the_ceiling
 
+- name: Nomad Magezine
+  category: Design
+  preview_photo: "/assets/images/projects/nomad_magezine/nomad.jpg"
+  preview_text: Design and devlopment of a Wordpress theme for University of Edinburgh's student-run travel and culture magezine.
+  color1: "#c9b959"
+  color2: "#2d795d"
+  color3: "#01305E"
+  color4: "#B88D68"
+  link: /portfolio/nomad_magezine
+
 - name: Scotland
   category: Photography
   preview_photo: "/assets/images/projects/scotland/loch.jpg"

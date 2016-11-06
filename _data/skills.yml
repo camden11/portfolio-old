@@ -1,12 +1,12 @@
 - name: Front End Web Development
-  skills: HTML & CSS, Javascript, Coffeescript, Sass, Angular, Jekyll
+  skills: HTML & CSS, Javascript, Coffeescript, Angular, Wordpress
   color1: "#DC3A1E"
   color2: "#DD921F"
   color3: "#105EA9"
   color4: "#29344C"
 
 - name: Back End Web Development
-  skills: Ruby, Rails, Node, MongoDB, SQL
+  skills: Ruby, Rails, Node, PHP, MongoDB, SQL
   color1: "#B02B2C"
   color2: "#669F64"
   color3: "#69B23F"
