@@ -1,5 +1,5 @@
 - name: Northeastern University
-  image: "/assets/images/northeastern-seal.png"
+  image: "/assets/images/about/northeastern-seal.jpg"
   location: Boston, MA
   years: 2013 - 2018
   program: Computer Science & Interaction Design
@@ -9,7 +9,7 @@
   color4: "#000000"
 
 - name: University of Edinburgh
-  image: "/assets/images/university-of-edinburgh-logo.png"
+  image: "/assets/images/about/university-of-edinburgh-logo.jpg"
   location: Edinburgh, UK
   years: 2016
   program: School of Informatics
