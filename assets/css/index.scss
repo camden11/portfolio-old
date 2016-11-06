@@ -34,7 +34,7 @@ html, body {
 
   .cp-color-block {
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 25px;
 
     @media #{$xs-screen-only} { 
       margin: 0; 
@@ -51,4 +51,16 @@ html, body {
     }
     height: 100%;
   }
+
+  ul.list-unstyled li {
+    @media #{$small-screen} {
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.cp-footer {
+  display: none;
 }
