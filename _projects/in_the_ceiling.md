@@ -26,13 +26,13 @@ images:
     offsetx: 100%
     classes: "cp-horizontal"
     modal_classes: "modal-md"
-  - url: /assets/images/projects/in_the_ceiling/testing.jpg
+  - url: /assets/images/projects/in_the_ceiling/testing_2.jpg
     id: testing
     title: Running in Northeastern's library
     offsety: 80%
     offsetx: 0
-    classes: "cp-vertical"
-    modal_classes: "modal-sm"
+    classes: "cp-horizontal"
+    modal_classes: "modal-md"
 
 links:
   - display: Project overview
@@ -41,4 +41,4 @@ links:
     color2: "#747474"
 
 --- 
-In The Ceiling is a research project run by Northeastern University professors Kristian Kloekl, Jonathan Carr, and Mark Sivak that seeks to examine the design of responsive environments and the way people interact with them. My role in the project has been to create the responsive environment that is to be studied. This environment consists of a series of cameras and projectors situated in the ceiling of Northeastern’s Snell Library. I wrote software that detects pedestrian motion using the cameras and projects a visualization that responds to this motion onto the floor. The current visualization involves a grid of moving lines that shifts in response to the average angle of pedestrian paths in the area. The next step of the project is to test the environment with improvisational theater actors to see what kind of behaviors the environment could affect in a passerby.  
+In The Ceiling is a research project run by Northeastern University professors Kristian Kloekl, Jonathan Carr, and Mark Sivak that seeks to examine the design of responsive environments and the way people interact with them. My role in the project has been to create the responsive environment that is to be studied. This environment consists of a series of cameras and projectors situated in the ceiling of Northeastern’s Snell Library. I wrote software that detects pedestrian motion using the cameras and projects a visualization that responds to this motion onto the floor. The current visualization involves a grid of moving lines that shifts in response to the average angle of pedestrian paths in the area. The environment is currently being tested by improvisational theater actors to see what kind of behaviors the it could affect in a passerby.  
