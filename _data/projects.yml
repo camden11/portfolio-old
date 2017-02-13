@@ -1,8 +1,19 @@
+- name: Scout
+  category: Experience
+  preview_photo: "/assets/images/projects/scout/logo.jpg"
+  preview_text: Mobile app design and development for Northeastern University's student-run design studio.
+  priority: 1
+  color1: "#469FB3"
+  color2: "#EB9A3F"
+  color3: "#BF2E39"
+  color4: "#5DA252"
+  link: /portfolio/scout
+
 - name: Trash2Treasure
   category: Code
   preview_photo: "/assets/images/projects/trash2treasure/t2t.jpg"
   preview_text: An online checkout system for Northeastern University’s annual Trash2Treasure sale built in Ruby on Rails.   
-  priority: 1
+  priority: 2
   color1: "#2F2F2F"
   color2: "#898989"
   color3: "#AB2D3D"
@@ -13,7 +24,7 @@
   category: Experience
   preview_photo: "/assets/images/projects/alignable/alignable.jpg"
   preview_text: Full stack web development in Ruby on Rails for the Boston-based “social network for small businesses”.
-  priority: 2
+  priority: 3
   color1: "#855B5E"
   color2: "#544560"
   color3: "#C6D7F1"
@@ -24,28 +35,18 @@
   category: Code
   preview_photo: "/assets/images/projects/in_the_ceiling/in_the_ceiling.jpg"
   preview_text: A research project that examines how pedestrians interact with their environment through the use of motion detection and data visualization. 
-  priority: 3
+  priority: 4
   color1: "#1C1C20"
   color2: "#21293D"
   color3: "#3D3C3C"
   color4: "#B4B4B4"
   link: /portfolio/in_the_ceiling
 
-- name: Nomad Magezine
-  category: Design
-  preview_photo: "/assets/images/projects/nomad_magezine/nomad.jpg"
-  preview_text: Design and devlopment of a Wordpress theme for University of Edinburgh's student-run travel and culture magezine.
-  color1: "#c9b959"
-  color2: "#2d795d"
-  color3: "#01305E"
-  color4: "#B88D68"
-  link: /portfolio/nomad_magezine
-
 - name: Scotland
   category: Photography
   preview_photo: "/assets/images/projects/scotland/loch.jpg"
   preview_text: Photos taken during my study abroad in Scotland, including Edinburgh, Isle of Skye, and Inverness.
-  priority: 4
+  priority: 5
   color1: "#A0ACBE"
   color2: "#183009"
   color3: "#DBAB2E"
@@ -67,7 +68,7 @@
   category: Code
   preview_photo: "/assets/images/projects/northeastern_energy_flows/nef.png"
   preview_text: A prototype for a project seeking to visualize energy consumption at Northeastern University.
-  priority: 5
+  priority: 7
   color1: "#323232"
   color2: "#89DC57"
   color3: "#E4BF5E"
@@ -100,7 +101,7 @@
   category: Photography
   preview_photo: "/assets/images/projects/stillness/carousel.jpg"
   preview_text: Photos of stillness in environments of motion. The final project for my Photo Basics class at Northeastern.
-  priority: 7
+  priority: 10
   color1: "#6A717D"
   color2: "#FF67B1"
   color3: "#46CED9"

@@ -136,9 +136,3 @@ DEPENDENCIES
   github-pages
   jekyll-feed (= 0.5.1)
   minima (= 1.2.0)
-
-RUBY VERSION
-   ruby 2.1.3p242
-
-BUNDLED WITH
-   1.13.2
