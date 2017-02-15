@@ -1,5 +1,5 @@
 - name: Front End Web Development
-  skills: HTML & CSS, Javascript, Coffeescript, Angular, Wordpress
+  skills: HTML & CSS, Javascript, React, Angular, Jekyll, Wordpress
   color1: "#DC3A1E"
   color2: "#DD921F"
   color3: "#105EA9"
@@ -12,14 +12,19 @@
   color3: "#69B23F"
   color4: "#5E87A1"
 
+- name: Mobile Development
+  skills: React Native
+  color1: "#8EB55B"
+  color2: "#4D9EF6"
+  color3: "#999999"
+  color4: "#2D2D2D"
 
 - name: "Data Processing & Visualization"
-  skills: Java, Python, Processing, OpenCV
+  skills: Java, Python, Processing, D3, OpenCV,
   color1: "#F68E45"
   color2: "#D6AD43"
   color3: "#062D4C"
   color4: "#EB2D2D"
-
 
 - name: Design
   skills: Photoshop, Illustrator, Indesign, Invision, Sketch
