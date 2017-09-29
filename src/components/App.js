@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
+import Routes from './Routes';
+import AddressBar from './AddressBar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to Camden Website</h2>
-        </div>
-        <p>
-          It's coming right along.
-        </p>
+      <div className="cp-site-wrapper">
+        <AddressBar />
+        <Routes />
       </div>
-    );
+    )
   }
 }
 
