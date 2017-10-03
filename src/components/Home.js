@@ -16,9 +16,9 @@ class Home extends Component {
       <div className="Home">
         <h2>Welcome to Camden Website</h2>
         <p>It's coming right along.</p>
-        <button onClick={() => dispatch(setAddress("Camden Phalen / Code Code Code"))}>Code</button>
-        <button onClick={() => dispatch(setAddress("Camden Phalen / Experience Experience Experience"))}>Experience</button>
-        <button onClick={() => dispatch(setAddress("Camden Phalen / About About About"))}>About</button>
+        <button onClick={() => dispatch(setAddress("Camden Phalen / Code"))}>Code</button>
+        <button onClick={() => dispatch(setAddress("Camden Phalen / Experience"))}>Experience</button>
+        <button onClick={() => dispatch(setAddress("Camden Phalen / About"))}>About</button>
       </div>
     );
   }

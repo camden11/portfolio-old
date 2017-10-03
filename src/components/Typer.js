@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-const DEFAULT_BACKSPACE_TIME = 200;
-const DEFAULT_TYPE_TIME = 200;
+const DEFAULT_BACKSPACE_TIME = 40;
+const DEFAULT_TYPE_TIME = 80;
 
 class Typer extends Component {
   constructor(props) {
@@ -19,10 +19,8 @@ class Typer extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { start } = nextProps;
-    this.state = {
-      currentText: start,
-      forward: false
-    }
+    this.setState({ forward: false });
+    this.startTyping();
   }
 
   backspaceTime() {
@@ -41,7 +39,7 @@ class Typer extends Component {
   switchInterval() {
     const { intervalId } = this.state;
     clearInterval(intervalId);
-    const newIntervalId = setInterval(() => this.type(), this.typeTime());
+    const newIntervalId = setInterval(() => this.typeStep(), this.typeTime());
     this.setState({ intervalId: newIntervalId })
   }
 
@@ -61,7 +59,7 @@ class Typer extends Component {
     } else {
       if (!forward) {
         this.setState({forward: true})
-        this.switchInterval();
+        // this.switchInterval();
       }
       const doneTyping = currentText === end;
       if (!doneTyping) {
@@ -88,6 +86,7 @@ class Typer extends Component {
   }
 
   render() {
+    console.log('render');
     const { currentText } = this.state;
     return <span className="typer">{currentText}</span>
   }
