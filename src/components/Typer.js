@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 
-const DEFAULT_BACKSPACE_TIME = 40;
-const DEFAULT_TYPE_TIME = 80;
+const DEFAULT_BACKSPACE_TIME = 10;
+const DEFAULT_TYPE_TIME = 10;
 
 class Typer extends Component {
   constructor(props) {
     super(props);
     const { start } = props;
     this.state = {
-      currentText: start,
-      forward: false
+      current: start || '',
+      forward: false,
+      callbackFinished: false
     }
   }
 
   componentDidMount() {
-    this.startTyping()
+    this.startTyping(this.backspaceTime());
   }
 
   componentWillReceiveProps(nextProps) {
-    const { start } = nextProps;
     this.setState({ forward: false });
     this.startTyping();
   }
@@ -31,64 +31,71 @@ class Typer extends Component {
     return this.props.typeTime || DEFAULT_TYPE_TIME;
   }
 
-  startTyping() {
-    const intervalId = setInterval(() => this.typeStep(), this.backspaceTime());
+  startTyping(time) {
+    const intervalId = setInterval(() => this.typeStep(), time);
     this.setState({ intervalId });
   }
 
-  switchInterval() {
+  stopTyping() {
     const { intervalId } = this.state;
     clearInterval(intervalId);
-    const newIntervalId = setInterval(() => this.typeStep(), this.typeTime());
-    this.setState({ intervalId: newIntervalId })
+  }
+
+  switchInterval() {
+    this.stopTyping()
+    this.startTyping(this.typeTime());
   }
 
   shouldContinueBackspacing() {
-    const { currentText, forward } = this.state;
-    const { end } = this.props;
+    const { current, forward } = this.state;
+    const target = this.props.children;
     return !forward &&
-      currentText.length !== 0 &&
-      currentText !== end.substring(0, currentText.length);
+      current.length !== 0 &&
+      current !== target.substring(0, current.length);
   }
 
   typeStep() {
-    const { currentText, forward, intervalId } = this.state;
-    const { end } = this.props
+    const { current, forward, intervalId, callbackFinished } = this.state;
+    const { children, onFinishTyping } = this.props;
+    const target = children;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
       if (!forward) {
         this.setState({forward: true})
-        // this.switchInterval();
+        this.switchInterval();
       }
-      const doneTyping = currentText === end;
+      const doneTyping = current === target;
       if (!doneTyping) {
         this.type();
       } else {
-        clearInterval(intervalId);
+        this.stopTyping();
+        if (onFinishTyping && !callbackFinished) {
+          this.setState({ callbackFinished: true });
+          onFinishTyping();
+        }
       }
     }
   }
 
   backspace() {
-    const { currentText } = this.state;
+    const { current } = this.state;
     this.setState({
-      currentText: currentText.substring(0, currentText.length - 1)
+      current: current.substring(0, current.length - 1)
     });
   }
 
   type() {
-    const { end } = this.props;
-    const { currentText } = this.state;
+    const target = this.props.children;
+    const { current } = this.state;
     this.setState({
-      currentText: end.substring(0, currentText.length + 1)
+      current: target.substring(0, current.length + 1)
     });
   }
 
   render() {
-    console.log('render');
-    const { currentText } = this.state;
-    return <span className="typer">{currentText}</span>
+    const { current } = this.state;
+    return <span className="typer">{current}</span>
   }
 }
 
