@@ -7,8 +7,8 @@ import AddressUrls from '../lib/AddressUrls';
 import { Link } from 'react-router-dom';
 import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
 
-const BACKSPACE_TIME = 100;
-const TYPE_TIME = 100;
+const BACKSPACE_TIME = 60;
+const TYPE_TIME = 60;
 
 class AddressBar extends Component {
   constructor(props) {
@@ -23,17 +23,21 @@ class AddressBar extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ forward: false, initiated: true });
-    this.startTyping(BACKSPACE_TIME);
+    if (!arrayEquals(nextProps.target, this.props.target)) {
+      this.setState({ forward: false, initiated: true });
+      this.startTyping(BACKSPACE_TIME);
+    }
   }
 
   startTyping(time) {
     const intervalId = setInterval(() => this.typeStep(), time);
+    console.log(intervalId);
     this.setState({ intervalId });
   }
 
   stopTyping() {
     const { intervalId } = this.state;
+    console.log(intervalId, 'end');
     clearInterval(intervalId);
   }
 
@@ -54,6 +58,7 @@ class AddressBar extends Component {
   typeStep() {
     const { current, forward } = this.state;
     const { target, dispatch } = this.props;
+    console.log(current, target);
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -123,7 +128,7 @@ class AddressBar extends Component {
     if (initiated) {
       return (
         <div className='address-bar'>
-          <h2 classname='address-bar-text'>
+          <h2 className='address-bar-text'>
             {current.map((section, index) => {
               if (index < target.length) {
                 return (
