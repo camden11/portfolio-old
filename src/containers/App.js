@@ -5,7 +5,7 @@ import AddressBar from '../components/AddressBar';
 class App extends Component {
   render() {
     return (
-      <div className="cp-site-wrapper">
+      <div className="container">
         <Routes />
       </div>
     )

@@ -5,9 +5,10 @@ import Typer from './Typer';
 import { arrayEquals } from '../lib/utils';
 import AddressUrls from '../lib/AddressUrls';
 import { Link } from 'react-router-dom';
+import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
 
-const BACKSPACE_TIME = 50;
-const TYPE_TIME = 50;
+const BACKSPACE_TIME = 100;
+const TYPE_TIME = 100;
 
 class AddressBar extends Component {
   constructor(props) {
@@ -16,7 +17,8 @@ class AddressBar extends Component {
       current: [''],
       currentIndex: 0,
       forward: false,
-      initiated: false
+      initiated: false,
+      done: false
     }
   }
 
@@ -51,7 +53,7 @@ class AddressBar extends Component {
 
   typeStep() {
     const { current, forward } = this.state;
-    const { target } = this.props;
+    const { target, dispatch } = this.props;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -64,6 +66,7 @@ class AddressBar extends Component {
         this.type()
       } else {
         this.stopTyping();
+        dispatch(incrementTypedSectionIndex());
       }
     }
   }
@@ -119,21 +122,26 @@ class AddressBar extends Component {
     const { target } = this.props;
     if (initiated) {
       return (
-        <h4>
-          {current.map((section, index) => {
-            if (index < target.length) {
-              return (
-                <span key={index}>
-                  <Link to={AddressUrls[target[index]]}>
-                    {section}
-                  </Link>
-                  {index !== current.length - 1 && ' / '}
-                </span>
-              )
-            }
-            return null;
-          })}
-        </h4>
+        <div className='address-bar'>
+          <h2 classname='address-bar-text'>
+            {current.map((section, index) => {
+              if (index < target.length) {
+                return (
+                  <span key={index}>
+                    <Link
+                      to={AddressUrls[target[index]]}
+                      className='address-bar-link'
+                    >
+                      {section}
+                    </Link>
+                    {index !== current.length - 1 && ' / '}
+                  </span>
+                )
+              }
+              return null;
+            })}
+          </h2>
+        </div>
       )
     }
     return null;

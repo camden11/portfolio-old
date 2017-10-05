@@ -17,20 +17,14 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <h2>
-          <TypedSection index={0}>Welcome to Camden Website</TypedSection>
-        </h2>
-        <p>
-          <TypedSection index={1}>It's coming right along.</TypedSection>
-        </p>
-        <p>
-          <TypedSection index={2}>Here's another paragraph.</TypedSection>
-        </p>
+        <h1>
+          <TypedSection index={0}>I am a creative developer passionate about finishing this website.</TypedSection>
+        </h1>
         <Link to="/work">
-          <TypedSection index={3}>Work</TypedSection>
+          <TypedSection index={1}>Work</TypedSection>
         </Link>
         <Link to="/about">
-          <TypedSection index={4}>About</TypedSection>
+          <TypedSection index={2}>About</TypedSection>
         </Link>
       </div>
     );

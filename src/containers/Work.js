@@ -17,9 +17,9 @@ class Work extends Component {
   render() {
     return (
       <div className="work">
-        <h2>
+        <h1>
           <TypedSection index={0}>This is the work page</TypedSection>
-        </h2>
+        </h1>
         <Link to="/work">
           <TypedSection index={1}>Work</TypedSection>
         </Link>
