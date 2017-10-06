@@ -11,7 +11,7 @@ class Work extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(resetTypedSectionIndex());
-    dispatch(setAddress(BASE_PATH))
+    dispatch(setAddress(BASE_PATH));
   }
 
   render() {
@@ -20,11 +20,28 @@ class Work extends Component {
         <h1>
           <TypedSection index={0}>This is the work page</TypedSection>
         </h1>
-        <Link to="/work">
-          <TypedSection index={1}>Work</TypedSection>
+        <h2>
+          <TypedSection index={1}>Here are some projects I've done.</TypedSection>
+        </h2>
+        <ul>
+          <li>
+            <Link to='/work/trailtag'>
+              <TypedSection index={2}>TrailTag</TypedSection>
+            </Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to='/work/hubspot'>
+              <TypedSection index={3}>HubSpot</TypedSection>
+            </Link>
+          </li>
+        </ul>
+        <Link to="/">
+          <TypedSection index={4}>Home</TypedSection>
         </Link>
         <Link to="/about">
-          <TypedSection index={2}>About</TypedSection>
+          <TypedSection index={5}>About</TypedSection>
         </Link>
       </div>
     )

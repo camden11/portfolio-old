@@ -55,7 +55,7 @@ class Typer extends Component {
   }
 
   typeStep() {
-    const { current, forward, intervalId, callbackFinished } = this.state;
+    const { current, forward, callbackFinished } = this.state;
     const { children, onFinishTyping } = this.props;
     const target = children;
     if (this.shouldContinueBackspacing()) {

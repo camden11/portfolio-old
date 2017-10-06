@@ -11,7 +11,7 @@ class About extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(resetTypedSectionIndex());
-    dispatch(setAddress(BASE_PATH))
+    dispatch(setAddress(BASE_PATH));
   }
 
   render() {

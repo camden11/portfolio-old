@@ -7,7 +7,7 @@ class TypedSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ready: props.index === props.currentIndex,
+      ready: props.started && props.index === props.currentIndex,
       finished: false
     }
   }
@@ -21,7 +21,7 @@ class TypedSection extends Component {
     const { ready } = this.state;
     if (ready) {
       this.setState({ finished: true });
-    } else if (nextProps.currentIndex >= index) {
+    } else if (nextProps.started && nextProps.currentIndex >= index) {
       this.setState({ ready: true });
     }
   }
@@ -45,6 +45,7 @@ class TypedSection extends Component {
 
 export default connect(({ typedSection }) => {
   return {
-    currentIndex: typedSection
+    currentIndex: typedSection.index,
+    started: typedSection.started
   }
 })(TypedSection)

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setAddress } from '../actions/AddressBarActions';
-import Typer from './Typer';
 import { arrayEquals } from '../lib/utils';
-import AddressUrls from '../lib/AddressUrls';
+import AddressUrls from '../data/AddressUrls';
 import { Link } from 'react-router-dom';
-import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
+import { startTypedSection } from '../actions/TypedSectionActions';
 
-const BACKSPACE_TIME = 60;
-const TYPE_TIME = 60;
+const BACKSPACE_TIME = 100;
+const TYPE_TIME = 100;
 
 class AddressBar extends Component {
   constructor(props) {
@@ -31,13 +29,11 @@ class AddressBar extends Component {
 
   startTyping(time) {
     const intervalId = setInterval(() => this.typeStep(), time);
-    console.log(intervalId);
     this.setState({ intervalId });
   }
 
   stopTyping() {
     const { intervalId } = this.state;
-    console.log(intervalId, 'end');
     clearInterval(intervalId);
   }
 
@@ -58,7 +54,6 @@ class AddressBar extends Component {
   typeStep() {
     const { current, forward } = this.state;
     const { target, dispatch } = this.props;
-    console.log(current, target);
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -71,7 +66,7 @@ class AddressBar extends Component {
         this.type()
       } else {
         this.stopTyping();
-        dispatch(incrementTypedSectionIndex());
+        dispatch(startTypedSection());
       }
     }
   }
@@ -143,7 +138,12 @@ class AddressBar extends Component {
                   </span>
                 )
               }
-              return null;
+              return (
+                <span key={index}>
+                  {section}
+                  {index !== current.length - 1 && ' / '}
+                </span>
+              )
             })}
           </h2>
         </div>

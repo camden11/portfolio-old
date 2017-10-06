@@ -4,6 +4,7 @@ import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
 import { Link } from 'react-router-dom';
 import TypedSection from '../components/TypedSection';
+import ProjectPreview from '../components/ProjectPreview';
 
 const BASE_PATH = ['Camden Phalen'];
 
@@ -26,6 +27,7 @@ class Home extends Component {
         <Link to="/about">
           <TypedSection index={2}>About</TypedSection>
         </Link>
+        <ProjectPreview />
       </div>
     );
   }
