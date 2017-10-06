@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { setBackgroundColor } from '../actions/ColorActions';
 import { Link } from 'react-router-dom';
 import TypedSection from '../components/TypedSection';
 
-const BASE_PATH = ['Camden Phalen', 'Work']
+const BASE_PATH = ['Camden Phalen', 'Work'];
+const BACKGROUND_COLOR = '#ffffff';
 
 class Work extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(resetTypedSectionIndex());
     dispatch(setAddress(BASE_PATH));
+    dispatch(setBackgroundColor(BACKGROUND_COLOR));
   }
 
   render() {

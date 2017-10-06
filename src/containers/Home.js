@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { setBackgroundColor } from '../actions/ColorActions';
 import { Link } from 'react-router-dom';
 import TypedSection from '../components/TypedSection';
 import ProjectPreview from '../components/ProjectPreview';
 
 const BASE_PATH = ['Camden Phalen'];
+const BACKGROUND_COLOR = '#ffffff';
 
 class Home extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(setAddress(BASE_PATH));
     dispatch(resetTypedSectionIndex());
+    dispatch(setBackgroundColor(BACKGROUND_COLOR));
   }
 
   render() {

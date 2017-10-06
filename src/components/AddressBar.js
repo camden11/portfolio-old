@@ -5,8 +5,8 @@ import AddressUrls from '../data/AddressUrls';
 import { Link } from 'react-router-dom';
 import { startTypedSection } from '../actions/TypedSectionActions';
 
-const BACKSPACE_TIME = 100;
-const TYPE_TIME = 100;
+const BACKSPACE_TIME = 40;
+const TYPE_TIME = 60;
 
 class AddressBar extends Component {
   constructor(props) {

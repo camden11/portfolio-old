@@ -1,7 +1,7 @@
 import ActionTypes from '../actions/ActionTypes';
 
 const initialState = {
-  index: 0,
+  index: -1,
   started: false
 }
 

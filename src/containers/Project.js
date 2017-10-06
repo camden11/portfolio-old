@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { setBackgroundColor } from '../actions/ColorActions';
 import Projects from '../data/Projects';
 import TypedSection from '../components/TypedSection';
 
@@ -22,7 +23,9 @@ class Project extends Component {
     path.push(project.name);
     dispatch(resetTypedSectionIndex());
     dispatch(setAddress(path));
+    dispatch(setBackgroundColor(project.backgroundColor));
   }
+
   render(){
     const { project } = this.state;
     return (
