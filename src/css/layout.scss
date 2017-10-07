@@ -4,6 +4,26 @@
   display: grid;
 }
 
+// - - - - - - - - - -
+// Grid
+// - - - - - - - - - -
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+}
+
+.four {
+  grid-column: span 4;
+}
+
+.eight {
+  grid-column: span 8;
+}
+
+// - - - - - - - - - -
+// Background
+// - - - - - - - - - -
 .background {
   position: fixed;
   top: 0;

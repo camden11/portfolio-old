@@ -1,12 +1,5 @@
-.address-bar {
-  border-bottom: 1.5px solid $main-gray;
-}
-
-.address-bar-text {
-  font-size: 24px;
-}
-
 .address-bar-link {
   text-decoration: none;
+  transition: color .2s;
   color: $main-gray;
 }

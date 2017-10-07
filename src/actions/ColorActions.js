@@ -1,8 +1,11 @@
 import ActionTypes from './ActionTypes';
 
-export const setBackgroundColor = (color) => {
+export const setColor = (backgroundColor, textColor) => {
   return {
-    type: ActionTypes.SET_BACKGROUND_COLOR,
-    color: color
+    type: ActionTypes.SET_COLOR,
+    payload: {
+      backgroundColor: backgroundColor,
+      textColor: textColor
+    }
   }
 }

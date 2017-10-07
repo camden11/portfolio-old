@@ -3,6 +3,14 @@
   src: url("../fonts/InputMono-Regular.ttf"); }
 
 @font-face {
+  font-family: 'Input Light';
+  src: url("../fonts/InputMono-Light.ttf"); }
+
+@font-face {
+  font-family: 'Input Bold';
+  src: url("../fonts/InputMono-Bold.ttf"); }
+
+@font-face {
   font-family: 'Crimson';
   src: url("../fonts/CrimsonText-Bold.ttf"); }
 
@@ -10,10 +18,45 @@ h1 {
   font-family: 'Crimson';
   font-size: 60px; }
 
+h2 {
+  font-size: 24px;
+  font-family: 'Input'; }
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: 'Input Bold';
+  font-size: 30px; }
+
+h6 {
+  font-size: 20px;
+  font-family: 'Input Bold';
+  margin-top: 0;
+  margin-bottom: 2px; }
+
+p {
+  font-family: 'Input Light'; }
+
+.project-data-text, .project-data-link {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 2px; }
+
 .container {
   width: 80%;
   margin: 0 auto;
   display: grid; }
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px; }
+
+.four {
+  grid-column: span 4; }
+
+.eight {
+  grid-column: span 8; }
 
 .background {
   position: fixed;
@@ -21,15 +64,20 @@ h1 {
   width: 100%;
   height: 100%; }
 
-.address-bar {
-  border-bottom: 1.5px solid #272727; }
-
-.address-bar-text {
-  font-size: 24px; }
-
 .address-bar-link {
   text-decoration: none;
+  transition: color .2s;
   color: #272727; }
+
+.project-content {
+  border-left: 1.5px solid #272727;
+  padding-left: 25px; }
+
+.project-data-section {
+  margin-bottom: 20px; }
+
+.project-data-link {
+  display: block; }
 
 body {
   margin: 0;

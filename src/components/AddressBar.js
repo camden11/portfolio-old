@@ -16,7 +16,8 @@ class AddressBar extends Component {
       currentIndex: 0,
       forward: false,
       initiated: false,
-      done: false
+      done: false,
+      color: props.nextColor
     }
   }
 
@@ -53,7 +54,7 @@ class AddressBar extends Component {
 
   typeStep() {
     const { current, forward } = this.state;
-    const { target, dispatch } = this.props;
+    const { target, dispatch, nextColor } = this.props;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -66,6 +67,7 @@ class AddressBar extends Component {
         this.type()
       } else {
         this.stopTyping();
+        this.setState({ color: nextColor })
         dispatch(startTypedSection());
       }
     }
@@ -118,11 +120,11 @@ class AddressBar extends Component {
   }
 
   render() {
-    const { current, initiated } = this.state;
+    const { current, initiated, color } = this.state;
     const { target } = this.props;
     if (initiated) {
       return (
-        <div className='address-bar'>
+        <div className='address-bar' style={{ color: color, borderBottom: `1.5px solid ${color}`}}>
           <h2 className='address-bar-text'>
             {current.map((section, index) => {
               if (index < target.length) {
@@ -131,6 +133,7 @@ class AddressBar extends Component {
                     <Link
                       to={AddressUrls[target[index]]}
                       className='address-bar-link'
+                      style={{ color: color }}
                     >
                       {section}
                     </Link>
@@ -155,7 +158,8 @@ class AddressBar extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    target: state.addressBar.address
+    target: state.addressBar.address,
+    nextColor: state.color.textColor
   }
 }
 

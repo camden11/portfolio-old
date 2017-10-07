@@ -2,3 +2,36 @@ h1 {
   font-family: 'Crimson';
   font-size: 60px;
 }
+
+h2 {
+  font-size: 24px;
+  font-family: 'Input'
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: 'Input Bold';
+  font-size: 30px;
+}
+
+h6 {
+  font-size: 20px;
+  font-family: 'Input Bold';
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+p {
+  font-family: 'Input Light';
+}
+
+.project-data-text {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.project-data-link {
+  @extend .project-data-text;
+}

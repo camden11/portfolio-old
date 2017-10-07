@@ -2,50 +2,51 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
-import { setBackgroundColor } from '../actions/ColorActions';
-import { Link } from 'react-router-dom';
+import { setColor } from '../actions/ColorActions';
 import TypedSection from '../components/TypedSection';
+import { TypeIndexTracker } from '../lib/utils';
+import { H1, H2, L } from '../components/Tags';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
 const BACKGROUND_COLOR = '#ffffff';
+const TEXT_COLOR = '#272727';
 
 class Work extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(resetTypedSectionIndex());
     dispatch(setAddress(BASE_PATH));
-    dispatch(setBackgroundColor(BACKGROUND_COLOR));
+    dispatch(setColor(BACKGROUND_COLOR, TEXT_COLOR));
   }
 
   render() {
+    const tracker = new TypeIndexTracker();
     return (
       <div className="work">
-        <h1>
-          <TypedSection index={0}>This is the work page</TypedSection>
-        </h1>
-        <h2>
-          <TypedSection index={1}>Here are some projects I've done.</TypedSection>
-        </h2>
+        <H1 index={tracker.index()}>This is the work page</H1>
+        <H2 index={tracker.index()}>Here are some projects I've done.</H2>
         <ul>
           <li>
-            <Link to='/work/trailtag'>
-              <TypedSection index={2}>TrailTag</TypedSection>
-            </Link>
+            <L to='/work/trailtag' index={tracker.index()}>TrailTag</L>
           </li>
-        </ul>
-        <ul>
           <li>
-            <Link to='/work/hubspot'>
-              <TypedSection index={3}>HubSpot</TypedSection>
-            </Link>
+            <L to='/work/hubspot' index={tracker.index()}>HubSpot</L>
+          </li>
+          <li>
+            <L to='/work/idea' index={tracker.index()}>Idea</L>
+          </li>
+          <li>
+            <L to='/work/alignable' index={tracker.index()}>Alignable</L>
+          </li>
+          <li>
+            <L to='/work/trash2treasure' index={tracker.index()}>Trash2Treasure</L>
+          </li>
+          <li>
+            <L to='/work/openlines' index={tracker.index()}>Open Lines</L>
           </li>
         </ul>
-        <Link to="/">
-          <TypedSection index={4}>Home</TypedSection>
-        </Link>
-        <Link to="/about">
-          <TypedSection index={5}>About</TypedSection>
-        </Link>
+        <L to="/" index={tracker.index()}>Home</L>
+        <L to="/about" index={tracker.index()}>About</L>
       </div>
     )
   }

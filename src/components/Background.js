@@ -43,7 +43,6 @@ class Background extends Component {
 
   transitionStep() {
     const { bg1active, intervalId } = this.state;
-    console.log(this.state);
     const { dispatch } = this.props;
     const activeBgPos = bg1active ? 'bg1pos' : 'bg2pos';
     const inactiveBgPos = bg1active ? 'bg2pos' : 'bg1pos';

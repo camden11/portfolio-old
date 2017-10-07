@@ -8,3 +8,13 @@ export const arrayEquals = (a, b) => {
   }
   return true;
 }
+
+export class TypeIndexTracker {
+  constructor() {
+    this.count = 0;
+  }
+
+  index() {
+    return this.count++;
+  }
+}

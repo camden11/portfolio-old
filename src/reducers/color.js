@@ -7,10 +7,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ActionTypes.SET_BACKGROUND_COLOR:
+    case ActionTypes.SET_COLOR:
       return {
         ...state,
-        backgroundColor: action.color
+        backgroundColor: action.payload.backgroundColor,
+        textColor: action.payload.textColor
       }
     default:
       return state;
