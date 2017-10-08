@@ -35,7 +35,7 @@ class Project extends Component {
     const { color } = this.props;
     const tracker = new TypeIndexTracker();
     return (
-      <div className="project">
+      <div className="project container">
         <H1 index={tracker.index()}>{project.header}</H1>
         <div className="grid-parent">
           <div className="four project-data">

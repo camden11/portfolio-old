@@ -10,7 +10,7 @@ class Background extends Component {
     this.state = {
       bg1pos: 0,
       bg2pos: -100,
-      bg1color: props.color,
+      bg1color: '#ffffff',
       bg2color: props.color,
       bg1active: true,
       transitionActive: false
@@ -58,17 +58,20 @@ class Background extends Component {
   }
 
   render() {
+    const { className, containerClassName } = this.props;
     const { bg1pos, bg2pos, bg1color, bg2color, bg1active } = this.state;
     return (
-      <div className="background-container">
-        <div
-          className="background"
-          style={{ background: bg1color, left: `${bg1pos}%`, zIndex: bg1active ? -1 : -2 }}
-        ></div>
-        <div
-          className="background"
-          style={{ background: bg2color, left: `${bg2pos}%`, zIndex: bg1active ? -2 : -1 }}
-        ></div>
+      <div className={`background-container ${containerClassName}`}>
+        <div>
+          <div
+            className={`background ${className}`}
+            style={{ background: bg1color, left: `${bg1pos}%`, zIndex: bg1active ? -1 : -2 }}
+          ></div>
+          <div
+            className={`background ${className}`}
+            style={{ background: bg2color, left: `${bg2pos}%`, zIndex: bg1active ? -2 : -1 }}
+          ></div>
+        </div>
       </div>
     )
   }

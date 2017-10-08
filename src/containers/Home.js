@@ -24,13 +24,12 @@ class Home extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="home">
+      <div className="home container">
         <H1 index={tracker.index()}>
           I am a creative developer passionate about finishing this website.
         </H1>
         <L to="/work" index={tracker.index()}>Work</L>
         <L to="/about" index={tracker.index()}>About</L>
-        <ProjectPreview />
       </div>
     );
   }

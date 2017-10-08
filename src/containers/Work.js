@@ -22,7 +22,7 @@ class Work extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="work">
+      <div className="work container">
         <H1 index={tracker.index()}>This is the work page</H1>
         <H2 index={tracker.index()}>Here are some projects I've done.</H2>
         <ul>

@@ -26,8 +26,8 @@ export default {
     categories: ["UI/UX Design", "Full Stack Development"],
     techUsed: ["Wordpress", "PHP"],
     links: [{name: "Idea", href: "https://www.northeastern.edu/idea/"}],
-    backgroundColor: "#F3A982",
-    textColor: "#272727"
+    backgroundColor: "#E4E4E4",
+    textColor: "#E5A040"
   },
   alignable: {
     name: "Alignable",
@@ -36,8 +36,8 @@ export default {
     categories: ["Professional Experience", "Full Stack Development"],
     techUsed: ["Ruby on Rails", "Javascript", "Sql"],
     links: [{name: "Alignable", href: "https://www.alignable.com"}],
-    backgroundColor: "#C8B0CD",
-    textColor: "#272727"
+    backgroundColor: "#6C5E7E",
+    textColor: "#9DDDCD"
   },
   trash2treasure: {
     name: "Trash2Treasure",
@@ -46,8 +46,8 @@ export default {
     categories: ["Full Stack Development", "UI/UX Design"],
     techUsed: ["Ruby on Rails", "Sql"],
     links: [{name: "Web app", href: "https://pacific-ravine-67111.herokuapp.com/"}, {name: "Github repo", href: "https://github.com/camden11/trash2treasure"}, {name: "NU T2T site", href: "https://nutrash2treasure.wordpress.com/about/"}],
-    backgroundColor: "#D79292",
-    textColor: "#272727"
+    backgroundColor: "#9F565F",
+    textColor: "#E4E4E4"
   },
   openlines: {
     name: "Open Lines",

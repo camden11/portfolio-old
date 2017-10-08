@@ -6,9 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="site-wrapper">
-        <div className="container">
-          <Routes />
-        </div>
+        <Routes />
         <Background />
       </div>
     )

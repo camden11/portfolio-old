@@ -4,6 +4,7 @@ import { arrayEquals } from '../lib/utils';
 import AddressUrls from '../data/AddressUrls';
 import { Link } from 'react-router-dom';
 import { startTypedSection } from '../actions/TypedSectionActions';
+import Background from './Background';
 
 const BACKSPACE_TIME = 40;
 const TYPE_TIME = 60;
@@ -54,7 +55,7 @@ class AddressBar extends Component {
 
   typeStep() {
     const { current, forward } = this.state;
-    const { target, dispatch, nextColor } = this.props;
+    const { target, dispatch, nextColor, nextBackgroundColor } = this.props;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -124,31 +125,44 @@ class AddressBar extends Component {
     const { target } = this.props;
     if (initiated) {
       return (
-        <div className='address-bar' style={{ color: color, borderBottom: `1.5px solid ${color}`}}>
-          <h2 className='address-bar-text'>
-            {current.map((section, index) => {
-              if (index < target.length) {
-                return (
-                  <span key={index}>
-                    <Link
-                      to={AddressUrls[target[index]]}
-                      className='address-bar-link'
-                      style={{ color: color }}
-                    >
+        <div className="address-bar-container">
+          <div className="address-bar-subcontainer">
+            <Background
+              className ="address-bar-background"
+              containerClassName="address-bar-background-container"
+            />
+            <div className="address-bar-left"></div>
+            <div
+              className='address-bar'
+              style={{ color: color, borderBottom: `1.5px solid ${color}`}}
+            >
+              <h2 className='address-bar-text'>
+                {current.map((section, index) => {
+                  if (index < target.length) {
+                    return (
+                      <span key={index}>
+                        <Link
+                          to={AddressUrls[target[index]]}
+                          className='address-bar-link'
+                          style={{ color: color }}
+                        >
+                          {section}
+                        </Link>
+                        {index !== current.length - 1 && ' / '}
+                      </span>
+                    )
+                  }
+                  return (
+                    <span key={index}>
                       {section}
-                    </Link>
-                    {index !== current.length - 1 && ' / '}
-                  </span>
-                )
-              }
-              return (
-                <span key={index}>
-                  {section}
-                  {index !== current.length - 1 && ' / '}
-                </span>
-              )
-            })}
-          </h2>
+                      {index !== current.length - 1 && ' / '}
+                    </span>
+                  )
+                })}
+              </h2>
+            </div>
+            <div className="address-bar-right"></div>
+          </div>
         </div>
       )
     }

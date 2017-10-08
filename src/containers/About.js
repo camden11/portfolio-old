@@ -23,7 +23,7 @@ class About extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="work">
+      <div className="about container">
         <H1 index={tracker.index()}>This is the about page</H1>
         <L to="/work" index={tracker.index()}>Work</L>
         <L to="/" index={tracker.index()}>Home</L>
