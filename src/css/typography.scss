@@ -1,6 +1,7 @@
 h1 {
   font-family: 'Crimson';
   font-size: 60px;
+  line-height: 70px;
 }
 
 h2 {
@@ -26,11 +27,18 @@ p {
   font-family: 'Input Light';
 }
 
-.project-data-text {
+p.project-data-text {
   font-size: 20px;
   margin: 0;
   margin-bottom: 2px;
 }
+
+p.project-preview-description {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 2px;
+}
+
 
 .project-data-link {
   @extend .project-data-text;

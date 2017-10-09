@@ -28,6 +28,8 @@ class Home extends Component {
         <H1 index={tracker.index()}>
           I am a creative developer passionate about finishing this website.
         </H1>
+        <ProjectPreview project="trailtag" tracker={tracker}/>
+        <ProjectPreview project="trailtag" tracker={tracker} reverse={true}/>
         <L to="/work" index={tracker.index()}>Work</L>
         <L to="/about" index={tracker.index()}>About</L>
       </div>

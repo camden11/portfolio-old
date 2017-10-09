@@ -10,13 +10,15 @@ import { TypeIndexTracker } from '../lib/utils';
 import content from '../components/content';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
+const FIXED_DATA_SCROLL = 50;
 
 class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
       project: Projects[props.match.params.project],
-      Content: content[props.match.params.project]
+      Content: content[props.match.params.project],
+      dataFixed: false
     }
   }
 
@@ -30,6 +32,10 @@ class Project extends Component {
     dispatch(setColor(project.backgroundColor, project.textColor));
   }
 
+  componentWillUnmount() {
+
+  }
+
   render(){
     const { project, Content } = this.state;
     const { color } = this.props;
@@ -39,28 +45,30 @@ class Project extends Component {
         <H1 index={tracker.index()}>{project.header}</H1>
         <div className="grid-parent">
           <div className="four project-data">
-            <H3 index={tracker.index()}>{project.name}</H3>
-            <div className="project-data-section">
-              <H6 index={tracker.index()}>Date</H6>
-              <P className="project-data-text" index={3}>{project.dates}</P>
-            </div>
-            <div className="project-data-section">
-              <H6 index={tracker.index()}>Categories</H6>
-              {project.categories.map(category => {
-                return <P className="project-data-text"index={tracker.index()}>{category}</P>
-              })}
-            </div>
-            <div className="project-data-section">
-              <H6 index={tracker.index()}>Tech Used</H6>
-              {project.techUsed.map(tech => {
-                return <P className="project-data-text" index={tracker.index()}>{tech}</P>
-              })}
-            </div>
-            <div className="project-data-section">
-              <H6 index={tracker.index()}>Links</H6>
-              {project.links.map(link => {
-                return <A href={link.href} className="project-data-link" index={tracker.index()}>{link.name}</A>
-              })}
+            <div className="project-data-sticky">
+              <H3 index={tracker.index()}>{project.name}</H3>
+              <div className="project-data-section">
+                <H6 index={tracker.index()}>Date</H6>
+                <P className="project-data-text" index={3}>{project.dates}</P>
+              </div>
+              <div className="project-data-section">
+                <H6 index={tracker.index()}>Categories</H6>
+                {project.categories.map(category => {
+                  return <P className="project-data-text"index={tracker.index()}>{category}</P>
+                })}
+              </div>
+              <div className="project-data-section">
+                <H6 index={tracker.index()}>Tech Used</H6>
+                {project.techUsed.map(tech => {
+                  return <P className="project-data-text" index={tracker.index()}>{tech}</P>
+                })}
+              </div>
+              <div className="project-data-section">
+                <H6 index={tracker.index()}>Links</H6>
+                {project.links.map(link => {
+                  return <A href={link.href} className="project-data-link" index={tracker.index()}>{link.name}</A>
+                })}
+              </div>
             </div>
           </div>
           <div className="eight project-content" style={{ borderColor: color }}>

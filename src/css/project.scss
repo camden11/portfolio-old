@@ -3,10 +3,65 @@
   padding-left: 25px;
 }
 
+.project-data-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+}
+
 .project-data-section {
   margin-bottom: 20px;
 }
 
 .project-data-link {
   display: block;
+}
+
+.project > div {
+  height: 100%;
+}
+
+.project-preview {
+  margin-bottom: 70px;
+}
+
+.project-preview-text {
+  border-bottom: 1.5px solid $main-gray;
+  > .reverse-margin {
+    margin-left: 20px;
+  }
+}
+
+.project-preview-image-section {
+  height: 100%;
+  overflow: visible;
+  padding-right: 20px;
+}
+
+.project-preview-image-section.reverse {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.project-preview-image-container {
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.project-preview-color {
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  right: -20px;
+
+  > div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.project-preview-color.reverse {
+  right: 0;
+  left: -20px;
 }

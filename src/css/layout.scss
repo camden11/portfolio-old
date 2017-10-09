@@ -5,21 +5,48 @@
   padding-top: 60px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
 // - - - - - - - - - -
 // Grid
 // - - - - - - - - - -
 .grid-parent {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
   grid-column-gap: 10px;
 }
 
 .four {
   grid-column: span 4;
+  grid-row: span 1;
+}
+
+.five {
+  grid-column: span 5;
+  grid-row: span 1;
+}
+
+.seven {
+  grid-column: span 7;
+  grid-row: span 1;
 }
 
 .eight {
   grid-column: span 8;
+  grid-row: span 1;
+}
+
+.no-gap {
+  grid-column-gap: 0;
 }
 
 // - - - - - - - - - -

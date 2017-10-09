@@ -65,11 +65,11 @@ class Background extends Component {
         <div>
           <div
             className={`background ${className}`}
-            style={{ background: bg1color, left: `${bg1pos}%`, zIndex: bg1active ? -1 : -2 }}
+            style={{ background: bg1color, left: `${bg1pos}%`, zIndex: bg1active ? -2 : -3 }}
           ></div>
           <div
             className={`background ${className}`}
-            style={{ background: bg2color, left: `${bg2pos}%`, zIndex: bg1active ? -2 : -1 }}
+            style={{ background: bg2color, left: `${bg2pos}%`, zIndex: bg1active ? -3 : -2 }}
           ></div>
         </div>
       </div>

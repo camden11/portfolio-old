@@ -1,7 +1,7 @@
 export default {
   trailtag: {
     name: "TrailTag",
-    header: "A thing that you put on your dog so you don't lose it in the woods.",
+    header: "Development and interface design for the mobile application for an new wearable safety device.",
     dates: "January 2017 - April 2017",
     categories: ["Mobile Development", "UI/UX Design"],
     techUsed: ["Javascript", "React Native", "Redux"],
