@@ -32,6 +32,10 @@ h3 {
   font-family: 'Input Bold';
   font-size: 30px; }
 
+h4 {
+  font-family: 'Input';
+  text-transform: uppercase; }
+
 h6 {
   font-size: 20px;
   font-family: 'Input Bold';

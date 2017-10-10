@@ -23,6 +23,10 @@ class Typer extends Component {
     this.startTyping();
   }
 
+  componentWillUnmount() {
+    this.stopTyping();
+  }
+
   backspaceTime() {
     return this.props.backspaceTime || DEFAULT_BACKSPACE_TIME;
   }

@@ -18,7 +18,7 @@ export default {
     categories: ["Professional Experience", "Front End Development"],
     techUsed: ["Javascript", "React", "Redux"],
     links: [{ name: "HubSpot Website", href: "https://www.hubspot.com/"}],
-    backgroundColor: "#F3A982",
+    backgroundColor: "#FEAC7B",
     textColor: "#272727"
   },
   idea: {
