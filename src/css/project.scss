@@ -1,12 +1,13 @@
 .project-content {
   border-left: 1.5px solid $main-gray;
   padding-left: 25px;
+  transition: border-width .2s;
 }
 
 .project-data-sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 100px;
+  top: 85px;
 }
 
 .project-data-section {
@@ -22,7 +23,32 @@
 }
 
 .project-preview {
-  margin-bottom: 70px;
+  margin-bottom: 80px;
+  transition: padding-bottom .2s;
+
+  &:hover {
+    padding-bottom: 10px;
+  }
+
+  &:hover .project-preview-color {
+    right: 0px;
+    top: 0px;
+  }
+
+  &:hover .project-preview-color.reverse {
+    left: 0px;
+    top: 0px;
+  }
+
+  &:hover .project-preview-image-section {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: -10px;
+  }
+
+  &:hover .project-preview-description {
+    margin-bottom: 10px;
+  }
 }
 
 .project-preview-text {
@@ -32,10 +58,15 @@
   }
 }
 
+.project-preview-description {
+  transition: margin-bottom .2s;
+}
+
 .project-preview-image-section {
   height: 100%;
   overflow: visible;
   padding-right: 20px;
+  transition: margin-top .2s, padding-left .2s, padding-right .2s;
 }
 
 .project-preview-image-section.reverse {
@@ -54,6 +85,7 @@
   z-index: -1;
   top: -20px;
   right: -20px;
+  transition: top .2s, right .2s;
 
   > div {
     width: 100%;
@@ -64,4 +96,11 @@
 .project-preview-color.reverse {
   right: 0;
   left: -20px;
+  transition: left .2s, top .2s;
+}
+
+.view-more-projects {
+  font-size: 20px;
+  width: 100%;
+  text-align: right;
 }

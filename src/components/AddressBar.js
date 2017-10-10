@@ -126,42 +126,38 @@ class AddressBar extends Component {
     if (initiated) {
       return (
         <div className="address-bar-container">
-          <div className="address-bar-subcontainer">
-            <Background
-              className ="address-bar-background"
-              containerClassName="address-bar-background-container"
-            />
-            <div className="address-bar-left"></div>
-            <div
-              className='address-bar'
-              style={{ color: color, borderBottom: `1.5px solid ${color}`}}
-            >
-              <h2 className='address-bar-text'>
-                {current.map((section, index) => {
-                  if (index < target.length) {
-                    return (
-                      <span key={index}>
-                        <Link
-                          to={AddressUrls[target[index]]}
-                          className='address-bar-link'
-                          style={{ color: color }}
-                        >
-                          {section}
-                        </Link>
-                        {index !== current.length - 1 && ' / '}
-                      </span>
-                    )
-                  }
+          <Background
+            className ="address-bar-background"
+            containerClassName="address-bar-background-container"
+          />
+          <div
+            className='address-bar container'
+            style={{ color: color, borderBottom: `1.5px solid ${color}`}}
+          >
+            <h2 className='address-bar-text'>
+              {current.map((section, index) => {
+                if (index < target.length) {
                   return (
                     <span key={index}>
-                      {section}
+                      <Link
+                        to={AddressUrls[target[index]]}
+                        className='address-bar-link'
+                        style={{ color: color }}
+                      >
+                        {section}
+                      </Link>
                       {index !== current.length - 1 && ' / '}
                     </span>
                   )
-                })}
-              </h2>
-            </div>
-            <div className="address-bar-right"></div>
+                }
+                return (
+                  <span key={index}>
+                    {section}
+                    {index !== current.length - 1 && ' / '}
+                  </span>
+                )
+              })}
+            </h2>
           </div>
         </div>
       )

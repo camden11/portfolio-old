@@ -10,8 +10,8 @@ export const arrayEquals = (a, b) => {
 }
 
 export class TypeIndexTracker {
-  constructor() {
-    this.count = 0;
+  constructor(tracker) {
+    this.count = tracker ? tracker.count : 0;
   }
 
   index() {

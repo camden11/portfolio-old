@@ -8,6 +8,7 @@ import TypedSection from '../components/TypedSection';
 import { P, H1, H3, H6, A } from '../components/Tags';
 import { TypeIndexTracker } from '../lib/utils';
 import content from '../components/content';
+import Div from '../components/TypedOutlineDiv';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
 const FIXED_DATA_SCROLL = 50;
@@ -15,6 +16,7 @@ const FIXED_DATA_SCROLL = 50;
 class Project extends Component {
   constructor(props) {
     super(props);
+    window.scrollTo(0, 0);
     this.state = {
       project: Projects[props.match.params.project],
       Content: content[props.match.params.project],
@@ -53,8 +55,10 @@ class Project extends Component {
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Categories</H6>
-                {project.categories.map(category => {
-                  return <P className="project-data-text"index={tracker.index()}>{category}</P>
+                {project.categories.map((category, index) => {
+                  return <P className="project-data-text"index={tracker.index()} key={index}>
+                    {category}
+                  </P>
                 })}
               </div>
               <div className="project-data-section">
@@ -71,9 +75,9 @@ class Project extends Component {
               </div>
             </div>
           </div>
-          <div className="eight project-content" style={{ borderColor: color }}>
+          <Div className="eight project-content" borderColor={color} index={10} index={tracker.index()}>
             <Content tracker={tracker} />
-          </div>
+          </Div>
         </div>
       </div>
     )

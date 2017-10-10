@@ -2,11 +2,14 @@ h1 {
   font-family: 'Crimson';
   font-size: 60px;
   line-height: 70px;
+  margin-bottom: 70px;
 }
 
 h2 {
   font-size: 24px;
-  font-family: 'Input'
+  font-family: 'Input';
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 
 h3 {
@@ -37,9 +40,14 @@ p.project-preview-description {
   font-size: 20px;
   line-height: 30px;
   margin-top: 2px;
+  margin-bottom: 20px;
 }
 
 
 .project-data-link {
   @extend .project-data-text;
+}
+
+a.project-preview {
+  text-decoration: none;
 }

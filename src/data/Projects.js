@@ -1,6 +1,7 @@
 export default {
   trailtag: {
     name: "TrailTag",
+    href: "/work/trailtag",
     header: "Development and interface design for the mobile application for an new wearable safety device.",
     dates: "January 2017 - April 2017",
     categories: ["Mobile Development", "UI/UX Design"],
@@ -11,7 +12,8 @@ export default {
   },
   hubspot: {
     name: "HubSpot",
-    header: "A place that I worked where they have beer and inbound marketing.",
+    href: "/work/hubspot",
+    header: "Front end engineering for Hubspot’s Content Management System." ,
     dates: "July 2017 - Present",
     categories: ["Professional Experience", "Front End Development"],
     techUsed: ["Javascript", "React", "Redux"],
@@ -21,7 +23,8 @@ export default {
   },
   idea: {
     name: "Idea",
-    header: "Web development for Northeastern's student-run venture accelerator",
+    href: "/work/idea",
+    header: "Web development for Northeastern's student-run venture accelerator.",
     dates: "July 2017 - Present",
     categories: ["UI/UX Design", "Full Stack Development"],
     techUsed: ["Wordpress", "PHP"],
@@ -31,7 +34,8 @@ export default {
   },
   alignable: {
     name: "Alignable",
-    header: "Full stack development for the Social Network for Small Business",
+    href: "/work/alignable",
+    header: "Full stack development for the Social Network for Small Business.",
     dates: "January 2016 - June 2016",
     categories: ["Professional Experience", "Full Stack Development"],
     techUsed: ["Ruby on Rails", "Javascript", "Sql"],
@@ -41,7 +45,8 @@ export default {
   },
   trash2treasure: {
     name: "Trash2Treasure",
-    header: "An app I built that apparently no one knew how to use properly",
+    href: "/work/trash2treasure",
+    header: "Design and development of an online checkout app for Northeastern's Trash2Treasure sale.",
     dates: "July 2016 - September 2016",
     categories: ["Full Stack Development", "UI/UX Design"],
     techUsed: ["Ruby on Rails", "Sql"],
@@ -51,7 +56,8 @@ export default {
   },
   openlines: {
     name: "Open Lines",
-    header: "A research project that examines how pedestrians interact with their environment",
+    href: "/work/openlines",
+    header: "A research project that examines how pedestrians interact with their environment.",
     dates: "March 2016 - December 2016",
     categories: ["Research", "Development"],
     techUsed: ["Processing", "Java", "OpenCV"],
@@ -61,3 +67,12 @@ export default {
   },
 
 }
+
+export const allProjects = [
+  'trailtag',
+  'hubspot',
+  'idea',
+  'alignable',
+  'trash2treasure',
+  'openlines'
+];

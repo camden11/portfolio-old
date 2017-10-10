@@ -78,4 +78,4 @@ const image = ({ index, className, src }) => {
     <ImageTypedSection index={index}><img className={className} src={src} /></ImageTypedSection>
   );
 }
-export const IMG = connect(mapStateToProps)(image);
+export const Img = connect(mapStateToProps)(image);

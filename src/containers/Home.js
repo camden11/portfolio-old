@@ -14,6 +14,11 @@ const BACKGROUND_COLOR = '#ffffff';
 const TEXT_COLOR = '#272727';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(setAddress(BASE_PATH));
@@ -29,9 +34,10 @@ class Home extends Component {
           I am a creative developer passionate about finishing this website.
         </H1>
         <ProjectPreview project="trailtag" tracker={tracker}/>
-        <ProjectPreview project="trailtag" tracker={tracker} reverse={true}/>
-        <L to="/work" index={tracker.index()}>Work</L>
-        <L to="/about" index={tracker.index()}>About</L>
+        <ProjectPreview project="hubspot" tracker={tracker} reverse={true}/>
+        <L to="/work" index={tracker.index()} className="view-more-projects">
+          View more
+        </L>
       </div>
     );
   }

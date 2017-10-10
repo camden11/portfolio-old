@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { P } from '../Tags';
+import { TypeIndexTracker } from '../../lib/utils';
 
-export default ({ tracker }) => {
+export default (props) => {
+  const tracker = new TypeIndexTracker(props.tracker);
   return (
-    <P index={tracker.index()}>This is Idea.</P>
+    <P index={tracker.index()}>This is idea.</P>
   )
 }

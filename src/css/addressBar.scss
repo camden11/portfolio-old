@@ -2,23 +2,11 @@
   position: fixed;
   z-index: 1;
   width: 100%;
-}
-
-.address-bar-subcontainer {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-}
-
-.address-bar-left {
-  grid-column: span 1;
-}
-
-.address-bar-right {
-  grid-column: span 1;
+  margin: 0 auto;
 }
 
 .address-bar {
-  grid-column: span 8;
+  padding-top: 0px;
 }
 
 .address-bar-link {
@@ -29,7 +17,7 @@
 
 .address-bar-background-container {
   position: absolute;
-  height: 68px;
+  height: 55px;
   width: 100%;
   z-index: -1;
 

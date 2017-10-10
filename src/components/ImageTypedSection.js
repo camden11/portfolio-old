@@ -26,6 +26,10 @@ class ImageTypedSection extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.stop();
+  }
+
   time() {
     return this.props.time || DEFAULT_TIME;
   }
@@ -44,8 +48,8 @@ class ImageTypedSection extends Component {
 
   step() {
     const { height } = this.state;
-    this.setState({ height: height + 1 }, () => {
-      if (height + 1 === 100) {
+    this.setState({ height: height + 2 }, () => {
+      if (height + 2 === 100) {
         this.setState({ finished: true });
         this.stop();
         this.increment();
