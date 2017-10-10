@@ -4,6 +4,14 @@
   margin: 0 auto;
   display: grid;
   padding-top: 55px;
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+    padding-top: 35px;
+  }
 }
 
 img {
@@ -24,6 +32,9 @@ img {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .four {
