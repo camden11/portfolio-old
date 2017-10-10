@@ -39,6 +39,7 @@
 .project-preview {
   margin-bottom: 80px;
   transition: padding-bottom .2s;
+  overflow: visible;
 
   &:hover {
     padding-bottom: 10px;
@@ -124,6 +125,7 @@
   top: -20px;
   right: -20px;
   transition: top .2s, right .2s;
+  overflow: visible;
 
   > div {
     width: 100%;

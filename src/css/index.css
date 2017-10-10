@@ -207,7 +207,8 @@ img {
 
 .project-preview {
   margin-bottom: 80px;
-  transition: padding-bottom .2s; }
+  transition: padding-bottom .2s;
+  overflow: visible; }
   .project-preview:hover {
     padding-bottom: 10px; }
   .project-preview:hover .project-preview-color {
@@ -269,7 +270,8 @@ img {
   z-index: -1;
   top: -20px;
   right: -20px;
-  transition: top .2s, right .2s; }
+  transition: top .2s, right .2s;
+  overflow: visible; }
   .project-preview-color > div {
     width: 100%;
     height: 100%; }

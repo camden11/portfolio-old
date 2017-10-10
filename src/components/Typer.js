@@ -10,7 +10,8 @@ class Typer extends Component {
     this.state = {
       current: start || '',
       forward: false,
-      callbackFinished: false
+      callbackFinished: false,
+      intervalIds: []
     }
   }
 
@@ -36,13 +37,17 @@ class Typer extends Component {
   }
 
   startTyping(time) {
+    const { intervalIds } = this.state;
     const intervalId = setInterval(() => this.typeStep(), time);
-    this.setState({ intervalId });
+    intervalIds.push(intervalId);
+    this.setState({ intervalIds });
   }
 
   stopTyping() {
-    const { intervalId } = this.state;
-    clearInterval(intervalId);
+    const { intervalIds } = this.state;
+    intervalIds.map(intervalId => {
+      clearInterval(intervalId);
+    })
   }
 
   switchInterval() {

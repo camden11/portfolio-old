@@ -10,7 +10,8 @@ class ImageTypedSection extends Component {
     this.state = {
       height: 0,
       finished: false,
-      active: false
+      active: false,
+      intervalIds: []
     }
   }
 
@@ -35,15 +36,18 @@ class ImageTypedSection extends Component {
   }
 
   start(time) {
+    const { intervalIds } = this.state;
     const intervalId = setInterval(() => this.step(), time);
-    this.setState({ active: true });
-    this.setState({ intervalId });
+    intervalIds.push(intervalId);
+    this.setState({ intervalIds, active: true });
   }
 
   stop() {
-    const { intervalId } = this.state;
-    this.setState({ active: false });
-    clearInterval(intervalId);
+    const { intervalIds } = this.state;
+    intervalIds.map(intervalId => {
+      clearInterval(intervalId);
+    })
+    this.setState({ active: false })
   }
 
   step() {
