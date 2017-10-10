@@ -31,16 +31,18 @@ class Work extends Component {
     return (
       <div className="work container">
         <H1 index={tracker.index()}>I've worked on a lot of cool projects. Here are a few of them.</H1>
-        { allProjects.map((project, index) => {
-          return (
-            <ProjectPreview
-              project={project}
-              tracker={tracker}
-              reverse={ index % 2 === 1 }
-              key={index}
-            />
-          );
-        })}
+        <div className="project-previews">
+          { allProjects.map((project, index) => {
+            return (
+              <ProjectPreview
+                project={project}
+                tracker={tracker}
+                reverse={ index % 2 === 1 }
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
     )
   }

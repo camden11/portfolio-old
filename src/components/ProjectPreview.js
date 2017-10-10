@@ -11,7 +11,7 @@ class ProjectPreview extends Component {
   renderText(project) {
     const { tracker, reverse } = this.props;
     return (
-      <div className='seven'>
+      <div className='seven project-preview-info-section'>
         <Div className='project-preview-text' index={tracker.index()}>
           <div className={reverse ? 'reverse-margin' : ''}>
             <H6 index={tracker.index()} className="project-preview-header">
