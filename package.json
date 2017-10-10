@@ -27,5 +27,5 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/css/index.scss -o src/css --watch --recursive",
     "deploy": "react-scripts build && gh-pages -d build"
   },
-  "homepage": "https://camden11.github.io"
+  "homepage": "https://camden11.github.io/phalen.io/"
 }
