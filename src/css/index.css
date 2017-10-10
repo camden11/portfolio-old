@@ -22,7 +22,8 @@ h1 {
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 30px;
-      line-height: 35px; } }
+      line-height: 35px;
+      margin-bottom: 30px; } }
 
 h2 {
   font-size: 24px;
@@ -41,6 +42,10 @@ h3 {
   margin-bottom: 30px;
   font-family: 'Input Bold';
   font-size: 30px; }
+  @media only screen and (max-width: 768px) {
+    h3 {
+      font-size: 24px;
+      margin-bottom: 16px; } }
 
 h4 {
   font-family: 'Input';
@@ -62,6 +67,9 @@ p.project-data-text, p.project-data-link {
   font-size: 20px;
   margin: 0;
   margin-bottom: 2px; }
+  @media only screen and (max-width: 768px) {
+    p.project-data-text, p.project-data-link {
+      font-size: 16px; } }
 
 p.project-preview-description {
   font-size: 20px;
@@ -166,6 +174,11 @@ img {
   border-left: 1.5px solid #272727;
   padding-left: 25px;
   transition: border-width .2s; }
+  @media only screen and (max-width: 768px) {
+    .project-content {
+      border-top: 1.5px solid #272727;
+      border-left: none;
+      padding-left: 0; } }
 
 .project-data-sticky {
   position: -webkit-sticky;
@@ -203,6 +216,9 @@ img {
   border-bottom: 1.5px solid #272727; }
   .project-preview-text > .reverse-margin {
     margin-left: 20px; }
+  @media only screen and (max-width: 768px) {
+    .project-preview-text {
+      border: none !important; } }
 
 .project-preview-description {
   transition: margin-bottom .2s; }

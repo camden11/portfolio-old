@@ -2,6 +2,12 @@
   border-left: 1.5px solid $main-gray;
   padding-left: 25px;
   transition: border-width .2s;
+
+  @media only screen and (max-width: 768px) {
+    border-top: 1.5px solid $main-gray;
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
 .project-data-sticky {
@@ -55,6 +61,10 @@
   border-bottom: 1.5px solid $main-gray;
   > .reverse-margin {
     margin-left: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    border: none !important;
   }
 }
 
