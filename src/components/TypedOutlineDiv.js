@@ -19,12 +19,12 @@ class TypedOutlineDiv extends Component {
   }
 
   render() {
-    const { children, className, borderColor } = this.props;
+    const { children, className, borderColor, id } = this.props;
     const { ready } = this.state;
     const usedStyle = ready ? { borderColor} : { borderWidth: 0 };
 
     return (
-      <div className={className} style={usedStyle}>
+      <div className={className} style={usedStyle} id={id}>
         {children}
       </div>
     )

@@ -4,6 +4,7 @@ import ideaPreview from './idea_preview.jpg';
 import alignablePreview from './alignable_preview.jpg';
 import openlinesPreview from './openlines_preview.jpg';
 import trash2treasurePreview from './trash2treasure_preview.jpg';
+import camden from './camden.jpg';
 
 export default {
   preview : {
@@ -13,5 +14,6 @@ export default {
     "Alignable": alignablePreview,
     "Trash2Treasure": trash2treasurePreview,
     "Open Lines": openlinesPreview
-  }
+  },
+  camden
 }

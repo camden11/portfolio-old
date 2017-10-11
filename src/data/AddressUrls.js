@@ -1,7 +1,7 @@
 export default {
   'Camden Phalen': '/',
   'Work': '/work',
-  'About': '/about',
+  'About': '/#about',
   'TrailTag': '/work/trailtag',
   'HubSpot': '/work/hubspot',
   'Trash2Treasure': '/work/trash2treasure',

@@ -136,6 +136,7 @@ class AddressBar extends Component {
           >
             <h2 className='address-bar-text'>
               {current.map((section, index) => {
+                console.log(target[index])
                 if (index < target.length) {
                   return (
                     <span key={index}>
@@ -143,6 +144,7 @@ class AddressBar extends Component {
                         to={AddressUrls[target[index]]}
                         className='address-bar-link'
                         style={{ color: color }}
+                        onClick={target[index] === 'About' ? () => {} : () => window.scrollTo(0, 0)}
                       >
                         {section}
                       </Link>

@@ -20,8 +20,8 @@ h1 {
 h2 {
   font-size: 24px;
   font-family: 'Input';
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   @media only screen and (max-width: 768px) {
     font-size: 16px;
@@ -42,9 +42,22 @@ h3 {
   }
 }
 
+h3.about-header {
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
 h4 {
   font-family: 'Input';
   text-transform: uppercase;
+}
+
+h4.find-me-on {
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 h6 {
@@ -60,6 +73,8 @@ h6 {
 
 p {
   font-family: 'Input Light';
+  font-size: 16px;
+  line-height: 20px;
 }
 
 p.project-data-text {
@@ -81,6 +96,11 @@ p.project-preview-description {
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+a {
+  font-family: 'Input Light';
+  text-decoration: underline;
 }
 
 
