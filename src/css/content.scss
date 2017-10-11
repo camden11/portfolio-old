@@ -1,0 +1,12 @@
+.image-phone {
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+  @media only screen and (max-width: 768px) {
+    width: 70%;
+  }
+}
+
+.image-web {
+  margin: 20px 0;
+}

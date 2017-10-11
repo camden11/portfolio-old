@@ -10,9 +10,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const paragraph = ({ children, index, className, color }) => {
+const paragraph = ({ children, index, className, color, typeTime }) => {
   return (
-    <p className={className} style={{ color }}><TypedSection index={index}>{children}</TypedSection></p>
+    <p className={className} style={{ color }}><TypedSection index={index} typeTime={typeTime}>{children}</TypedSection></p>
   );
 }
 export const P = connect(mapStateToProps)(paragraph);
@@ -79,3 +79,9 @@ const image = ({ index, className, src }) => {
   );
 }
 export const Img = connect(mapStateToProps)(image);
+
+export const InlineImg = ({ index, className, src }) => {
+  return (
+    <div className="inline-img-outer"><div className="inline-img-inner"><Img index={index} className={className} src={src}/></div></div>
+  );
+}

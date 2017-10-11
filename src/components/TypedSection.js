@@ -32,11 +32,16 @@ class TypedSection extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, typeTime } = this.props;
     const { ready } = this.state;
     if (ready) {
       return (
-        <Typer onFinishTyping={() => this.increment()}>{ children }</Typer>
+        <Typer
+          onFinishTyping={() => this.increment()}
+          typeTime={typeTime}
+        >
+          { children }
+        </Typer>
       );
     }
     return null;

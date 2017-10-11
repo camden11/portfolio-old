@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Projects from '../data/Projects';
-import { H6, P } from './Tags';
+import { H5, P } from './Tags';
 import Div from './TypedOutlineDiv';
 import { TypeIndexTracker } from '../lib/utils';
 import Images from '../img'
@@ -14,9 +14,9 @@ class ProjectPreview extends Component {
       <div className='seven project-preview-info-section'>
         <Div className='project-preview-text' index={tracker.index()}>
           <div className={reverse ? 'reverse-margin' : ''}>
-            <H6 index={tracker.index()} className="project-preview-header">
+            <H5 index={tracker.index()} className="project-preview-header">
               {project.name}
-            </H6>
+            </H5>
             <P className='project-preview-description' index={tracker.index()}>
               {project.header}
             </P>

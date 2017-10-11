@@ -2,7 +2,7 @@ export default {
   trailtag: {
     name: "TrailTag",
     href: "/work/trailtag",
-    header: "Development and interface design for the mobile application for an new wearable safety device.",
+    header: "Development and interface design for the mobile application for a new wearable safety device.",
     dates: "January 2017 - April 2017",
     categories: ["Mobile Development", "UI/UX Design"],
     techUsed: ["Javascript", "React Native", "Redux"],

@@ -12,6 +12,7 @@ import Div from '../components/TypedOutlineDiv';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
 const FIXED_DATA_SCROLL = 50;
+const PARAGRAPH_TYPE_TIME = 1;
 
 class Project extends Component {
   constructor(props) {
@@ -76,7 +77,7 @@ class Project extends Component {
             </div>
           </div>
           <Div className="eight project-content" borderColor={color} index={10} index={tracker.index()}>
-            <Content tracker={tracker} />
+            <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME}/>
           </Div>
         </div>
       </div>

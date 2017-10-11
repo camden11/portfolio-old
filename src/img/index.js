@@ -5,6 +5,9 @@ import alignablePreview from './alignable_preview.jpg';
 import openlinesPreview from './openlines_preview.jpg';
 import trash2treasurePreview from './trash2treasure_preview.jpg';
 import camden from './camden.jpg';
+import shop from './t2t_shop.png'
+import checkout from './t2t_checkout.png';
+import seller from './t2t_seller.png';
 
 export default {
   preview : {
@@ -15,5 +18,10 @@ export default {
     "Trash2Treasure": trash2treasurePreview,
     "Open Lines": openlinesPreview
   },
-  camden
+  camden,
+  t2t: {
+    shop,
+    checkout,
+    seller
+  }
 }

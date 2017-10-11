@@ -120,6 +120,10 @@ class AddressBar extends Component {
     });
   }
 
+  linkOnClick(target, index) {
+    return target[index] === 'About' ? () => {} : () => window.scrollTo(0, 0)
+  }
+
   render() {
     const { current, initiated, color } = this.state;
     const { target } = this.props;
@@ -144,7 +148,7 @@ class AddressBar extends Component {
                         to={AddressUrls[target[index]]}
                         className='address-bar-link'
                         style={{ color: color }}
-                        onClick={target[index] === 'About' ? () => {} : () => window.scrollTo(0, 0)}
+                        onClick={this.linkOnClick(target, index)}
                       >
                         {section}
                       </Link>

@@ -24,6 +24,19 @@ img {
   overflow: hidden;
 }
 
+.inline-img-outer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.inline-img-inner {
+  grid-column: span 1;
+  grid-row: span 1;
+  height: 100%;
+}
+
+
 // - - - - - - - - - -
 // Grid
 // - - - - - - - - - -
