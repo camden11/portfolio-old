@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { P, H4 } from '../Tags';
+import { P, H4, InlineImg } from '../Tags';
 import { TypeIndexTracker } from '../../lib/utils';
+import Image from '../../img';
 
 export default (props) => {
   const tracker = new TypeIndexTracker(props.tracker);
+    const { typeTime } = props;
   return (
     <div>
-      <H4 index={tracker.index()}>More information coming soon.</H4>
-      <P index={tracker.index()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique aliquet sodales. Donec at nisl non dolor euismod iaculis. Nam purus sapien, tempor quis lacinia tempus, consequat a enim. Mauris porttitor mollis maximus. Aenean nulla eros, semper vel laoreet ac, condimentum vel turpis. Nunc egestas elit sit amet lectus eleifend, at volutpat massa congue. Aenean elementum neque quis egestas convallis. Etiam interdum maximus venenatis. Etiam non tellus nec massa fermentum consectetur. Nulla eget fermentum metus. Curabitur vitae ultrices sem. Pellentesque mollis vehicula nisl, sit amet mattis urna pretium nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</P>
-      <P index={tracker.index()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique aliquet sodales. Donec at nisl non dolor euismod iaculis. Nam purus sapien, tempor quis lacinia tempus, consequat a enim. Mauris porttitor mollis maximus. Aenean nulla eros, semper vel laoreet ac, condimentum vel turpis. Nunc egestas elit sit amet lectus eleifend, at volutpat massa congue. Aenean elementum neque quis egestas convallis. Etiam interdum maximus venenatis. Etiam non tellus nec massa fermentum consectetur. Nulla eget fermentum metus. Curabitur vitae ultrices sem. Pellentesque mollis vehicula nisl, sit amet mattis urna pretium nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</P>
-      <P index={tracker.index()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique aliquet sodales. Donec at nisl non dolor euismod iaculis. Nam purus sapien, tempor quis lacinia tempus, consequat a enim. Mauris porttitor mollis maximus. Aenean nulla eros, semper vel laoreet ac, condimentum vel turpis. Nunc egestas elit sit amet lectus eleifend, at volutpat massa congue. Aenean elementum neque quis egestas convallis. Etiam interdum maximus venenatis. Etiam non tellus nec massa fermentum consectetur. Nulla eget fermentum metus. Curabitur vitae ultrices sem. Pellentesque mollis vehicula nisl, sit amet mattis urna pretium nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</P>
+      <H4 index={tracker.index()}>Background</H4>
+      <P index={tracker.index()} typeTime={typeTime}>Open lines is a research project run by Northeastern University professors Kristian Kloekl, Jonathan Carr, and Mark Sivak that seeks to examine the design of responsive environments and the way people interact with them. My role in the project has been to create the responsive environment that is to be studied. This environment consists of a series of cameras and projectors situated in the ceiling of Northeastern’s Snell Library. I wrote software that detects pedestrian motion using the cameras and projects a visualization that responds to this motion onto the floor. The current visualization involves a grid of moving lines that shifts in response to the average angle of pedestrian paths in the area.</P>
+      <InlineImg index={tracker.index()} src={Image.openLines.vis} className="image-photo"/>
+      <P index={tracker.index()} typeTime={typeTime}>Following its completion, the environment was tested by improvisational theater actors to see what kind of behaviors the it could affect in a passerby. The professors and I are currently working on a paper to dicuss our findings.</P>
+      <InlineImg index={tracker.index()} src={Image.openLines.active} className="image-photo"/>
     </div>
   )
 }

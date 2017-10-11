@@ -4,7 +4,7 @@ export default {
     href: "/work/trailtag",
     header: "Development and interface design for the mobile application for a new wearable safety device.",
     dates: "January 2017 - April 2017",
-    categories: ["Mobile Development", "UI/UX Design"],
+    categories: ["Mobile Development", "UX Design"],
     techUsed: ["Javascript", "React Native", "Redux"],
     links: [{name: "Scout Website", href:"https://web.northeastern.edu/scout/"}],
     backgroundColor: "#3D8D82",

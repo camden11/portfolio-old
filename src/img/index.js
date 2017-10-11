@@ -8,6 +8,10 @@ import camden from './camden.jpg';
 import shop from './t2t_shop.png'
 import checkout from './t2t_checkout.png';
 import seller from './t2t_seller.png';
+import openLines from './open_lines.jpg';
+import openLinesActive from './open_lines_active.jpg';
+import dashboard from './hs_dashboard.png';
+import analyze from './hs_analyze.png';
 
 export default {
   preview : {
@@ -23,5 +27,13 @@ export default {
     shop,
     checkout,
     seller
+  },
+  openLines: {
+    vis: openLines,
+    active: openLinesActive
+  },
+  hubspot: {
+    dashboard,
+    analyze
   }
 }

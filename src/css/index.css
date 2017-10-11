@@ -366,6 +366,12 @@ li {
 .image-web {
   margin: 20px 0; }
 
+.image-photo {
+  display: block;
+  margin: 20px 0;
+  border: 3px solid #ffffff;
+  width: 95%; }
+
 body {
   margin: 0;
   padding: 0;
