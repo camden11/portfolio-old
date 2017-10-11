@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { H1, H3, H4, L, P, Img, A  } from '../components/Tags';
+import { H1, H3, H4, L, P, InlineImg, A  } from '../components/Tags';
 import Image from '../img';
 import Documents from '../documents';
 import ImageTypedSection from '../components/ImageTypedSection';
@@ -16,7 +16,7 @@ class About extends Component {
         <div className="grid-parent">
           <div className="five about-image-section">
             <div className="about-image-container project-preview-image-container">
-              <Img className="project-preview-image" src={Image.camden} index={tracker.index()} />
+              <InlineImg className="project-preview-image" src={Image.camden} index={tracker.index()} />
               <ImageTypedSection
                 index={tracker.index()}
                 className="project-preview-color reverse"
