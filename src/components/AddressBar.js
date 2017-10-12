@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { startTypedSection } from '../actions/TypedSectionActions';
 import Background from './Background';
 
-const BACKSPACE_TIME = 40;
+const BACKSPACE_TIME = 60;
 const TYPE_TIME = 60;
 
 class AddressBar extends Component {
