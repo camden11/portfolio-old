@@ -13,8 +13,8 @@ class About extends Component {
         <H1 index={tracker.index()}>
           I'm a creative developer focused on the intersection of development and design.
         </H1>
-        <div className="grid-parent">
-          <div className="five about-image-section">
+        <div className="about-grid-parent">
+          <div className="about-five about-image-section">
             <div className="about-image-container project-preview-image-container">
               <InlineImg className="project-preview-image" src={Image.camden} index={tracker.index()} />
               <ImageTypedSection
@@ -28,7 +28,7 @@ class About extends Component {
               </ImageTypedSection>
             </div>
           </div>
-          <div className="seven">
+          <div className="about-seven">
             <H3 index={tracker.index()} className="about-header">About Me</H3>
             <P index={tracker.index()}>
               I'm Camden. I'm a developer and designer based in Boston, MA. I'm currently focused on

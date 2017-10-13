@@ -156,6 +156,10 @@ img {
       grid-template-columns: 1fr; } }
 
 .four {
+  grid-column: span 1;
+  grid-row: span 1; }
+
+.four {
   grid-column: span 4;
   grid-row: span 1; }
 
@@ -347,6 +351,23 @@ img {
       padding-left: 0;
       margin-bottom: 20px;
       margin-top: 30px; } }
+
+.about-grid-parent {
+  width: 100%; }
+
+.about-five {
+  width: calc(41.66% - 70px);
+  float: left; }
+  @media only screen and (max-width: 768px) {
+    .about-five {
+      width: calc(100% - 20px); } }
+
+.about-seven {
+  width: 58.33%;
+  float: left; }
+  @media only screen and (max-width: 768px) {
+    .about-seven {
+      width: 100%; } }
 
 ul {
   padding: 0;
