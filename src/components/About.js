@@ -43,7 +43,7 @@ class About extends Component {
               <li><A index={tracker.index()} href="https://github.com/camden11">Github</A></li>
               <li><A index={tracker.index()} href="https://www.instagram.com/camdenphalen/">Instagram</A></li>
             </ul>
-            <A index={tracker.index()} href={Documents.resume}>View my resume</A>
+            <A index={tracker.index()} href="https://drive.google.com/file/d/0B-RHHMn7HqGwbVlxQU9GbENYbms/view?usp=sharing">View my resume</A>
           </div>
         </div>
       </div>
