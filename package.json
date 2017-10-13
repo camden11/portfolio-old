@@ -27,5 +27,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://camden11.surge.sh"
+  "homepage": "https://phalen.io"
 }

@@ -55,7 +55,7 @@ class Home extends Component {
     return (
       <div className="home container">
         <H1 index={tracker.index()}>
-          I am a creative developer passionate about finishing this website.
+          I combine clean code with design thinking to build distinctive user experiences.
         </H1>
         <ProjectPreview project="trailtag" tracker={tracker}/>
         <ProjectPreview project="hubspot" tracker={tracker} reverse={true}/>
