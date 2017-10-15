@@ -30,10 +30,10 @@ class About extends Component {
           </div>
           <div className="about-seven">
             <H3 index={tracker.index()} className="about-header">About Me</H3>
-            <P index={tracker.index()}>
+            <P index={tracker.index()} typeTime={1}>
               I'm Camden. I'm a developer and designer based in Boston, MA. I'm currently focused on
-              front-end web devopment but I'm also experienced with mobile and full stack development, as
-              well as UX design. I beleive development and design are better together and try to
+              front-end web development but I'm also experienced with mobile and full stack development, as
+              well as UX design. I believe development and design are better together and try to
               integrate both as fully as possible in my work. When I'm not working on projects I
               enjoy listening to music, biking, and generally hanging out.
             </P>
