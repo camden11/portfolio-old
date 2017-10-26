@@ -8,7 +8,9 @@ export default {
     techUsed: ["Javascript", "React Native", "Redux"],
     links: [{name: "Scout Website", href:"https://web.northeastern.edu/scout/"}],
     backgroundColor: "#3D8D82",
-    textColor: "#D5DEF4"
+    textColor: "#D5DEF4",
+    next: "/work/hubspot",
+    previous: "/work/openlines"
   },
   hubspot: {
     name: "HubSpot",
@@ -19,7 +21,9 @@ export default {
     techUsed: ["Javascript", "React", "Redux"],
     links: [{ name: "HubSpot Website", href: "https://www.hubspot.com/"}],
     backgroundColor: "#FEAC7B",
-    textColor: "#272727"
+    textColor: "#272727",
+    next: "/work/idea",
+    previous: "/work/trailtag"
   },
   idea: {
     name: "Idea",
@@ -30,7 +34,9 @@ export default {
     techUsed: ["Wordpress", "PHP"],
     links: [{name: "Idea", href: "https://www.northeastern.edu/idea/"}],
     backgroundColor: "#E4E4E4",
-    textColor: "#E5A040"
+    textColor: "#E5A040",
+    next: "/work/alignable",
+    previous: "/work/hubspot"
   },
   alignable: {
     name: "Alignable",
@@ -41,7 +47,9 @@ export default {
     techUsed: ["Ruby on Rails", "Javascript", "Sql"],
     links: [{name: "Alignable", href: "https://www.alignable.com"}],
     backgroundColor: "#6C5E7E",
-    textColor: "#9DDDCD"
+    textColor: "#9DDDCD",
+    next: "/work/trash2treasure",
+    previous: "/work/idea"
   },
   trash2treasure: {
     name: "Trash2Treasure",
@@ -52,7 +60,9 @@ export default {
     techUsed: ["Ruby on Rails", "Sql"],
     links: [{name: "Web app", href: "https://pacific-ravine-67111.herokuapp.com/"}, {name: "Github repo", href: "https://github.com/camden11/trash2treasure"}, {name: "NU T2T site", href: "https://nutrash2treasure.wordpress.com/about/"}],
     backgroundColor: "#9F565F",
-    textColor: "#E4E4E4"
+    textColor: "#E4E4E4",
+    next: "/work/openlines",
+    previous: "/work/alignable"
   },
   openlines: {
     name: "Open Lines",
@@ -63,7 +73,9 @@ export default {
     techUsed: ["Processing", "Java", "OpenCV"],
     links: [{name: "Project page", href: "http://www.informationinaction.com/openlines/"}],
     backgroundColor: "#272727",
-    textColor: "#ffffff"
+    textColor: "#ffffff",
+    next: "/work/trailtag",
+    previous: "/work/trash2treasure"
   },
 
 }

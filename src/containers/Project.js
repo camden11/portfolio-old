@@ -5,7 +5,7 @@ import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
 import { setColor } from '../actions/ColorActions';
 import Projects from '../data/Projects';
 import TypedSection from '../components/TypedSection';
-import { P, H1, H3, H6, A } from '../components/Tags';
+import { P, H1, H3, H6, A, L } from '../components/Tags';
 import { TypeIndexTracker } from '../lib/utils';
 import content from '../components/content';
 import Div from '../components/TypedOutlineDiv';
@@ -74,6 +74,8 @@ class Project extends Component {
                   return <A href={link.href} className="project-data-link" index={tracker.index()}>{link.name}</A>
                 })}
               </div>
+              <L index={tracker.index()} to={project.previous}>Previous</L>
+              <L index={tracker.index()}to={project.next}>Next</L>
             </div>
           </div>
           <Div className="eight project-content" borderColor={color} index={10} index={tracker.index()}>
