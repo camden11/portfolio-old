@@ -11,11 +11,11 @@ class TypedOutlineDiv extends Component {
     }
   }
   componentWillReceiveProps(nextProps) {
-    const { index, dispatch } = this.props;
+    const { index, incrementTypedSectionIndex } = this.props;
     const { ready } = this.state;
     if (!ready && nextProps.started && nextProps.currentIndex >= index) {
       this.setState({ ready: true });
-      dispatch(incrementTypedSectionIndex());
+      incrementTypedSectionIndex();
     }
   }
 
@@ -39,4 +39,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(TypedOutlineDiv);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TypedOutlineDiv);

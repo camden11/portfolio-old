@@ -21,10 +21,10 @@ class Work extends Component {
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(resetTypedSectionIndex());
-    dispatch(setAddress(BASE_PATH));
-    dispatch(setColor(BACKGROUND_COLOR, TEXT_COLOR));
+    const { resetTypedSectionIndex, setAddress, setColor } = this.props;
+    resetTypedSectionIndex();
+    setAddress(BASE_PATH);
+    setColor(BACKGROUND_COLOR, TEXT_COLOR);
   }
 
   render() {
@@ -49,4 +49,12 @@ class Work extends Component {
   }
 }
 
-export default connect()(Work);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setAddress: (path) => dispatch(setAddress(path)),
+    resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
+    setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Work);

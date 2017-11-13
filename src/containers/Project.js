@@ -27,12 +27,12 @@ class Project extends Component {
 
   componentDidMount() {
     const { project } = this.state;
-    const { dispatch } = this.props;
+    const { resetTypedSectionIndex, setAddress, setColor } = this.props;
     const path = BASE_PATH.slice();
     path.push(project.name);
-    dispatch(resetTypedSectionIndex());
-    dispatch(setAddress(path));
-    dispatch(setColor(project.backgroundColor, project.textColor));
+    resetTypedSectionIndex();
+    setAddress(path);
+    setColor(project.backgroundColor, project.textColor);
   }
 
   componentWillUnmount() {
@@ -93,4 +93,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Project);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setAddress: (path) => dispatch(setAddress(path)),
+    resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
+    setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Project);

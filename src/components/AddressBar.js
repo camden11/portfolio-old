@@ -57,7 +57,7 @@ class AddressBar extends Component {
 
   typeStep() {
     const { current, forward } = this.state;
-    const { target, dispatch, nextColor } = this.props;
+    const { target, startTypedSection, nextColor } = this.props;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -71,7 +71,7 @@ class AddressBar extends Component {
       } else {
         this.stopTyping();
         this.setState({ color: nextColor })
-        dispatch(startTypedSection());
+        startTypedSection();
       }
     }
   }
@@ -180,4 +180,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(AddressBar);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    startTypedSection: () => dispatch(startTypedSection())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddressBar);

@@ -28,18 +28,13 @@ class TypedSection extends Component {
     }
   }
 
-  increment() {
-    const { dispatch } = this.props;
-    dispatch(incrementTypedSectionIndex());
-  }
-
   render() {
-    const { children, typeTime } = this.props;
+    const { children, typeTime, incrementTypedSectionIndex } = this.props;
     const { ready } = this.state;
     if (ready) {
       return (
         <Typer
-          onFinishTyping={() => this.increment()}
+          onFinishTyping={incrementTypedSectionIndex}
           typeTime={typeTime}
         >
           { children }
@@ -50,9 +45,17 @@ class TypedSection extends Component {
   }
 }
 
-export default connect(({ typedSection }) => {
+const mapStateToProps = (state) => {
   return {
-    currentIndex: typedSection.index,
-    started: typedSection.started
+    currentIndex: state.typedSection.index,
+    started: state.typedSection.started
   }
-})(TypedSection)
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TypedSection)

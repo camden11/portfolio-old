@@ -19,7 +19,7 @@ class Background extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { dispatch } = this.props;
+    const { incrementTypedSectionIndex } = this.props;
     const { bg1active } = this.state;
     const activeBgColor = this.state[bg1active ? 'bg1color' : 'bg2color'];
     if (nextProps.color !== activeBgColor && nextProps.ready) {
@@ -30,7 +30,7 @@ class Background extends Component {
         bg2color: bg1active ? nextProps.color : activeBgColor
       }, () => this.transition());
     } else if (nextProps.ready) {
-      dispatch(incrementTypedSectionIndex());
+      incrementTypedSectionIndex();
     }
   }
 
@@ -44,7 +44,7 @@ class Background extends Component {
 
   transitionStep() {
     const { bg1active, intervalId } = this.state;
-    const { dispatch } = this.props;
+    const { incrementTypedSectionIndex } = this.props;
     const activeBgPos = bg1active ? 'bg1pos' : 'bg2pos';
     const inactiveBgPos = bg1active ? 'bg2pos' : 'bg1pos';
     const newState = {};
@@ -53,7 +53,7 @@ class Background extends Component {
       newState[inactiveBgPos] = -100;
       newState.transitionActive = false;
       clearInterval(intervalId);
-      dispatch(incrementTypedSectionIndex());
+      incrementTypedSectionIndex();
     }
     this.setState(newState);
   }
@@ -84,4 +84,10 @@ const mapStateToProps = (state) => {
     ready: state.typedSection.started
   }
 }
-export default connect(mapStateToProps)(Background);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Background);

@@ -17,10 +17,10 @@ const TEXT_COLOR = '#272727';
 
 class Home extends Component {
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(setAddress(BASE_PATH));
-    dispatch(resetTypedSectionIndex());
-    dispatch(setColor(BACKGROUND_COLOR, TEXT_COLOR));
+    const { setAddress, resetTypedSectionIndex, setColor } = this.props;
+    setAddress(BASE_PATH);
+    resetTypedSectionIndex();
+    setColor(BACKGROUND_COLOR, TEXT_COLOR);
     const scrollListener = () => this.handleScroll();
     this.setState({ scrollListener });
     window.addEventListener('scroll', scrollListener);
@@ -34,14 +34,14 @@ class Home extends Component {
     const scroll = document.documentElement.scrollTop;
     const dividerLocation = document.getElementById('about').offsetTop - 62;
     const { inAboutSection } = this.state;
-    const { dispatch } = this.props;
+    const { setAddress } = this.props;
     if (scroll > dividerLocation) {
       if (!inAboutSection) {
-        dispatch(setAddress(BASE_PATH.concat(['About'])));
+        setAddress(BASE_PATH.concat(['About']));
         this.setState({ inAboutSection: true });
       }
     } else if (inAboutSection) {
-      dispatch(setAddress(BASE_PATH));
+      setAddress(BASE_PATH);
       this.setState({inAboutSection: false})
     }
   }
@@ -71,4 +71,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setAddress: (path) => dispatch(setAddress(path)),
+    resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
+    setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

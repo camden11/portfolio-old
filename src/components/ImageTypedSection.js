@@ -63,8 +63,8 @@ class ImageTypedSection extends Component {
   }
 
   increment() {
-    const { dispatch } = this.props;
-    dispatch(incrementTypedSectionIndex());
+    const { incrementTypedSectionIndex } = this.props;
+    incrementTypedSectionIndex();
   }
 
   render() {
@@ -79,9 +79,17 @@ class ImageTypedSection extends Component {
 
 }
 
-export default connect(({ typedSection }) => {
+const mapStateToProps = (state) => {
   return {
-    currentIndex: typedSection.index,
-    started: typedSection.started
+    currentIndex: state.typedSection.index,
+    started: state.typedSection.started
   }
-})(ImageTypedSection)
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ImageTypedSection)
