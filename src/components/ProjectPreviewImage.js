@@ -8,7 +8,11 @@ class ProjectPreviewImage extends Component {
     const { src, color, tracker, reverse } = this.props;
     return (
       <div className="project-preview-image-container">
-        <Img className="project-preview-image" src={src} index={tracker.index()} />
+        <Img
+          className="project-preview-image"
+          src={src}
+          index={tracker.index()}
+        />
         <ImageTypedSection
           index={tracker.index()}
           className={`project-preview-color ${reverse ? 'reverse' : ''}`}

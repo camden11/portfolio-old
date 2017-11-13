@@ -37,7 +37,10 @@ class Background extends Component {
   transition() {
     const { transitionActive } = this.state;
     if (!transitionActive) {
-      const intervalId = setInterval(() => this.transitionStep(), TRANSITION_SPEED);
+      const intervalId = setInterval(
+        () => this.transitionStep(),
+        TRANSITION_SPEED
+      );
       this.setState({ intervalId, transitionActive: true })
     }
   }
@@ -66,11 +69,19 @@ class Background extends Component {
         <div>
           <div
             className={`background ${className}`}
-            style={{ background: bg1color, left: `${bg1pos}%`, zIndex: bg1active ? -2 : -3 }}
+            style={{
+              background: bg1color,
+              left: `${bg1pos}%`,
+              zIndex: bg1active ? -2 : -3
+            }}
           ></div>
           <div
             className={`background ${className}`}
-            style={{ background: bg2color, left: `${bg2pos}%`, zIndex: bg1active ? -3 : -2 }}
+            style={{
+              background: bg2color,
+              left: `${bg2pos}%`,
+              zIndex: bg1active ? -3 : -2
+            }}
           ></div>
         </div>
       </div>

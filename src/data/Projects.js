@@ -6,7 +6,9 @@ export default {
     dates: "January 2017 - April 2017",
     categories: ["Mobile Development", "UX Design"],
     techUsed: ["Javascript", "React Native", "Redux"],
-    links: [{name: "Scout Website", href:"https://web.northeastern.edu/scout/"}],
+    links: [
+      { name: "Scout Website", href:"https://web.northeastern.edu/scout/" }
+    ],
     backgroundColor: "#3D8D82",
     textColor: "#D5DEF4",
     next: "/work/hubspot",
@@ -32,7 +34,7 @@ export default {
     dates: "July 2017 - Present",
     categories: ["UI/UX Design", "Full Stack Development"],
     techUsed: ["Wordpress", "PHP"],
-    links: [{name: "Idea", href: "https://www.northeastern.edu/idea/"}],
+    links: [{ name: "Idea", href: "https://www.northeastern.edu/idea/" }],
     backgroundColor: "#E4E4E4",
     textColor: "#E5A040",
     next: "/work/alignable",
@@ -45,7 +47,7 @@ export default {
     dates: "January 2016 - June 2016",
     categories: ["Professional Experience", "Full Stack Development"],
     techUsed: ["Ruby on Rails", "Javascript", "Sql"],
-    links: [{name: "Alignable", href: "https://www.alignable.com"}],
+    links: [{ name: "Alignable", href: "https://www.alignable.com" }],
     backgroundColor: "#6C5E7E",
     textColor: "#9DDDCD",
     next: "/work/trash2treasure",
@@ -58,7 +60,20 @@ export default {
     dates: "July 2016 - September 2016",
     categories: ["Full Stack Development", "UI/UX Design"],
     techUsed: ["Ruby on Rails", "Sql"],
-    links: [{name: "Web app", href: "https://pacific-ravine-67111.herokuapp.com/"}, {name: "Github repo", href: "https://github.com/camden11/trash2treasure"}, {name: "NU T2T site", href: "https://nutrash2treasure.wordpress.com/about/"}],
+    links: [
+      {
+        name: "Web app",
+        href: "https://pacific-ravine-67111.herokuapp.com/"
+      },
+      {
+        name: "Github repo",
+        href: "https://github.com/camden11/trash2treasure"
+      },
+      {
+        name: "NU T2T site",
+        href: "https://nutrash2treasure.wordpress.com/about/"
+      }
+    ],
     backgroundColor: "#9F565F",
     textColor: "#E4E4E4",
     next: "/work/openlines",
@@ -71,7 +86,12 @@ export default {
     dates: "March 2016 - December 2016",
     categories: ["Research", "Development"],
     techUsed: ["Processing", "Java", "OpenCV"],
-    links: [{name: "Project page", href: "http://www.informationinaction.com/openlines/"}],
+    links: [
+      {
+        name: "Project page",
+        href: "http://www.informationinaction.com/openlines/"
+      }
+    ],
     backgroundColor: "#272727",
     textColor: "#ffffff",
     next: "/work/trailtag",

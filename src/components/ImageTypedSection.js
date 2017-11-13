@@ -71,7 +71,10 @@ class ImageTypedSection extends Component {
     const { height } = this.state;
     const { children, className } = this.props;
     return (
-      <div className={`image-container ${className}`} style={{ height: `${height}%`}}>
+      <div
+        className={`image-container ${className}`}
+        style={{ height: `${height}%`}}
+      >
         { children }
       </div>
     )

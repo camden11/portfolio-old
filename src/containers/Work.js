@@ -31,7 +31,9 @@ class Work extends Component {
     const tracker = new TypeIndexTracker();
     return (
       <div className="work container">
-        <H1 index={tracker.index()}>I've worked on a lot of cool projects. Here are a few of them.</H1>
+        <H1 index={tracker.index()}>
+          I've worked on a lot of cool projects. Here are a few of them.
+        </H1>
         <div className="project-previews">
           { allProjects.map((project, index) => {
             return (

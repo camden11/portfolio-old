@@ -30,7 +30,9 @@ class ProjectPreview extends Component {
   renderImage(project) {
     const { tracker, reverse } = this.props;
     return (
-      <div className={`five project-preview-image-section ${reverse ? 'reverse' : ''}`}>
+      <div
+        className={`five project-preview-image-section ${reverse ? 'reverse' : ''}`}
+      >
         <ProjectPreviewImage
           src={Images.preview[project.name]}
           tracker={tracker}

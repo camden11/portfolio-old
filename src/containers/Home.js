@@ -51,7 +51,8 @@ class Home extends Component {
     return (
       <div className="home container">
         <H1 index={tracker.index()}>
-          I combine clean code with design thinking to build distinctive user experiences.
+          I combine clean code with design thinking to build distinctive user
+          experiences.
         </H1>
         <ProjectPreview project="trailtag" tracker={tracker}/>
         <ProjectPreview project="hubspot" tracker={tracker} reverse={true}/>
@@ -75,7 +76,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setAddress: (path) => dispatch(setAddress(path)),
     resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
-    setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
+    setColor: (backgroundColor, textColor) => {
+      dispatch(setColor(backgroundColor, textColor))
+    }
   }
 }
 

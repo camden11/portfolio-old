@@ -57,28 +57,51 @@ class Project extends Component {
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Categories</H6>
                 {project.categories.map((category, index) => {
-                  return <P className="project-data-text"index={tracker.index()} key={index}>
-                    {category}
-                  </P>
+                  return (
+                    <P
+                      className="project-data-text"
+                      index={tracker.index()}
+                      key={index}
+                    >
+                      {category}
+                    </P>
+                  );
                 })}
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Tech Used</H6>
                 {project.techUsed.map((tech, index) => {
-                  return <P className="project-data-text" index={tracker.index()} key={index}>{tech}</P>
+                  return (
+                    <P
+                      className="project-data-text"
+                      index={tracker.index()}
+                      key={index}>{tech}
+                    </P>
+                  );
                 })}
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Links</H6>
                 {project.links.map((link, index) => {
-                  return <A href={link.href} className="project-data-link" index={tracker.index()} key={index}>{link.name}</A>
+                  return (
+                    <A
+                      href={link.href}
+                      className="project-data-link"
+                      index={tracker.index()}
+                      key={index}>{link.name}
+                    </A>
+                  );
                 })}
               </div>
               <L index={tracker.index()} to={project.previous}>Previous</L>
               <L index={tracker.index()}to={project.next}>Next</L>
             </div>
           </div>
-          <Div className="eight project-content" borderColor={color} index={tracker.index()}>
+          <Div
+            className="eight project-content"
+            borderColor={color}
+            index={tracker.index()}
+          >
             <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME}/>
           </Div>
         </div>
@@ -97,7 +120,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setAddress: (path) => dispatch(setAddress(path)),
     resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
-    setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
+    setColor: (backgroundColor, textColor) => {
+      dispatch(setColor(backgroundColor, textColor))
+    }
   }
 }
 

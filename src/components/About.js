@@ -12,39 +12,71 @@ class About extends Component {
     return (
       <div className="about">
         <H1 index={tracker.index()}>
-          I'm a creative developer focused on the intersection of development and design.
+          I'm a creative developer focused on the intersection of development
+          and design.
         </H1>
         <div className="about-grid-parent">
           <div className="about-five about-image-section">
-            <div className="about-image-container project-preview-image-container">
-              <InlineImg className="project-preview-image" src={Image.camden} index={tracker.index()} />
+            <div
+              className="about-image-container project-preview-image-container"
+            >
+              <InlineImg
+                className="project-preview-image"
+                src={Image.camden}
+                index={tracker.index()}
+              />
               <ImageTypedSection
                 index={tracker.index()}
                 className="project-preview-color reverse"
               >
-                <div
-                  style={{ backgroundColor: '#6C93BA' }}
-                >
-                </div>
+                <div style={{ backgroundColor: '#6C93BA' }}></div>
               </ImageTypedSection>
             </div>
           </div>
           <div className="about-seven">
             <H3 index={tracker.index()} className="about-header">About Me</H3>
             <P index={tracker.index()} typeTime={1}>
-              I'm Camden. I'm a developer and designer based in Boston, MA. I'm currently focused on
-              front-end web development but I'm also experienced with mobile and full stack development, as
-              well as UX design. I believe development and design are better together and try to
-              integrate both as fully as possible in my work. When I'm not working on projects I
-              enjoy listening to music, biking, and generally hanging out.
+              I'm Camden. I'm a developer and designer based in Boston, MA.
+              I'm currently focused on front-end web development but I'm also
+              experienced with mobile and full stack development, as well as UX
+              design. I believe development and design are better together and
+              try to integrate both as fully as possible in my work. When I'm
+              not working on projects I enjoy listening to music, biking, and
+              generally hanging out.
             </P>
             <H4 index={tracker.index()} className="find-me-on">Find me on</H4>
             <ul>
-              <li><A index={tracker.index()} href="https://www.linkedin.com/in/camdenphalen/">LinkedIn</A></li>
-              <li><A index={tracker.index()} href="https://github.com/camden11">Github</A></li>
-              <li><A index={tracker.index()} href="https://www.instagram.com/camdenphalen/">Instagram</A></li>
+              <li>
+                <A
+                  index={tracker.index()}
+                  href="https://www.linkedin.com/in/camdenphalen/"
+                >
+                  LinkedIn
+                </A>
+              </li>
+              <li>
+                <A
+                  index={tracker.index()}
+                  href="https://github.com/camden11"
+                >
+                  Github
+                </A>
+              </li>
+              <li>
+                <A
+                  index={tracker.index()}
+                  href="https://www.instagram.com/camdenphalen/"
+                >
+                  Instagram
+                </A>
+              </li>
             </ul>
-            <A index={tracker.index()} href="https://drive.google.com/file/d/0B-RHHMn7HqGwbVlxQU9GbENYbms/view?usp=sharing">View my resume</A>
+            <A
+              index={tracker.index()}
+              href="https://drive.google.com/file/d/0B-RHHMn7HqGwbVlxQU9GbENYbms/view?usp=sharing"
+            >
+              View my resume
+            </A>
           </div>
         </div>
       </div>
