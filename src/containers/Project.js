@@ -64,14 +64,14 @@ class Project extends Component {
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Tech Used</H6>
-                {project.techUsed.map(tech => {
-                  return <P className="project-data-text" index={tracker.index()}>{tech}</P>
+                {project.techUsed.map((tech, index) => {
+                  return <P className="project-data-text" index={tracker.index()} key={index}>{tech}</P>
                 })}
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Links</H6>
-                {project.links.map(link => {
-                  return <A href={link.href} className="project-data-link" index={tracker.index()}>{link.name}</A>
+                {project.links.map((link, index) => {
+                  return <A href={link.href} className="project-data-link" index={tracker.index()} key={index}>{link.name}</A>
                 })}
               </div>
               <L index={tracker.index()} to={project.previous}>Previous</L>
