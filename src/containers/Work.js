@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
 import { setColor } from '../actions/ColorActions';
-import TypedSection from '../components/TypedSection';
 import { TypeIndexTracker } from '../lib/utils';
-import { H1, H2, L } from '../components/Tags';
-import Projects, { allProjects } from '../data/Projects';
+import { H1 } from '../components/Tags';
+import { allProjects } from '../data/Projects';
 import ProjectPreview from '../components/ProjectPreview';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];

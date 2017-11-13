@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { H4, P, InlineImg } from '../Tags';
 import { TypeIndexTracker } from '../../lib/utils';
 import Image from '../../img';

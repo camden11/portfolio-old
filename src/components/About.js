@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { H1, H3, H4, L, P, InlineImg, A  } from '../components/Tags';
+import { H1, H3, H4, P, InlineImg, A  } from '../components/Tags';
 import Image from '../img';
-import Documents from '../documents';
 import ImageTypedSection from '../components/ImageTypedSection';
 import { TypeIndexTracker } from '../lib/utils';
 

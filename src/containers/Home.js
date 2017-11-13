@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
 import { setColor } from '../actions/ColorActions';
-import { Link } from 'react-router-dom';
-import TypedSection from '../components/TypedSection';
 import ProjectPreview from '../components/ProjectPreview';
 import { TypeIndexTracker } from '../lib/utils';
 import { H1, L } from '../components/Tags';
@@ -16,10 +14,6 @@ const BACKGROUND_COLOR = '#ffffff';
 const TEXT_COLOR = '#272727';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(setAddress(BASE_PATH));

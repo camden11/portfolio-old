@@ -21,7 +21,7 @@ class ImageTypedSection extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { index } = this.props;
-    const { ready, active } = this.state;
+    const { active } = this.state;
     if (nextProps.started && nextProps.currentIndex >= index && !active) {
       this.start(this.time());
     }
@@ -44,7 +44,7 @@ class ImageTypedSection extends Component {
 
   stop() {
     const { intervalIds } = this.state;
-    intervalIds.map(intervalId => {
+    intervalIds.forEach(intervalId => {
       clearInterval(intervalId);
     })
     this.setState({ active: false })
@@ -68,7 +68,7 @@ class ImageTypedSection extends Component {
 
   render() {
     const { height } = this.state;
-    const { src, children, className } = this.props;
+    const { children, className } = this.props;
     return (
       <div className={`image-container ${className}`} style={{ height: `${height}%`}}>
         { children }

@@ -18,7 +18,7 @@ class Background extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { color, dispatch } = this.props;
+    const { dispatch } = this.props;
     const { bg1active } = this.state;
     const activeBgColor = this.state[bg1active ? 'bg1color' : 'bg2color'];
     if (nextProps.color !== activeBgColor && nextProps.ready) {

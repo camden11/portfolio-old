@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import TypedSection from './TypedSection';
 import ImageTypedSection from './ImageTypedSection';
@@ -73,9 +73,9 @@ const link = ({ children, index, className, to, color }) => {
 }
 export const L = connect(mapStateToProps)(link);
 
-const image = ({ index, className, src }) => {
+const image = ({ index, className, src, alt }) => {
   return (
-    <ImageTypedSection index={index}><img className={className} src={src} /></ImageTypedSection>
+    <ImageTypedSection index={index}><img className={className} src={src} alt={alt} /></ImageTypedSection>
   );
 }
 export const Img = connect(mapStateToProps)(image);

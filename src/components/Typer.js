@@ -45,7 +45,7 @@ class Typer extends Component {
 
   stopTyping() {
     const { intervalIds } = this.state;
-    intervalIds.map(intervalId => {
+    intervalIds.forEach(intervalId => {
       clearInterval(intervalId);
     })
   }

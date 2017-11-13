@@ -55,7 +55,7 @@ class AddressBar extends Component {
 
   typeStep() {
     const { current, forward } = this.state;
-    const { target, dispatch, nextColor, nextBackgroundColor } = this.props;
+    const { target, dispatch, nextColor } = this.props;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {

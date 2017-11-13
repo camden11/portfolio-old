@@ -4,14 +4,12 @@ import { setAddress } from '../actions/AddressBarActions';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
 import { setColor } from '../actions/ColorActions';
 import Projects from '../data/Projects';
-import TypedSection from '../components/TypedSection';
 import { P, H1, H3, H6, A, L } from '../components/Tags';
 import { TypeIndexTracker } from '../lib/utils';
 import content from '../components/content';
 import Div from '../components/TypedOutlineDiv';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
-const FIXED_DATA_SCROLL = 50;
 const PARAGRAPH_TYPE_TIME = 1;
 
 class Project extends Component {
@@ -78,7 +76,7 @@ class Project extends Component {
               <L index={tracker.index()}to={project.next}>Next</L>
             </div>
           </div>
-          <Div className="eight project-content" borderColor={color} index={10} index={tracker.index()}>
+          <Div className="eight project-content" borderColor={color} index={tracker.index()}>
             <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME}/>
           </Div>
         </div>

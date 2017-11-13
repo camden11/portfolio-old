@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Projects from '../data/Projects';
 import { H5, P } from './Tags';
 import Div from './TypedOutlineDiv';
-import { TypeIndexTracker } from '../lib/utils';
 import Images from '../img'
 import ProjectPreviewImage from './ProjectPreviewImage';
 import { Link } from 'react-router-dom';
