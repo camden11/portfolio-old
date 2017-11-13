@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './Home';
-import Work from './Work';
-import Project from './Project';
+import React, { Component } from 'react';
+
 import AddressBar from '../components/AddressBar';
+import Home from './Home';
+import Project from './Project';
+import Work from './Work';
 
 class Routes extends Component {
   render() {

@@ -1,8 +1,9 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import TypedSection from './TypedSection';
-import ImageTypedSection from './ImageTypedSection';
 import { Link } from 'react-router-dom';
+import React from 'react';
+
+import ImageTypedSection from './ImageTypedSection';
+import TypedSection from './TypedSection';
 
 const mapStateToProps = (state) => {
   return {

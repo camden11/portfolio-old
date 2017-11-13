@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setAddress } from '../actions/AddressBarActions';
+import React, { Component } from 'react';
+
+import { H1 } from '../components/Tags';
+import ProjectPreview from '../components/ProjectPreview';
+
+import { allProjects } from '../data/Projects';
 import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { setAddress } from '../actions/AddressBarActions';
 import { setColor } from '../actions/ColorActions';
 import { TypeIndexTracker } from '../lib/utils';
-import { H1 } from '../components/Tags';
-import { allProjects } from '../data/Projects';
-import ProjectPreview from '../components/ProjectPreview';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
 const BACKGROUND_COLOR = '#ffffff';

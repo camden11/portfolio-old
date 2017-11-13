@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { H1, H3, H4, P, InlineImg, A  } from '../components/Tags';
-import Image from '../img';
+
 import ImageTypedSection from '../components/ImageTypedSection';
+import { H1, H3, H4, P, InlineImg, A  } from '../components/Tags';
+
+import Image from '../img';
 import { TypeIndexTracker } from '../lib/utils';
 
 class About extends Component {

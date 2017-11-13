@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
+import React, { Component } from 'react';
+
 import Typer from './Typer';
+
+import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
 
 class TypedSection extends Component {
   constructor(props) {

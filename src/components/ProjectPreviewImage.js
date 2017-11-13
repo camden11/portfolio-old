@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { Img } from './Tags';
 import ImageTypedSection from './ImageTypedSection';
 

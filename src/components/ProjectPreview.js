@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
-import Projects from '../data/Projects';
-import { H5, P } from './Tags';
+
 import Div from './TypedOutlineDiv';
 import Images from '../img'
 import ProjectPreviewImage from './ProjectPreviewImage';
-import { Link } from 'react-router-dom';
+import { H5, P } from './Tags';
+
+import Projects from '../data/Projects';
 
 class ProjectPreview extends Component {
   renderText(project) {

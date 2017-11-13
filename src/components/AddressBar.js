@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { arrayEquals } from '../lib/utils';
-import AddressUrls from '../data/AddressUrls';
 import { Link } from 'react-router-dom';
-import { startTypedSection } from '../actions/TypedSectionActions';
+import React, { Component } from 'react';
+
 import Background from './Background';
+
+import AddressUrls from '../data/AddressUrls';
+import { arrayEquals } from '../lib/utils';
+import { startTypedSection } from '../actions/TypedSectionActions';
 
 const BACKSPACE_TIME = 60;
 const TYPE_TIME = 60;

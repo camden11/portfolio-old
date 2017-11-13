@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setAddress } from '../actions/AddressBarActions';
-import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
-import { setColor } from '../actions/ColorActions';
-import Projects from '../data/Projects';
-import { P, H1, H3, H6, A, L } from '../components/Tags';
-import { TypeIndexTracker } from '../lib/utils';
+import React, { Component } from 'react';
+
 import content from '../components/content';
 import Div from '../components/TypedOutlineDiv';
+import { P, H1, H3, H6, A, L } from '../components/Tags';
+
+import Projects from '../data/Projects';
+import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { setAddress } from '../actions/AddressBarActions';
+import { setColor } from '../actions/ColorActions';
+import { TypeIndexTracker } from '../lib/utils';
 
 const BASE_PATH = ['Camden Phalen', 'Work'];
 const PARAGRAPH_TYPE_TIME = 1;

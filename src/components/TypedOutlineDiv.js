@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import React, { Component } from 'react';
+
 import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
 
 class TypedOutlineDiv extends Component {
