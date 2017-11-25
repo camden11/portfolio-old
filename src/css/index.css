@@ -334,6 +334,9 @@ img {
   width: 100%;
   text-align: right; }
 
+.project-next {
+  margin-top: 150px; }
+
 .divider {
   height: 0px;
   margin-top: 50px;

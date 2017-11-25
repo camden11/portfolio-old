@@ -7,6 +7,13 @@ import Project from './Project';
 import Work from './Work';
 
 class Routes extends Component {
+  renderProject(props) {
+    const projectName = props.match.params.project;
+    return (
+      <Project name={projectName} key={projectName} />
+    );
+  }
+
   render() {
     return (
       <Router>
@@ -14,7 +21,8 @@ class Routes extends Component {
           <Route path="/" component={AddressBar} />
           <Route exact path="/" component={Home} />
           <Route exact path="/work" component={Work} />
-          <Route path="/work/:project" component={Project} />
+          {/* <Route path="/work/:project" component={Project} /> */}
+          <Route path="/work/:project" render={this.renderProject} />
         </div>
       </Router>
     )

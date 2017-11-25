@@ -19,8 +19,8 @@ class Project extends Component {
     super(props);
     window.scrollTo(0, 0);
     this.state = {
-      project: Projects[props.match.params.project],
-      Content: content[props.match.params.project],
+      project: Projects[props.name],
+      Content: content[props.name],
       dataFixed: false
     }
   }
@@ -93,8 +93,13 @@ class Project extends Component {
                   );
                 })}
               </div>
-              <L index={tracker.index()} to={project.previous}>Previous</L>
-              <L index={tracker.index()}to={project.next}>Next</L>
+              <L index={tracker.index()} to={project.previousHref}>
+                {`< ${project.previousName}`}
+              </L>
+              <br />
+              <L index={tracker.index()}to={project.nextHref}>
+                {`${project.nextName} >`}
+              </L>
             </div>
           </div>
           <Div

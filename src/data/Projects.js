@@ -11,8 +11,10 @@ export default {
     ],
     backgroundColor: "#3D8D82",
     textColor: "#D5DEF4",
-    next: "/work/hubspot",
-    previous: "/work/openlines"
+    nextHref: "/work/hubspot",
+    nextName: "Hubspot",
+    previousHref: "/work/openlines",
+    previousName: "Open Lines"
   },
   hubspot: {
     name: "HubSpot",
@@ -24,8 +26,10 @@ export default {
     links: [{ name: "HubSpot Website", href: "https://www.hubspot.com/"}],
     backgroundColor: "#FEAC7B",
     textColor: "#272727",
-    next: "/work/idea",
-    previous: "/work/trailtag"
+    nextHref: "/work/idea",
+    nextName: "Idea",
+    previousHref: "/work/trailtag",
+    previousName: "TrailTag"
   },
   idea: {
     name: "Idea",
@@ -37,8 +41,10 @@ export default {
     links: [{ name: "Idea", href: "https://www.northeastern.edu/idea/" }],
     backgroundColor: "#E4E4E4",
     textColor: "#E5A040",
-    next: "/work/alignable",
-    previous: "/work/hubspot"
+    nextHref: "/work/alignable",
+    nextName: "Alignable",
+    previousHref: "/work/hubspot",
+    previousName: "HubSpot"
   },
   alignable: {
     name: "Alignable",
@@ -50,8 +56,10 @@ export default {
     links: [{ name: "Alignable", href: "https://www.alignable.com" }],
     backgroundColor: "#6C5E7E",
     textColor: "#9DDDCD",
-    next: "/work/trash2treasure",
-    previous: "/work/idea"
+    nextHref: "/work/trash2treasure",
+    nextName: "Trash2Treasure",
+    previousHref: "/work/idea",
+    previousName: "Idea"
   },
   trash2treasure: {
     name: "Trash2Treasure",
@@ -76,8 +84,10 @@ export default {
     ],
     backgroundColor: "#9F565F",
     textColor: "#E4E4E4",
-    next: "/work/openlines",
-    previous: "/work/alignable"
+    nextHref: "/work/openlines",
+    nextName: "Open Lines",
+    previousHref: "/work/alignable",
+    previousName: "Alignable"
   },
   openlines: {
     name: "Open Lines",
@@ -94,8 +104,10 @@ export default {
     ],
     backgroundColor: "#272727",
     textColor: "#ffffff",
-    next: "/work/trailtag",
-    previous: "/work/trash2treasure"
+    nextHref: "/work/trailtag",
+    nextName: "TrailTag",
+    previousHref: "/work/trash2treasure",
+    previousName: "Trash2Treasure"
   },
 
 }
