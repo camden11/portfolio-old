@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 const DEFAULT_BACKSPACE_TIME = 10;
 const DEFAULT_TYPE_TIME = 10;
+const PARAGRAPH_INCREMENT = 3;
 
 class Typer extends Component {
   constructor(props) {
@@ -12,7 +13,10 @@ class Typer extends Component {
       forward: false,
       callbackFinished: false,
       intervalIds: []
-    }
+    };
+    this.defaultProps = {
+      paragraph: false
+    };
   }
 
   componentDidMount() {
@@ -96,9 +100,21 @@ class Typer extends Component {
 
   type() {
     const target = this.props.children;
+    const { paragraph } = this.props;
     const { current } = this.state;
+
+    let next;
+
+    if (paragraph) {
+      next = current.length + PARAGRAPH_INCREMENT <= target.length
+        ? target.substring(0, current.length + PARAGRAPH_INCREMENT)
+        : target;
+    } else {
+      next = target.substring(0, current.length + 1);
+    }
+
     this.setState({
-      current: target.substring(0, current.length + 1)
+      current: next
     });
   }
 

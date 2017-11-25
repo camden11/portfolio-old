@@ -14,7 +14,13 @@ const mapStateToProps = (state) => {
 const paragraph = ({ children, index, className, color, typeTime }) => {
   return (
     <p className={className} style={{ color }}>
-      <TypedSection index={index} typeTime={typeTime}>{children}</TypedSection>
+      <TypedSection
+        index={index}
+        typeTime={typeTime}
+        paragraph={true}
+      >
+        {children}
+      </TypedSection>
     </p>
   );
 }

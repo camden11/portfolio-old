@@ -29,13 +29,19 @@ class TypedSection extends Component {
   }
 
   render() {
-    const { children, typeTime, incrementTypedSectionIndex } = this.props;
+    const {
+      children,
+      typeTime,
+      incrementTypedSectionIndex,
+      paragraph
+    } = this.props;
     const { ready } = this.state;
     if (ready) {
       return (
         <Typer
           onFinishTyping={incrementTypedSectionIndex}
           typeTime={typeTime}
+          paragraph={paragraph}
         >
           { children }
         </Typer>
