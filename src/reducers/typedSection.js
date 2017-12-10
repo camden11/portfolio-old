@@ -14,7 +14,6 @@ export default (state = initialState, action) => {
         phase: TypedSectionPhases.BACKGROUND
       }
     case ActionTypes.FINISH_BACKGROUND_TYPING:
-    console.log('this is not though');
       return {
         ...state,
         phase: TypedSectionPhases.CONTENT

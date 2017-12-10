@@ -8,8 +8,8 @@ import AddressUrls from '../data/AddressUrls';
 import { arrayEquals } from '../lib/utils';
 import { finishAddressBarTyping } from '../actions/TypedSectionActions';
 
-const BACKSPACE_TIME = 60;
-const TYPE_TIME = 60;
+const BACKSPACE_TIME = 50;
+const TYPE_TIME = 50;
 
 class AddressBar extends Component {
   constructor(props) {

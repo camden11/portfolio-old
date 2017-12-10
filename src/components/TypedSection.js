@@ -9,9 +9,16 @@ import { TypedSectionPhases } from '../constants';
 class TypedSection extends Component {
   constructor(props) {
     super(props);
+    if (props.children === "Work") {
+      console.log('construct');
+      console.log(props);
+    }
     this.state = {
       ready: props.started && props.index === props.currentIndex,
       finished: false
+    }
+    if (props.children === "Work") {
+      console.log(this.state);
     }
   }
 
@@ -30,7 +37,7 @@ class TypedSection extends Component {
   }
 
   incrementTypedSectionTest() {
-    const { incrementTypedSectionIndex } = this.props;
+    const { incrementTypedSectionIndex, children, currentIndex } = this.props;
     incrementTypedSectionIndex();
   }
 

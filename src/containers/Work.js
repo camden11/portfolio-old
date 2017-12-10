@@ -20,7 +20,7 @@ class Work extends Component {
     window.scrollTo(0, 0);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const { resetTypedSection, setAddress, setColor } = this.props;
     resetTypedSection();
     setAddress(BASE_PATH);

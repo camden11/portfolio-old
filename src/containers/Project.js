@@ -25,7 +25,7 @@ class Project extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const { project } = this.state;
     const { resetTypedSection, setAddress, setColor } = this.props;
     const path = BASE_PATH.slice();
@@ -33,10 +33,6 @@ class Project extends Component {
     resetTypedSection();
     setAddress(path);
     setColor(project.backgroundColor, project.textColor);
-  }
-
-  componentWillUnmount() {
-
   }
 
   render(){
@@ -52,7 +48,7 @@ class Project extends Component {
               <H3 index={tracker.index()}>{project.name}</H3>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Date</H6>
-                <P className="project-data-text" index={3}>{project.dates}</P>
+                <P className="project-data-text" index={tracker.index()}>{project.dates}</P>
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Categories</H6>

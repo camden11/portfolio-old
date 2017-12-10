@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-const DEFAULT_BACKSPACE_TIME = 10;
-const DEFAULT_TYPE_TIME = 10;
+const DEFAULT_BACKSPACE_TIME = 8;
+const DEFAULT_TYPE_TIME = 8;
 const PARAGRAPH_INCREMENT = 3;
 
 class Typer extends Component {

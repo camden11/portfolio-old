@@ -16,7 +16,7 @@ const BACKGROUND_COLOR = '#ffffff';
 const TEXT_COLOR = '#272727';
 
 class Home extends Component {
-  componentDidMount() {
+  componentWillMount() {
     const { setAddress, resetTypedSection, setColor } = this.props;
     setAddress(BASE_PATH);
     resetTypedSection();

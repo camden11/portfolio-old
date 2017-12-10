@@ -7,7 +7,6 @@ export const finishAddressBarTyping = () => {
 }
 
 export const finishBackgroundTyping = () => {
-  console.log('this should be happening');
   return {
     type: ActionTypes.FINISH_BACKGROUND_TYPING
   }
