@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
+import { TypedSectionPhases } from '../constants';
 
 class TypedOutlineDiv extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class TypedOutlineDiv extends Component {
 const mapStateToProps = (state) => {
   return {
     currentIndex: state.typedSection.index,
-    started: state.typedSection.started
+    started: state.typedSection.phase === TypedSectionPhases.CONTENT
   }
 }
 

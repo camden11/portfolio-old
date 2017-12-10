@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Typer from './Typer';
 
 import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
+import { TypedSectionPhases } from '../constants';
 
 class TypedSection extends Component {
   constructor(props) {
@@ -28,6 +29,11 @@ class TypedSection extends Component {
     }
   }
 
+  incrementTypedSectionTest() {
+    const { incrementTypedSectionIndex } = this.props;
+    incrementTypedSectionIndex();
+  }
+
   render() {
     const {
       children,
@@ -39,7 +45,7 @@ class TypedSection extends Component {
     if (ready) {
       return (
         <Typer
-          onFinishTyping={incrementTypedSectionIndex}
+          onFinishTyping={() => this.incrementTypedSectionTest()}
           typeTime={typeTime}
           paragraph={paragraph}
         >
@@ -54,7 +60,7 @@ class TypedSection extends Component {
 const mapStateToProps = (state) => {
   return {
     currentIndex: state.typedSection.index,
-    started: state.typedSection.started
+    started: state.typedSection.phase === TypedSectionPhases.CONTENT
   }
 }
 

@@ -6,7 +6,7 @@ import Background from './Background';
 
 import AddressUrls from '../data/AddressUrls';
 import { arrayEquals } from '../lib/utils';
-import { startTypedSection } from '../actions/TypedSectionActions';
+import { finishAddressBarTyping } from '../actions/TypedSectionActions';
 
 const BACKSPACE_TIME = 60;
 const TYPE_TIME = 60;
@@ -57,7 +57,7 @@ class AddressBar extends Component {
 
   typeStep() {
     const { current, forward } = this.state;
-    const { target, startTypedSection, nextColor } = this.props;
+    const { target, finishAddressBarTyping, nextColor } = this.props;
     if (this.shouldContinueBackspacing()) {
       this.backspace();
     } else {
@@ -71,7 +71,7 @@ class AddressBar extends Component {
       } else {
         this.stopTyping();
         this.setState({ color: nextColor })
-        startTypedSection();
+        finishAddressBarTyping();
       }
     }
   }
@@ -182,7 +182,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    startTypedSection: () => dispatch(startTypedSection())
+    finishAddressBarTyping: () => dispatch(finishAddressBarTyping())
   }
 }
 

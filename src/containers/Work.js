@@ -5,7 +5,7 @@ import { H1 } from '../components/Tags';
 import ProjectPreview from '../components/ProjectPreview';
 
 import { allProjects } from '../data/Projects';
-import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { resetTypedSection } from '../actions/TypedSectionActions';
 import { setAddress } from '../actions/AddressBarActions';
 import { setColor } from '../actions/ColorActions';
 import { TypeIndexTracker } from '../lib/utils';
@@ -21,8 +21,8 @@ class Work extends Component {
   }
 
   componentDidMount() {
-    const { resetTypedSectionIndex, setAddress, setColor } = this.props;
-    resetTypedSectionIndex();
+    const { resetTypedSection, setAddress, setColor } = this.props;
+    resetTypedSection();
     setAddress(BASE_PATH);
     setColor(BACKGROUND_COLOR, TEXT_COLOR);
   }
@@ -54,7 +54,7 @@ class Work extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     setAddress: (path) => dispatch(setAddress(path)),
-    resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
+    resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
   }
 }

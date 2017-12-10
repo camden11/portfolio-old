@@ -1,8 +1,15 @@
 import ActionTypes from './ActionTypes';
 
-export const startTypedSection = () => {
+export const finishAddressBarTyping = () => {
   return {
-    type: ActionTypes.START_TYPED_SECTION
+    type: ActionTypes.FINISH_ADDRESS_BAR_TYPING
+  }
+}
+
+export const finishBackgroundTyping = () => {
+  console.log('this should be happening');
+  return {
+    type: ActionTypes.FINISH_BACKGROUND_TYPING
   }
 }
 
@@ -12,15 +19,8 @@ export const incrementTypedSectionIndex = () => {
   }
 }
 
-export const resetTypedSectionIndex = () => {
+export const resetTypedSection = () => {
   return {
-    type: ActionTypes.RESET_TYPED_SECTION_INDEX
-  }
-}
-
-export const setTypedSectionIndex = (index) => {
-  return {
-    type: ActionTypes.RESET_TYPED_SECTION_INDEX,
-    index
+    type: ActionTypes.RESET_TYPED_SECTION
   }
 }

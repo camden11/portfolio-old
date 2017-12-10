@@ -1,25 +1,30 @@
 import ActionTypes from '../actions/ActionTypes';
+import { TypedSectionPhases } from '../constants';
 
 const initialState = {
-  index: -1,
-  started: false
+  index: 0,
+  phase: TypedSectionPhases.ADDRESS_BAR
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ActionTypes.START_TYPED_SECTION:
+    case ActionTypes.FINISH_ADDRESS_BAR_TYPING:
       return {
         ...state,
-        started: true
+        phase: TypedSectionPhases.BACKGROUND
+      }
+    case ActionTypes.FINISH_BACKGROUND_TYPING:
+    console.log('this is not though');
+      return {
+        ...state,
+        phase: TypedSectionPhases.CONTENT
       }
     case ActionTypes.INCREMENT_TYPED_SECTION_INDEX:
       return {
         ...state,
         index: state.index + 1
       };
-    case ActionTypes.SET_TYPED_SECTION_INDEX:
-      return action.index;
-    case ActionTypes.RESET_TYPED_SECTION_INDEX:
+    case ActionTypes.RESET_TYPED_SECTION:
       return initialState;
     default:
       return state;

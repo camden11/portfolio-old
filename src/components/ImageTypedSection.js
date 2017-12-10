@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
+import { TypedSectionPhases } from '../constants';
 
 const DEFAULT_TIME = 1;
 
@@ -85,7 +86,7 @@ class ImageTypedSection extends Component {
 const mapStateToProps = (state) => {
   return {
     currentIndex: state.typedSection.index,
-    started: state.typedSection.started
+    started: state.typedSection.phase === TypedSectionPhases.CONTENT
   }
 }
 

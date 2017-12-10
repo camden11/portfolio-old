@@ -6,7 +6,7 @@ import Div from '../components/TypedOutlineDiv';
 import { P, H1, H3, H6, A, L } from '../components/Tags';
 
 import Projects from '../data/Projects';
-import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { resetTypedSection } from '../actions/TypedSectionActions';
 import { setAddress } from '../actions/AddressBarActions';
 import { setColor } from '../actions/ColorActions';
 import { TypeIndexTracker } from '../lib/utils';
@@ -27,10 +27,10 @@ class Project extends Component {
 
   componentDidMount() {
     const { project } = this.state;
-    const { resetTypedSectionIndex, setAddress, setColor } = this.props;
+    const { resetTypedSection, setAddress, setColor } = this.props;
     const path = BASE_PATH.slice();
     path.push(project.name);
-    resetTypedSectionIndex();
+    resetTypedSection();
     setAddress(path);
     setColor(project.backgroundColor, project.textColor);
   }
@@ -124,7 +124,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setAddress: (path) => dispatch(setAddress(path)),
-    resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
+    resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => {
       dispatch(setColor(backgroundColor, textColor))
     }

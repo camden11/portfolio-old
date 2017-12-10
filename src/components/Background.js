@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
-import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
+import { finishBackgroundTyping } from '../actions/TypedSectionActions';
+import { TypedSectionPhases } from '../constants';
 
 const TRANSITION_SPEED = 1 ;
 
@@ -19,7 +20,7 @@ class Background extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { incrementTypedSectionIndex } = this.props;
+    const { finishBackgroundTyping } = this.props;
     const { bg1active } = this.state;
     const activeBgColor = this.state[bg1active ? 'bg1color' : 'bg2color'];
     if (nextProps.color !== activeBgColor && nextProps.ready) {
@@ -30,7 +31,7 @@ class Background extends Component {
         bg2color: bg1active ? nextProps.color : activeBgColor
       }, () => this.transition());
     } else if (nextProps.ready) {
-      incrementTypedSectionIndex();
+      finishBackgroundTyping();
     }
   }
 
@@ -47,7 +48,7 @@ class Background extends Component {
 
   transitionStep() {
     const { bg1active, intervalId } = this.state;
-    const { incrementTypedSectionIndex } = this.props;
+    const { finishBackgroundTyping } = this.props;
     const activeBgPos = bg1active ? 'bg1pos' : 'bg2pos';
     const inactiveBgPos = bg1active ? 'bg2pos' : 'bg1pos';
     const newState = {};
@@ -56,7 +57,7 @@ class Background extends Component {
       newState[inactiveBgPos] = -100;
       newState.transitionActive = false;
       clearInterval(intervalId);
-      incrementTypedSectionIndex();
+      finishBackgroundTyping();
     }
     this.setState(newState);
   }
@@ -92,13 +93,13 @@ class Background extends Component {
 const mapStateToProps = (state) => {
   return {
     color: state.color.backgroundColor,
-    ready: state.typedSection.started
+    ready: state.typedSection.phase === TypedSectionPhases.BACKGROUND
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
+    finishBackgroundTyping: () => dispatch(finishBackgroundTyping())
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Background);

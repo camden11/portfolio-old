@@ -6,7 +6,7 @@ import Div from '../components/TypedOutlineDiv'
 import ProjectPreview from '../components/ProjectPreview';
 import { H1, L } from '../components/Tags';
 
-import { resetTypedSectionIndex } from '../actions/TypedSectionActions';
+import { resetTypedSection } from '../actions/TypedSectionActions';
 import { setAddress } from '../actions/AddressBarActions';
 import { setColor } from '../actions/ColorActions';
 import { TypeIndexTracker } from '../lib/utils';
@@ -17,9 +17,9 @@ const TEXT_COLOR = '#272727';
 
 class Home extends Component {
   componentDidMount() {
-    const { setAddress, resetTypedSectionIndex, setColor } = this.props;
+    const { setAddress, resetTypedSection, setColor } = this.props;
     setAddress(BASE_PATH);
-    resetTypedSectionIndex();
+    resetTypedSection();
     setColor(BACKGROUND_COLOR, TEXT_COLOR);
     const scrollListener = () => this.handleScroll();
     this.setState({ scrollListener });
@@ -75,7 +75,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setAddress: (path) => dispatch(setAddress(path)),
-    resetTypedSectionIndex: () => dispatch(resetTypedSectionIndex()),
+    resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => {
       dispatch(setColor(backgroundColor, textColor))
     }
