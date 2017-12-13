@@ -1,9 +1,10 @@
 import React from 'react';
 import { P, H4 } from '../Tags';
+import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
 
 export default (props) => {
-  const tracker = new TypeIndexTracker(props.tracker);
+  const tracker = new TypeIndexTracker({tracker: props.tracker});
   const { typeTime } = props;
   return (
     <div>

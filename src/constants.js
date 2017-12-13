@@ -3,3 +3,5 @@ export const TypedSectionPhases = {
   BACKGROUND: 'background',
   CONTENT: 'content'
 };
+
+export const PROJECT_START_INDEX = 3;

@@ -8,7 +8,7 @@ import { TypeIndexTracker } from '../lib/utils';
 
 class About extends Component {
   render() {
-    const tracker = new TypeIndexTracker(this.props.tracker);
+    const tracker = new TypeIndexTracker({tracker: this.props.tracker});
     return (
       <div className="about">
         <H1 index={tracker.index()}>
