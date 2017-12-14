@@ -14,6 +14,7 @@ import { TypeIndexTracker } from '../lib/utils';
 const BASE_PATH = ['Camden Phalen'];
 const BACKGROUND_COLOR = '#ffffff';
 const TEXT_COLOR = '#272727';
+const NUM_ELEMENTS = 23;
 
 class Home extends Component {
   componentWillMount() {
@@ -31,11 +32,18 @@ class Home extends Component {
   }
 
   handleScroll() {
-    const scroll = document.documentElement.scrollTop;
+    const { typeIndex } = this.props;
+    const scroll = window.scrollY;
+    const scrollBottom = scroll + window.innerHeight;
     const dividerLocation = document.getElementById('about').offsetTop - 62;
+    const bottom = document.documentElement.scrollHeight;
     const { inAboutSection } = this.state;
     const { setAddress } = this.props;
-    if (scroll > dividerLocation) {
+    if (
+      scroll > dividerLocation ||
+      typeIndex === NUM_ELEMENTS &&
+      scrollBottom === bottom
+    ) {
       if (!inAboutSection) {
         setAddress(BASE_PATH.concat(['About']));
         this.setState({ inAboutSection: true });
@@ -69,6 +77,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     textColor: state.color.textColor,
+    typeIndex: state.typedSection.index
   }
 }
 
