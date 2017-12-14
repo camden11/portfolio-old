@@ -1,27 +1,15 @@
 .divider {
   height: 0px;
   margin-top: 50px;
+  margin-bottom: 20px;
   width: 100%;
   border-bottom: 1.5px solid $main-gray;
-}
-
-.about-image-section {
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-left: 20px;
-
-  @media only screen and (max-width: 768px) {
-    padding-top: 0;
-    padding-right: 20px;
-    padding-left: 0;
-    margin-bottom: 20px;
-    margin-top: 30px;
-  }
 }
 
 .about-grid-parent {
   width: 100%;
 }
+
 .about-five {
   width: calc(41.66% - 70px);
   float: left;
@@ -34,9 +22,17 @@
 .about-seven {
   width: 58.33%;
   float: left;
+  padding-left: 30px;
 
-  @media only screen and (max-width: 768px) {
+  @media #{$small} {
     width: 100%;
+    padding-left: 0;
+  }
+}
+
+.about-image {
+  @media #{$small} {
+    margin-bottom: 30px;
   }
 }
 

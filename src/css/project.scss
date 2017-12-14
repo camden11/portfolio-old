@@ -3,7 +3,7 @@
   padding-left: 25px;
   transition: border-width .2s;
 
-  @media only screen and (max-width: 768px) {
+  @media #{$small} {
     border-top: 1.5px solid $main-gray;
     border-left: none;
     padding-left: 0;
@@ -64,10 +64,36 @@
   &:hover .project-preview-description {
     margin-bottom: 10px;
   }
+
+  @media #{$small} {
+    &:hover {
+      padding-bottom: 20px;
+    }
+
+    &:hover .project-preview-color {
+      right: -50px;
+    }
+
+    &:hover .project-preview-color.reverse {
+      left: -50px;
+
+    }
+
+    &:hover .project-preview-image-section {
+      padding-right: 0;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    &:hover .project-preview-description {
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 .project-preview-info-section {
-  @media only screen and (max-width: 768px) {
+  @media #{$small} {
     order: 2;
   }
 }
@@ -77,12 +103,12 @@
   > .reverse-margin {
     margin-left: 20px;
 
-    @media only screen and (max-width: 768px) {
+    @media #{$small} {
       margin-left: 0;
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media #{$small} {
     border: none !important;
   }
 }
@@ -97,9 +123,11 @@
   padding-right: 20px;
   transition: margin-top .2s, padding-left .2s, padding-right .2s;
 
-  @media only screen and (max-width: 768px) {
+  @media #{$small} {
     order: 1;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding-right: 0;
+    height: calc(100% - 25px);
   }
 }
 
@@ -108,7 +136,6 @@
   padding-left: 20px;
 
   @media only screen and (max-width: 768px) {
-    padding-right: 20px;
     padding-left: 0;
   }
 }
@@ -127,6 +154,12 @@
   transition: top .2s, right .2s;
   overflow: visible;
 
+  @media #{$small} {
+    top: 0;
+    overflow: hidden;
+    right: -50px;
+  }
+
   > div {
     width: 100%;
     height: 100%;
@@ -138,10 +171,9 @@
   left: -20px;
   transition: left .2s, top .2s;
 
-  @media only screen and (max-width: 768px) {
-    top: -20px;
-    left: auto;
-    right: -20px;
+  @media #{$small} {
+    top: 0px;
+    left: -50px;
   }
 }
 

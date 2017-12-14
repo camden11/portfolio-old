@@ -21,15 +21,16 @@ class About extends Component {
               className="about-image-container project-preview-image-container"
             >
               <InlineImg
-                className="project-preview-image"
+                className="project-preview-image about-image"
                 src={Image.camden}
+                mobileSrc={Image.camdenMobile}
                 index={tracker.index()}
               />
               <ImageTypedSection
                 index={tracker.index()}
-                className="project-preview-color reverse"
+                className="project-preview-color reverse large-only"
               >
-                <div style={{ backgroundColor: '#6C93BA' }}></div>
+                <div style={{ backgroundColor: '#DEA557' }}></div>
               </ImageTypedSection>
             </div>
           </div>

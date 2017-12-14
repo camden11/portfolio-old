@@ -98,20 +98,31 @@ const link = ({ children, index, className, to, color }) => {
 }
 export const L = connect(mapStateToProps)(link);
 
-const image = ({ index, className, src, alt }) => {
+const image = ({ index, className, src, mobileSrc, alt }) => {
   return (
     <ImageTypedSection index={index}>
-      <img className={className} src={src} alt={alt} />
+      <img
+        className={`${className} ${mobileSrc ? 'large-only' : ''}`}
+        src={src}
+        alt={alt}
+      />
+      {mobileSrc && <img className={`${className} small-only`} src={mobileSrc} alt={alt} />}
     </ImageTypedSection>
   );
 }
 export const Img = connect(mapStateToProps)(image);
 
-export const InlineImg = ({ index, className, src, alt }) => {
+export const InlineImg = ({ index, className, src, mobileSrc, alt }) => {
   return (
     <div className="inline-img-outer">
       <div className="inline-img-inner">
-        <Img index={index} className={className} src={src} alt={alt}/>
+        <Img
+          index={index}
+          className={className}
+          src={src}
+          mobileSrc={mobileSrc}
+          alt={alt}
+        />
       </div>
     </div>
   );

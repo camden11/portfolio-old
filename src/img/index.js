@@ -5,6 +5,7 @@ import alignablePreview from './alignable_preview.jpg';
 import openlinesPreview from './openlines_preview.jpg';
 import trash2treasurePreview from './trash2treasure_preview.jpg';
 import camden from './camden.jpg';
+import camdenMobile from './camden-mobile.jpg';
 import shop from './t2t_shop.png'
 import checkout from './t2t_checkout.png';
 import seller from './t2t_seller.png';
@@ -23,6 +24,7 @@ export default {
     "Open Lines": openlinesPreview
   },
   camden,
+  camdenMobile,
   t2t: {
     shop,
     checkout,

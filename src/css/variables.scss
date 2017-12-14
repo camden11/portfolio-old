@@ -1,2 +1,7 @@
 // colors
 $main-gray: #272727;
+
+// media queries
+$extra-small: only screen and (max-width: 480px);
+$small: only screen and (max-width: 768px);
+$medium: only screen and (max-width: 900px);
