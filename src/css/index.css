@@ -219,7 +219,7 @@ img {
     height: 100%; }
   @media only screen and (max-width: 768px) {
     .address-bar-background-container {
-      height: 40px; } }
+      height: 38px; } }
 
 .address-bar-background {
   position: absolute; }
