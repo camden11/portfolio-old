@@ -57,18 +57,20 @@ class Home extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="home container">
-        <H1 index={tracker.index()}>
-          I combine clean code with design thinking to build distinctive user
-          experiences.
-        </H1>
-        <ProjectPreview project="trailtag" tracker={tracker}/>
-        <ProjectPreview project="hubspot" tracker={tracker} reverse={true}/>
-        <L to="/work" index={tracker.index()} className="view-more-projects">
-          View more
-        </L>
-        <Div index={tracker.index()} className="divider" id="about"></Div>
-        <About tracker={tracker}/>
+      <div className="home-wrapper">
+        <div className="home container">
+          <H1 index={tracker.index()}>
+            I combine clean code with design thinking to build distinctive user
+            experiences.
+          </H1>
+          <ProjectPreview project="trailtag" tracker={tracker}/>
+          <ProjectPreview project="hubspot" tracker={tracker} reverse={true}/>
+          <L to="/work" index={tracker.index()} className="view-more-projects">
+            View more
+          </L>
+          <Div index={tracker.index()} className="divider" id="about"></Div>
+          <About tracker={tracker}/>
+        </div>
       </div>
     );
   }

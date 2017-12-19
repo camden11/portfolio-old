@@ -111,10 +111,6 @@ a {
 a.project-preview {
   text-decoration: none; }
 
-.phalen-io {
-  width: 100%;
-  overflow-x: hidden; }
-
 .container {
   width: 80%;
   max-width: 1000px;
@@ -197,6 +193,10 @@ img {
 @media (max-width: 768px) {
   .large-only {
     display: none; } }
+
+.home-wrapper {
+  width: 100%;
+  overflow-x: hidden; }
 
 @media (max-width: 768px) {
   .address-bar {

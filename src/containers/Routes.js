@@ -17,7 +17,7 @@ class Routes extends Component {
   render() {
     return (
       <Router>
-        <div className="phalen-io">
+        <div>
           <Route path="/" component={AddressBar} />
           <Route exact path="/" component={Home} />
           <Route exact path="/work" component={Work} />
