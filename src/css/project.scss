@@ -71,11 +71,11 @@
     }
 
     &:hover .project-preview-color {
-      left: 100%;
+      left: -100%;
     }
 
     &:hover .project-preview-color.reverse {
-      left: -100%;
+      left: 100%;
     }
 
     &:hover .project-preview-image-section {
@@ -156,7 +156,7 @@
   @media #{$small} {
     top: 0;
     overflow: hidden;
-    left: 100%;
+    left: -100%;
     z-index: 0;
   }
 
@@ -173,7 +173,7 @@
 
   @media #{$small} {
     top: 0px;
-    left: -100%;
+    left: 100%;
     z-index: 0;
   }
 }

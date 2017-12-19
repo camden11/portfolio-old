@@ -111,6 +111,10 @@ a {
 a.project-preview {
   text-decoration: none; }
 
+body {
+  width: 100%;
+  overflow-x: hidden; }
+
 .container {
   width: 80%;
   max-width: 1000px;
@@ -276,9 +280,9 @@ img {
     .project-preview:hover {
       padding-bottom: 20px; }
     .project-preview:hover .project-preview-color {
-      left: 100%; }
-    .project-preview:hover .project-preview-color.reverse {
       left: -100%; }
+    .project-preview:hover .project-preview-color.reverse {
+      left: 100%; }
     .project-preview:hover .project-preview-image-section {
       padding-right: 0;
       padding-left: 0;
@@ -339,7 +343,7 @@ img {
     .project-preview-color {
       top: 0;
       overflow: hidden;
-      left: 100%;
+      left: -100%;
       z-index: 0; } }
   .project-preview-color > div {
     width: 100%;
@@ -352,7 +356,7 @@ img {
   @media (max-width: 768px) {
     .project-preview-color.reverse {
       top: 0px;
-      left: -100%;
+      left: 100%;
       z-index: 0; } }
 
 .view-more-projects {
