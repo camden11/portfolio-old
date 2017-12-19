@@ -10,6 +10,12 @@
   }
 }
 
+.project-data {
+  @media #{$small} {
+    padding-bottom: 50px;
+  }
+}
+
 .project-data-sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -30,6 +36,12 @@
 
 .project > div {
   height: 100%;
+}
+
+.project-content {
+  @media #{$small} {
+    padding-top: 20px;
+  }
 }
 
 .project-previews {

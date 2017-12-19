@@ -242,6 +242,10 @@ img {
       border-left: none;
       padding-left: 0; } }
 
+@media (max-width: 768px) {
+  .project-data {
+    padding-bottom: 50px; } }
+
 .project-data-sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -258,6 +262,10 @@ img {
 
 .project > div {
   height: 100%; }
+
+@media (max-width: 768px) {
+  .project-content {
+    padding-top: 20px; } }
 
 .project-previews {
   margin-top: 20px; }
