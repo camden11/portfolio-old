@@ -392,6 +392,9 @@ img {
   @media only screen and (max-width: 768px) {
     .about-five {
       width: calc(100% - 20px); } }
+  @media (max-width: 768px) {
+    .about-five {
+      width: 100%; } }
 
 .about-seven {
   width: 58.33%;

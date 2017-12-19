@@ -17,6 +17,10 @@
   @media only screen and (max-width: 768px) {
     width: calc(100% - 20px);
   }
+
+  @media #{$small} {
+    width: 100%;
+  }
 }
 
 .about-seven {
