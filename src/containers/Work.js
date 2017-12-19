@@ -8,9 +8,9 @@ import { allProjects } from '../data/Projects';
 import { resetTypedSection } from '../actions/TypedSectionActions';
 import { setAddress } from '../actions/AddressBarActions';
 import { setColor } from '../actions/ColorActions';
-import { TypeIndexTracker } from '../lib/utils';
+import { TypeIndexTracker, getNamePath } from '../lib/utils';
 
-const BASE_PATH = ['Camden Phalen', 'Work'];
+const BASE_PATH = [getNamePath(), 'Work'];
 const BACKGROUND_COLOR = '#ffffff';
 const TEXT_COLOR = '#272727';
 

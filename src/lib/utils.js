@@ -25,3 +25,10 @@ export class TypeIndexTracker {
     return this.count++;
   }
 }
+
+export const getNamePath = () => {
+  if (window.innerWidth > 480) {
+    return "Camden Phalen";
+  }
+  return "CP";
+}

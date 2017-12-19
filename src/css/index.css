@@ -202,6 +202,10 @@ img {
   .large-only {
     display: none; } }
 
+@media (max-width: 768px) {
+  .address-bar {
+    min-height: 38px; } }
+
 .address-bar-container {
   position: fixed;
   z-index: 1;
@@ -225,7 +229,7 @@ img {
     position: relative;
     width: 100%;
     height: 100%; }
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .address-bar-background-container {
       height: 38px; } }
 
