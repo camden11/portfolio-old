@@ -111,6 +111,10 @@ a {
 a.project-preview {
   text-decoration: none; }
 
+html {
+  width: 100%;
+  overflow-x: hidden; }
+
 body {
   width: 100%;
   overflow-x: hidden; }
