@@ -30,21 +30,23 @@ class Work extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="work container">
-        <H1 index={tracker.index()}>
-          I've worked on a lot of cool projects. Here are a few of them.
-        </H1>
-        <div className="project-previews">
-          { allProjects.map((project, index) => {
-            return (
-              <ProjectPreview
-                project={project}
-                tracker={tracker}
-                reverse={ index % 2 === 1 }
-                key={index}
-              />
-            );
-          })}
+      <div className="wrapper">
+        <div className="work container">
+          <H1 index={tracker.index()}>
+            I've worked on a lot of cool projects. Here are a few of them.
+          </H1>
+          <div className="project-previews">
+            { allProjects.map((project, index) => {
+              return (
+                <ProjectPreview
+                  project={project}
+                  tracker={tracker}
+                  reverse={ index % 2 === 1 }
+                  key={index}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     )

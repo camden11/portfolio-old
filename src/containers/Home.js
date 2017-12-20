@@ -57,7 +57,7 @@ class Home extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="home-wrapper">
+      <div className="wrapper">
         <div className="home container">
           <H1 index={tracker.index()}>
             I combine clean code with design thinking to build distinctive user
