@@ -127,3 +127,18 @@ export const InlineImg = ({ index, className, src, mobileSrc, alt }) => {
     </div>
   );
 }
+
+const listItem = ({ children, index, className, color, typeTime }) => {
+  return (
+    <li className={className} style={{ color }}>
+      <TypedSection
+        index={index}
+        typeTime={typeTime}
+        paragraph={true}
+      >
+        {children}
+      </TypedSection>
+    </li>
+  )
+}
+export const LI = connect(mapStateToProps)(listItem);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { P, H4 } from '../Tags';
+import { P, H4, LI } from '../Tags';
 import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
 
@@ -10,30 +10,107 @@ export default (props) => {
     <div>
       <H4 index={tracker.index()}>Background</H4>
       <P index={tracker.index()} typeTime={typeTime}>
-        Last spring, I worked as a member of Scout, Northeastern's student-run
-        design studio to build the app for TrailTag, a new wearable safetly
-        device in development by a group of Boston entrepreneurs and
-        Northeastern grad students. TrailTag is a simple but powerful emergency
-        device that lets a group of friends communicate and signal emergencies
-        to each other on wilderness excusrions, even when cellular service is
-        not available. The wearable device connects to the app we built, which
-        allows users to view their friends' locations and communicate via text
-        message.
+        While a member of Scout, Northeastern University’s student led design
+        studio, I worked with a team of developers and designers to build the
+        mobile app for TrailTag, a wearable safety device being developed by a
+        group of Boston-based entrepreneurs. TrailTag is a simple but powerful
+        emergency device that lets a group of friends communicate and signal
+        emergencies to each other on wilderness excursions, even when cellular
+        service is not available. The wearable device connects to the app we
+        built, which allows users to view their friends' locations and
+        communicate via text message.
       </P>
-      <H4 index={tracker.index()}>Work</H4>
+      <H4 index={tracker.index()}>Client Requirements</H4>
       <P index={tracker.index()} typeTime={typeTime}>
-        I contributed to both the design and development of TrailTag. I first
-        worked with the design team to create a user interface for the
-        application. Designing around the many limitations that come with using
-        an app in the backcountry was a challenging yet very rewarding process.
-        After finishing the UX designs, I switched into development and began
-        building the app in React native with another team member. By the end
-        of our development process, we had completely built out the interface
-        for the application and made provisions for full functionality,
-        including bluetooth communcation, to be added in the future.
+        The team’s deliverables for the project included identity and branding
+        for TrailTag, UI and UX design for the TrailTag mobile app, and the
+        development of the mobile app. I focused primarily on UX design and
+        development, while offering some feedback and guidance to the rest of
+        the team in the remaining areas of our work.
       </P>
       <P index={tracker.index()} typeTime={typeTime}>
-        More information coming soon.
+        The requirements for the mobile app were as follows:
+      </P>
+      <ul>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Provide an interface for users to pair their phone to a TrailTag.
+        </LI>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Provide an interface for users to join groups with others in their
+          party for the purpose of communication and emergency signaling
+        </LI>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Display the location of the user and the others in their group on a
+          map of the surrounding area, along with whether or not each user has
+          signaled an emergency.
+        </LI>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Allow users to get directions to any other member of their group
+        </LI>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Allow users to text message other users through their TrailTags
+        </LI>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Allow users to signal emergency alerts
+        </LI>
+        <LI index={tracker.index()} typeTime={typeTime}>
+          Inform users when a member of their group has signaled an emergency
+        </LI>
+      </ul>
+      <H4 index={tracker.index()}>Research</H4>
+      <P index={tracker.index()} typeTime={typeTime}>
+        We spent three weeks conducting research to determine how to best build
+        a brand and mobile application for TrailTag. This included exercises
+        with our clients to get a better idea of their vision for TrailTag,
+        interviews with members of the target market to gain insight on their
+        needs and expectations for a safety mobile app, and research on the
+        activities that TrailTag would be used with to determine what its ideal
+        use cases would be and what limitations my arise. Through our research,
+        we were able to create a much better defined vision for TrailTag.
+      </P>
+      <P index={tracker.index()} typeTime={typeTime}>
+        Many of our findings had serious implications for the design and
+        development of the mobile app. We decided that the best use case to
+        focus on for TrailTag would be skiing, and designed around the tags
+        being offered as rentals from ski resorts. This necessitated a simple,
+        streamlined  onboarding process for users that likely wouldn’t be using
+        the app frequently and tag connection system that could function well
+        even with upwards of 100 tags within connection range. The fact that
+        TrailTags would be primarily used in the wilderness also created a few
+        important limitations we’d have to work around: First, users would not
+        reliably have internet service, so the app would have to provide some
+        way to download and store maps locally. Secondly, we wouldn’t be able
+        to use a standard mapping service like Google or Apple since they
+        provide little to no detail in wilderness areas.
+      </P>
+      <H4 index={tracker.index()}>Wireframing</H4>
+      <P index={tracker.index()} typeTime={typeTime}>
+        After finalizing our design requirements, we began working on
+        wireframing the app.
+      </P>
+      <H4 index={tracker.index()}>Development</H4>
+      <P index={tracker.index()} typeTime={typeTime}>
+        As the designers began transitioning the wireframes to high-fidelity
+        mockups, the team’s other developer and I began working on developing
+        the mobile app. We opted to use React Native to build an app that would
+        be fully functional on both Android and iOS. We employed a variety of
+        frameworks to assist on our development, including NativeBase for UI
+        components, Redux for state management, and React Native Mapbox GL for
+        topographic maps as well as local map storage. We also made provisions
+        for the app to connect to the physical TrailTag devices via Bluetooth
+        Low Energy using React Native BLE PLX. Once the designers were finished
+        with the UI, we updated the app the match the high fidelity mockups
+        using a Sass framework for React Native.
+      </P>
+      <H4 index={tracker.index()}>Results</H4>
+      <P index={tracker.index()} typeTime={typeTime}>
+        Due to the production of the TrailTag hardware on our client’s end
+        taking longer than expected, we were unable to make the application
+        fully functional. However, we completely built out the interface for
+        the app, and made provisions for bluetooth functionality and tag-to-tag
+        connectivity functions to be added in in the future. Our clients are
+        currently working on finishing the TrailTag hardware and getting it
+        integrated with our application.
       </P>
     </div>
   )

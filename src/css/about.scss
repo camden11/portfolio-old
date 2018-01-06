@@ -32,19 +32,21 @@
     width: 100%;
     padding-left: 0;
   }
+
+  ul {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+
 }
 
 .about-image {
   @media #{$small} {
     margin-bottom: 30px;
   }
-}
-
-ul {
-  padding: 0;
-  margin-top: 0;
-}
-
-li {
-  list-style-type: none;
 }
