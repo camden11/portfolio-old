@@ -9,7 +9,7 @@ export default {
     links: [
       { name: "Scout Website", href:"https://web.northeastern.edu/scout/" }
     ],
-    backgroundColor: "#3D8D82",
+    backgroundColor: "#14777D",
     textColor: "#D5DEF4",
     nextHref: "/work/hubspot",
     nextName: "Hubspot",

@@ -1,4 +1,4 @@
-import example from './example.jpg';
+import trailtagPreview from './trailtag_preview.jpg';
 import hubspotPreview from './hubspot_preview.jpg';
 import ideaPreview from './idea_preview.jpg';
 import alignablePreview from './alignable_preview.jpg';
@@ -16,7 +16,7 @@ import analyze from './hs_analyze.png';
 
 export default {
   preview : {
-    "TrailTag": example,
+    "TrailTag": trailtagPreview,
     "HubSpot": hubspotPreview,
     "Idea": ideaPreview,
     "Alignable": alignablePreview,
