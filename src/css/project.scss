@@ -87,7 +87,7 @@
     }
 
     &:hover .project-preview-color.reverse {
-      left: 100%;
+      left: -100%;
     }
 
     &:hover .project-preview-image-section {
@@ -184,8 +184,9 @@
   transition: left .2s, top .2s;
 
   @media #{$small} {
-    top: 0px;
-    left: 100%;
+    top: 0;
+    overflow: hidden;
+    left: -100%;
     z-index: 0;
   }
 }

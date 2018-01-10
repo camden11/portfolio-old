@@ -303,7 +303,7 @@ img {
     .project-preview:hover .project-preview-color {
       left: -100%; }
     .project-preview:hover .project-preview-color.reverse {
-      left: 100%; }
+      left: -100%; }
     .project-preview:hover .project-preview-image-section {
       padding-right: 0;
       padding-left: 0;
@@ -376,8 +376,9 @@ img {
   transition: left .2s, top .2s; }
   @media (max-width: 768px) {
     .project-preview-color.reverse {
-      top: 0px;
-      left: 100%;
+      top: 0;
+      overflow: hidden;
+      left: -100%;
       z-index: 0; } }
 
 .view-more-projects {
