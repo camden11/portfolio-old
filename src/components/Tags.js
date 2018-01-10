@@ -8,6 +8,7 @@ import TypedSection from './TypedSection';
 const mapStateToProps = (state) => {
   return {
     color: state.color.textColor,
+    currentIndex: state.typedSection.index
   }
 }
 
@@ -106,7 +107,9 @@ const image = ({ index, className, src, mobileSrc, alt }) => {
         src={src}
         alt={alt}
       />
-      {mobileSrc && <img className={`${className} small-only`} src={mobileSrc} alt={alt} />}
+      {mobileSrc &&
+        <img className={`${className} small-only`} src={mobileSrc} alt={alt} />
+      }
     </ImageTypedSection>
   );
 }
@@ -128,9 +131,12 @@ export const InlineImg = ({ index, className, src, mobileSrc, alt }) => {
   );
 }
 
-const listItem = ({ children, index, className, color, typeTime }) => {
+const listItem = (
+  { children, index, currentIndex, className, color, typeTime }
+) => {
+  const display = index <= currentIndex ? 'list-item' : 'none';
   return (
-    <li className={className} style={{ color }}>
+    <li className={className} style={{ color, display }}>
       <TypedSection
         index={index}
         typeTime={typeTime}

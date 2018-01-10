@@ -13,6 +13,11 @@ import openLines from './open_lines.jpg';
 import openLinesActive from './open_lines_active.jpg';
 import dashboard from './hs_dashboard.png';
 import analyze from './hs_analyze.png';
+import trailtagLogo from './trailtag_logo.png';
+import trailtagUX from './trailtag_ux.png';
+import trailtagSki from './trailtag_ski.jpg';
+import trailtagScreen1 from './trailtag_screen1.png';
+import trailtagScreen2 from './trailtag_screen2.png';
 
 export default {
   preview : {
@@ -37,5 +42,12 @@ export default {
   hubspot: {
     dashboard,
     analyze
+  },
+  trailtag: {
+    logo: trailtagLogo,
+    ux: trailtagUX,
+    ski: trailtagSki,
+    screen1: trailtagScreen1,
+    screen2: trailtagScreen2
   }
 }

@@ -1,8 +1,10 @@
 import React from 'react';
-import { P, H4, LI } from '../Tags';
+import { P, H4, LI, InlineImg } from '../Tags';
 import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
+import Image from '../../img';
 
+console.log(Image);
 export default (props) => {
   const tracker = new TypeIndexTracker({tracker: props.tracker});
   const typeTime = props.typeTime;
@@ -20,6 +22,10 @@ export default (props) => {
         built, which allows users to view their friends' locations and
         communicate via text message.
       </P>
+      <InlineImg
+        index={tracker.index()}
+        src={Image.trailtag.logo}
+      />
       <H4 index={tracker.index()}>Client Requirements</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         The team’s deliverables for the project included identity and branding
@@ -65,9 +71,14 @@ export default (props) => {
         interviews with members of the target market to gain insight on their
         needs and expectations for a safety mobile app, and research on the
         activities that TrailTag would be used with to determine what its ideal
-        use cases would be and what limitations my arise. Through our research,
+        use cases would be and what limitations may arise. Through our research,
         we were able to create a much better defined vision for TrailTag.
       </P>
+      <InlineImg
+        index={tracker.index()}
+        src={Image.trailtag.ski}
+        className="image-photo"
+      />
       <P index={tracker.index()} typeTime={typeTime}>
         Many of our findings had serious implications for the design and
         development of the mobile app. We decided that the best use case to
@@ -83,11 +94,22 @@ export default (props) => {
         to use a standard mapping service like Google or Apple since they
         provide little to no detail in wilderness areas.
       </P>
+      <InlineImg
+        index={tracker.index()}
+        src={Image.trailtag.ux}
+        className="image-photo"
+      />
       <H4 index={tracker.index()}>Wireframing</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         After finalizing our design requirements, we began working on
-        wireframing the app.
+        wireframing the app. Through this process, we streamlined the app’s
+        proposed features and created the it’s final UX and navigational flow.
       </P>
+      <InlineImg
+        index={tracker.index()}
+        src={Image.trailtag.screen1}
+        className="image-phone"
+      />
       <H4 index={tracker.index()}>Development</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         As the designers began transitioning the wireframes to high-fidelity
@@ -102,6 +124,11 @@ export default (props) => {
         with the UI, we updated the app the match the high fidelity mockups
         using a Sass framework for React Native.
       </P>
+      <InlineImg
+        index={tracker.index()}
+        src={Image.trailtag.screen2}
+        className="image-phone"
+      />
       <H4 index={tracker.index()}>Results</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         Due to the production of the TrailTag hardware on our client’s end
