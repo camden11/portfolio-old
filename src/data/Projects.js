@@ -127,8 +127,8 @@ export default {
     ],
     backgroundColor: "#272727",
     textColor: "#ffffff",
-    nextHref: "/work/trailtag",
-    nextName: "TrailTag",
+    nextHref: "/work/mass-hike",
+    nextName: "Mass Hike",
     previousHref: "/work/trash2treasure",
     previousName: "Trash2Treasure"
   }
