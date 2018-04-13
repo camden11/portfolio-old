@@ -1,16 +1,18 @@
 export default {
-  trailtag: {
-    name: "TrailTag",
-    href: "/work/trailtag",
-    header: "Development and interface design for the mobile application for a new wearable safety device.",
-    dates: "January 2017 - April 2017",
-    categories: ["Mobile Development", "UX Design"],
-    techUsed: ["Javascript", "React Native", "Redux"],
+  "mass-hike": {
+    name: "Mass Hike",
+    href: "/work/mass-hike",
+    header:
+      "Project leadership, UX design, and development for a nonprofit that brings people closer to nature.",
+    dates: "January 2018 - May 2018",
+    categories: ["Project Leadership", "UX Design", "Full Stack Development"],
+    techUsed: ["Javascript", "React", "Redux", "Node"],
     links: [
-      { name: "Scout Website", href:"https://web.northeastern.edu/scout/" }
+      { name: "Scout Website", href: "https://web.northeastern.edu/scout/" }
     ],
-    backgroundColor: "#14777D",
-    textColor: "#D5DEF4",
+    backgroundColor: "#F8F4E8",
+    textColor: "#2391C0",
+    previewColor: "#2391C0",
     nextHref: "/work/hubspot",
     nextName: "Hubspot",
     previousHref: "/work/openlines",
@@ -19,22 +21,41 @@ export default {
   hubspot: {
     name: "HubSpot",
     href: "/work/hubspot",
-    header: "Front end engineering for Hubspot’s Content Management System." ,
-    dates: "July 2017 - Present",
+    header: "Front end engineering for Hubspot’s Content Management System.",
+    dates: "July 2017 - December 2017",
     categories: ["Professional Experience", "Front End Development"],
     techUsed: ["Javascript", "React", "Redux"],
-    links: [{ name: "HubSpot Website", href: "https://www.hubspot.com/"}],
+    links: [{ name: "HubSpot Website", href: "https://www.hubspot.com/" }],
     backgroundColor: "#FEAC7B",
     textColor: "#272727",
+    nextHref: "/work/trailtag",
+    nextName: "TrailTag",
+    previousHref: "/work/mass-hike",
+    previousName: "Mass Hike"
+  },
+  trailtag: {
+    name: "TrailTag",
+    href: "/work/trailtag",
+    header:
+      "Development and interface design for the mobile application for a new wearable safety device.",
+    dates: "January 2017 - April 2017",
+    categories: ["Mobile Development", "UX Design"],
+    techUsed: ["Javascript", "React Native", "Redux"],
+    links: [
+      { name: "Scout Website", href: "https://web.northeastern.edu/scout/" }
+    ],
+    backgroundColor: "#14777D",
+    textColor: "#D5DEF4",
     nextHref: "/work/idea",
     nextName: "Idea",
-    previousHref: "/work/trailtag",
-    previousName: "TrailTag"
+    previousHref: "/work/hubspot",
+    previousName: "HubSpot"
   },
   idea: {
     name: "Idea",
     href: "/work/idea",
-    header: "Web development for Northeastern's student-run venture accelerator.",
+    header:
+      "Web development for Northeastern's student-run venture accelerator.",
     dates: "July 2017 - Present",
     categories: ["UI/UX Design", "Full Stack Development"],
     techUsed: ["Wordpress", "PHP"],
@@ -43,8 +64,8 @@ export default {
     textColor: "#E5A040",
     nextHref: "/work/alignable",
     nextName: "Alignable",
-    previousHref: "/work/hubspot",
-    previousName: "HubSpot"
+    previousHref: "/work/trailtag",
+    previousName: "TrailTag"
   },
   alignable: {
     name: "Alignable",
@@ -64,7 +85,8 @@ export default {
   trash2treasure: {
     name: "Trash2Treasure",
     href: "/work/trash2treasure",
-    header: "Design and development of an online checkout app for Northeastern's Trash2Treasure sale.",
+    header:
+      "Design and development of an online checkout app for Northeastern's Trash2Treasure sale.",
     dates: "July 2016 - September 2016",
     categories: ["Full Stack Development", "UI/UX Design"],
     techUsed: ["Ruby on Rails", "Sql"],
@@ -92,7 +114,8 @@ export default {
   openlines: {
     name: "Open Lines",
     href: "/work/openlines",
-    header: "A research project that examines how pedestrians interact with their environment.",
+    header:
+      "A research project that examines how pedestrians interact with their environment.",
     dates: "March 2016 - December 2016",
     categories: ["Research", "Development"],
     techUsed: ["Processing", "Java", "OpenCV"],
@@ -108,15 +131,15 @@ export default {
     nextName: "TrailTag",
     previousHref: "/work/trash2treasure",
     previousName: "Trash2Treasure"
-  },
-
-}
+  }
+};
 
 export const allProjects = [
-  'trailtag',
-  'hubspot',
-  'idea',
-  'alignable',
-  'trash2treasure',
-  'openlines'
+  "mass-hike",
+  "hubspot",
+  "trailtag",
+  "idea",
+  "alignable",
+  "trash2treasure",
+  "openlines"
 ];

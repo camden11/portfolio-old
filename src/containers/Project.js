@@ -1,28 +1,29 @@
-import { connect } from 'react-redux';
-import React, { Component } from 'react';
+import { connect } from "react-redux";
+import React, { Component } from "react";
 
-import content from '../components/content';
-import Div from '../components/TypedOutlineDiv';
-import { P, H1, H3, H6, A, L } from '../components/Tags';
+import content from "../components/content";
+import Div from "../components/TypedOutlineDiv";
+import { P, H1, H3, H6, A, L } from "../components/Tags";
 
-import Projects from '../data/Projects';
-import { resetTypedSection } from '../actions/TypedSectionActions';
-import { setAddress } from '../actions/AddressBarActions';
-import { setColor } from '../actions/ColorActions';
-import { TypeIndexTracker, getNamePath } from '../lib/utils';
+import Projects from "../data/Projects";
+import { resetTypedSection } from "../actions/TypedSectionActions";
+import { setAddress } from "../actions/AddressBarActions";
+import { setColor } from "../actions/ColorActions";
+import { TypeIndexTracker, getNamePath } from "../lib/utils";
 
-const BASE_PATH = [getNamePath(), 'Work'];
+const BASE_PATH = [getNamePath(), "Work"];
 const PARAGRAPH_TYPE_TIME = 1;
 
 class Project extends Component {
   constructor(props) {
     super(props);
     window.scrollTo(0, 0);
+    console.log(props.name);
     this.state = {
       project: Projects[props.name],
       Content: content[props.name],
       dataFixed: false
-    }
+    };
   }
 
   componentWillMount() {
@@ -35,7 +36,7 @@ class Project extends Component {
     setColor(project.backgroundColor, project.textColor);
   }
 
-  render(){
+  render() {
     const { project, Content } = this.state;
     const { color } = this.props;
     const tracker = new TypeIndexTracker();
@@ -48,7 +49,9 @@ class Project extends Component {
               <H3 index={tracker.index()}>{project.name}</H3>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Date</H6>
-                <P className="project-data-text" index={tracker.index()}>{project.dates}</P>
+                <P className="project-data-text" index={tracker.index()}>
+                  {project.dates}
+                </P>
               </div>
               <div className="project-data-section">
                 <H6 index={tracker.index()}>Categories</H6>
@@ -71,7 +74,9 @@ class Project extends Component {
                     <P
                       className="project-data-text"
                       index={tracker.index()}
-                      key={index}>{tech}
+                      key={index}
+                    >
+                      {tech}
                     </P>
                   );
                 })}
@@ -84,7 +89,9 @@ class Project extends Component {
                       href={link.href}
                       className="project-data-link"
                       index={tracker.index()}
-                      key={index}>{link.name}
+                      key={index}
+                    >
+                      {link.name}
                     </A>
                   );
                 })}
@@ -93,7 +100,7 @@ class Project extends Component {
                 {`< ${project.previousName}`}
               </L>
               <br />
-              <L index={tracker.index()}to={project.nextHref}>
+              <L index={tracker.index()} to={project.nextHref}>
                 {`${project.nextName} >`}
               </L>
             </div>
@@ -103,28 +110,28 @@ class Project extends Component {
             borderColor={color}
             index={tracker.index()}
           >
-            <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME}/>
+            <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME} />
           </Div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    color: state.color.textColor,
-  }
-}
+    color: state.color.textColor
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    setAddress: (path) => dispatch(setAddress(path)),
+    setAddress: path => dispatch(setAddress(path)),
     resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => {
-      dispatch(setColor(backgroundColor, textColor))
+      dispatch(setColor(backgroundColor, textColor));
     }
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Project);

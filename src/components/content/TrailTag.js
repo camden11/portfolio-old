@@ -1,12 +1,11 @@
-import React from 'react';
-import { P, H4, LI, InlineImg } from '../Tags';
-import { PROJECT_START_INDEX } from '../../constants';
-import { TypeIndexTracker } from '../../lib/utils';
-import Image from '../../img';
+import React from "react";
+import { P, H4, LI, InlineImg } from "../Tags";
+import { PROJECT_START_INDEX } from "../../constants";
+import { TypeIndexTracker } from "../../lib/utils";
+import Image from "../../img";
 
-console.log(Image);
-export default (props) => {
-  const tracker = new TypeIndexTracker({tracker: props.tracker});
+export default props => {
+  const tracker = new TypeIndexTracker({ tracker: props.tracker });
   const typeTime = props.typeTime;
   return (
     <div>
@@ -22,10 +21,7 @@ export default (props) => {
         built, which allows users to view their friends' locations and
         communicate via text message.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.trailtag.logo}
-      />
+      <InlineImg index={tracker.index()} src={Image.trailtag.logo} />
       <H4 index={tracker.index()}>Client Requirements</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         The team’s deliverables for the project included identity and branding
@@ -84,15 +80,15 @@ export default (props) => {
         development of the mobile app. We decided that the best use case to
         focus on for TrailTag would be skiing, and designed around the tags
         being offered as rentals from ski resorts. This necessitated a simple,
-        streamlined  onboarding process for users that likely wouldn’t be using
+        streamlined onboarding process for users that likely wouldn’t be using
         the app frequently and tag connection system that could function well
         even with upwards of 100 tags within connection range. The fact that
         TrailTags would be primarily used in the wilderness also created a few
         important limitations we’d have to work around: First, users would not
         reliably have internet service, so the app would have to provide some
-        way to download and store maps locally. Secondly, we wouldn’t be able
-        to use a standard mapping service like Google or Apple since they
-        provide little to no detail in wilderness areas.
+        way to download and store maps locally. Secondly, we wouldn’t be able to
+        use a standard mapping service like Google or Apple since they provide
+        little to no detail in wilderness areas.
       </P>
       <InlineImg
         index={tracker.index()}
@@ -133,12 +129,12 @@ export default (props) => {
       <P index={tracker.index()} typeTime={typeTime}>
         Due to the production of the TrailTag hardware on our client’s end
         taking longer than expected, we were unable to make the application
-        fully functional. However, we completely built out the interface for
-        the app, and made provisions for bluetooth functionality and tag-to-tag
+        fully functional. However, we completely built out the interface for the
+        app, and made provisions for bluetooth functionality and tag-to-tag
         connectivity functions to be added in in the future. Our clients are
         currently working on finishing the TrailTag hardware and getting it
         integrated with our application.
       </P>
     </div>
-  )
-}
+  );
+};

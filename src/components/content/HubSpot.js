@@ -1,11 +1,11 @@
-import React from 'react';
-import { H4, P, InlineImg } from '../Tags';
-import { PROJECT_START_INDEX } from '../../constants';
-import { TypeIndexTracker } from '../../lib/utils';
-import Image from '../../img';
+import React from "react";
+import { H4, P, InlineImg } from "../Tags";
+import { PROJECT_START_INDEX } from "../../constants";
+import { TypeIndexTracker } from "../../lib/utils";
+import Image from "../../img";
 
-export default (props) => {
-  const tracker = new TypeIndexTracker({tracker: props.tracker});
+export default props => {
+  const tracker = new TypeIndexTracker({ tracker: props.tracker });
   const { typeTime } = props;
   return (
     <div>
@@ -48,8 +48,8 @@ export default (props) => {
         on my first large-scale project this past September. I was tasked with
         rebuilding HubSpot's content creator interface to match their new design
         language, effectively bulding a brand new application from the ground
-        up. This project is currently still in progress.
+        up. More information on this project coming soon.
       </P>
     </div>
-  )
-}
+  );
+};
