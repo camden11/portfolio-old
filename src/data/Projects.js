@@ -11,8 +11,8 @@ export default {
       { name: "Scout Website", href: "https://web.northeastern.edu/scout/" }
     ],
     backgroundColor: "#F8F4E8",
-    textColor: "#2391C0",
-    previewColor: "#2391C0",
+    textColor: "#548859",
+    previewColor: "#548859",
     nextHref: "/work/hubspot",
     nextName: "Hubspot",
     previousHref: "/work/openlines",
