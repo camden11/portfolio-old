@@ -1,28 +1,26 @@
-import { connect } from "react-redux";
-import React, { Component } from "react";
+import { connect } from 'react-redux';
+import React, { Component } from 'react';
 
-import content from "../components/content";
-import Div from "../components/TypedOutlineDiv";
-import { P, H1, H3, H6, A, L } from "../components/Tags";
+import content from '../components/content';
+import { OutlineDiv, P, H1, H3, H6, A, L } from '../components/typed';
 
-import Projects from "../data/Projects";
-import { resetTypedSection } from "../actions/TypedSectionActions";
-import { setAddress } from "../actions/AddressBarActions";
-import { setColor } from "../actions/ColorActions";
-import { TypeIndexTracker, getNamePath } from "../lib/utils";
+import Projects from '../data/Projects';
+import { resetTypedSection } from '../actions/TypedSectionActions';
+import { setAddress } from '../actions/AddressBarActions';
+import { setColor } from '../actions/ColorActions';
+import { TypeIndexTracker, getNamePath } from '../lib/utils';
 
-const BASE_PATH = [getNamePath(), "Work"];
+const BASE_PATH = [getNamePath(), 'Work'];
 const PARAGRAPH_TYPE_TIME = 1;
 
 class Project extends Component {
   constructor(props) {
     super(props);
     window.scrollTo(0, 0);
-    console.log(props.name);
     this.state = {
       project: Projects[props.name],
       Content: content[props.name],
-      dataFixed: false
+      dataFixed: false,
     };
   }
 
@@ -105,13 +103,13 @@ class Project extends Component {
               </L>
             </div>
           </div>
-          <Div
+          <OutlineDiv
             className="eight project-content"
             borderColor={color}
             index={tracker.index()}
           >
             <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME} />
-          </Div>
+          </OutlineDiv>
         </div>
       </div>
     );
@@ -120,7 +118,7 @@ class Project extends Component {
 
 const mapStateToProps = state => {
   return {
-    color: state.color.textColor
+    color: state.color.textColor,
   };
 };
 
@@ -130,7 +128,7 @@ const mapDispatchToProps = dispatch => {
     resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => {
       dispatch(setColor(backgroundColor, textColor));
-    }
+    },
   };
 };
 

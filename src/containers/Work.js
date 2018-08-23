@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
-import { H1 } from '../components/Tags';
+import { H1 } from '../components/typed';
 import ProjectPreview from '../components/ProjectPreview';
 
 import { allProjects } from '../data/Projects';
@@ -36,12 +36,12 @@ class Work extends Component {
             I've worked on a lot of cool projects. Here are a few of them.
           </H1>
           <div className="project-previews">
-            { allProjects.map((project, index) => {
+            {allProjects.map((project, index) => {
               return (
                 <ProjectPreview
                   project={project}
                   tracker={tracker}
-                  reverse={ index % 2 === 1 }
+                  reverse={index % 2 === 1}
                   key={index}
                 />
               );
@@ -49,16 +49,17 @@ class Work extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    setAddress: (path) => dispatch(setAddress(path)),
+    setAddress: path => dispatch(setAddress(path)),
     resetTypedSection: () => dispatch(resetTypedSection()),
-    setColor: (backgroundColor, textColor) => dispatch(setColor(backgroundColor, textColor))
-  }
-}
+    setColor: (backgroundColor, textColor) =>
+      dispatch(setColor(backgroundColor, textColor)),
+  };
+};
 
 export default connect(null, mapDispatchToProps)(Work);

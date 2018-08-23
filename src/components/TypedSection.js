@@ -9,17 +9,10 @@ import { TypedSectionPhases } from '../constants';
 class TypedSection extends Component {
   constructor(props) {
     super(props);
-    if (props.children === "Work") {
-      console.log('construct');
-      console.log(props);
-    }
     this.state = {
       ready: props.started && props.index === props.currentIndex,
-      finished: false
-    }
-    if (props.children === "Work") {
-      console.log(this.state);
-    }
+      finished: false,
+    };
   }
 
   shouldComponentUpdate() {
@@ -46,7 +39,7 @@ class TypedSection extends Component {
       children,
       typeTime,
       incrementTypedSectionIndex,
-      paragraph
+      paragraph,
     } = this.props;
     const { ready } = this.state;
     if (ready) {
@@ -56,7 +49,7 @@ class TypedSection extends Component {
           typeTime={typeTime}
           paragraph={paragraph}
         >
-          { children }
+          {children}
         </Typer>
       );
     }
@@ -64,17 +57,17 @@ class TypedSection extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     currentIndex: state.typedSection.index,
-    started: state.typedSection.phase === TypedSectionPhases.CONTENT
-  }
-}
+    started: state.typedSection.phase === TypedSectionPhases.CONTENT,
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
-  }
-}
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex()),
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(TypedSection)
+export default connect(mapStateToProps, mapDispatchToProps)(TypedSection);

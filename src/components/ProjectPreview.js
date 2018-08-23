@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom";
-import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 
-import Div from "./TypedOutlineDiv";
-import Images from "../img";
-import ProjectPreviewImage from "./ProjectPreviewImage";
-import { H5, P } from "./Tags";
+import { OutlineDiv } from './typed';
+import Images from '../img';
+import ProjectPreviewImage from './ProjectPreviewImage';
+import { H5, P } from './typed';
 
-import Projects from "../data/Projects";
+import Projects from '../data/Projects';
 
 class ProjectPreview extends Component {
   renderText(project) {
     const { tracker, reverse } = this.props;
     return (
       <div className="seven project-preview-info-section">
-        <Div className="project-preview-text" index={tracker.index()}>
-          <div className={reverse ? "reverse-margin" : ""}>
+        <OutlineDiv className="project-preview-text" index={tracker.index()}>
+          <div className={reverse ? 'reverse-margin' : ''}>
             <H5 index={tracker.index()} className="project-preview-header">
               {project.name}
             </H5>
@@ -22,7 +22,7 @@ class ProjectPreview extends Component {
               {project.header}
             </P>
           </div>
-        </Div>
+        </OutlineDiv>
       </div>
     );
   }
@@ -32,7 +32,7 @@ class ProjectPreview extends Component {
     return (
       <div
         className={`five project-preview-image-section ${
-          reverse ? "reverse" : ""
+          reverse ? 'reverse' : ''
         }`}
       >
         <ProjectPreviewImage

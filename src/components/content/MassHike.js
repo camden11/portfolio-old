@@ -1,6 +1,6 @@
-import React from "react";
-import { P } from "../Tags";
-import { TypeIndexTracker } from "../../lib/utils";
+import React from 'react';
+import { P } from '../typed';
+import { TypeIndexTracker } from '../../lib/utils';
 
 export default props => {
   const tracker = new TypeIndexTracker({ tracker: props.tracker });

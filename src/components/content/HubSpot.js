@@ -1,8 +1,8 @@
-import React from "react";
-import { H4, P, InlineImg } from "../Tags";
-import { PROJECT_START_INDEX } from "../../constants";
-import { TypeIndexTracker } from "../../lib/utils";
-import Image from "../../img";
+import React from 'react';
+import { H4, P, InlineImg } from '../typed';
+import { PROJECT_START_INDEX } from '../../constants';
+import { TypeIndexTracker } from '../../lib/utils';
+import Image from '../../img';
 
 export default props => {
   const tracker = new TypeIndexTracker({ tracker: props.tracker });

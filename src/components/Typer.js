@@ -12,10 +12,10 @@ class Typer extends Component {
       current: start || '',
       forward: false,
       callbackFinished: false,
-      intervalIds: []
+      intervalIds: [],
     };
     this.defaultProps = {
-      paragraph: false
+      paragraph: false,
     };
   }
 
@@ -51,20 +51,22 @@ class Typer extends Component {
     const { intervalIds } = this.state;
     intervalIds.forEach(intervalId => {
       clearInterval(intervalId);
-    })
+    });
   }
 
   switchInterval() {
-    this.stopTyping()
+    this.stopTyping();
     this.startTyping(this.typeTime());
   }
 
   shouldContinueBackspacing() {
     const { current, forward } = this.state;
     const target = this.props.children;
-    return !forward &&
+    return (
+      !forward &&
       current.length !== 0 &&
-      current !== target.substring(0, current.length);
+      current !== target.substring(0, current.length)
+    );
   }
 
   typeStep() {
@@ -75,7 +77,7 @@ class Typer extends Component {
       this.backspace();
     } else {
       if (!forward) {
-        this.setState({forward: true})
+        this.setState({ forward: true });
         this.switchInterval();
       }
       const doneTyping = current === target;
@@ -94,7 +96,7 @@ class Typer extends Component {
   backspace() {
     const { current } = this.state;
     this.setState({
-      current: current.substring(0, current.length - 1)
+      current: current.substring(0, current.length - 1),
     });
   }
 
@@ -106,21 +108,22 @@ class Typer extends Component {
     let next;
 
     if (paragraph) {
-      next = current.length + PARAGRAPH_INCREMENT <= target.length
-        ? target.substring(0, current.length + PARAGRAPH_INCREMENT)
-        : target;
+      next =
+        current.length + PARAGRAPH_INCREMENT <= target.length
+          ? target.substring(0, current.length + PARAGRAPH_INCREMENT)
+          : target;
     } else {
       next = target.substring(0, current.length + 1);
     }
 
     this.setState({
-      current: next
+      current: next,
     });
   }
 
   render() {
     const { current } = this.state;
-    return <span className="typer">{current}</span>
+    return <span className="typer">{current}</span>;
   }
 }
 

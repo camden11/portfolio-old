@@ -1,12 +1,12 @@
 import React from 'react';
-import { P, H4, InlineImg } from '../Tags';
+import { P, H4, InlineImg } from '../typed';
 import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
 import Image from '../../img';
 
-export default (props) => {
-  const tracker = new TypeIndexTracker({tracker: props.tracker});
-    const { typeTime } = props;
+export default props => {
+  const tracker = new TypeIndexTracker({ tracker: props.tracker });
+  const { typeTime } = props;
   return (
     <div>
       <H4 index={tracker.index()}>Background</H4>
@@ -40,5 +40,5 @@ export default (props) => {
         className="image-photo"
       />
     </div>
-  )
-}
+  );
+};

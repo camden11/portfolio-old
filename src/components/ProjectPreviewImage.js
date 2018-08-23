@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Img } from './Tags';
+import { Img } from './typed';
 import ImageTypedSection from './ImageTypedSection';
 
 class ProjectPreviewImage extends Component {
@@ -17,10 +17,7 @@ class ProjectPreviewImage extends Component {
           index={tracker.index()}
           className={`project-preview-color ${reverse ? 'reverse' : ''}`}
         >
-          <div
-            style={{ backgroundColor: color }}
-          >
-          </div>
+          <div style={{ backgroundColor: color }} />
         </ImageTypedSection>
       </div>
     );

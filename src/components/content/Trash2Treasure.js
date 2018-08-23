@@ -1,11 +1,11 @@
 import React from 'react';
-import { P, H4, InlineImg } from '../Tags';
+import { P, H4, InlineImg } from '../typed';
 import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
 import Image from '../../img';
 
-export default (props) => {
-  const tracker = new TypeIndexTracker({tracker: props.tracker});
+export default props => {
+  const tracker = new TypeIndexTracker({ tracker: props.tracker });
   const { typeTime } = props;
   return (
     <div>
@@ -67,5 +67,5 @@ export default (props) => {
         inventory for their sales.
       </P>
     </div>
-  )
-}
+  );
+};
