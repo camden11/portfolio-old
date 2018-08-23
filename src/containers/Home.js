@@ -1,20 +1,29 @@
-import { connect } from "react-redux";
-import React, { Component } from "react";
+import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import About from "../components/About";
-import Div from "../components/TypedOutlineDiv";
-import ProjectPreview from "../components/ProjectPreview";
-import { H1, L } from "../components/Tags";
+import About from '../components/About';
+import Div from '../components/TypedOutlineDiv';
+import ProjectPreview from '../components/ProjectPreview';
+import { H1, L } from '../components/Tags';
 
-import { resetTypedSection } from "../actions/TypedSectionActions";
-import { setAddress } from "../actions/AddressBarActions";
-import { setColor } from "../actions/ColorActions";
-import { TypeIndexTracker } from "../lib/utils";
+import { resetTypedSection } from '../actions/TypedSectionActions';
+import { setAddress } from '../actions/AddressBarActions';
+import { setColor } from '../actions/ColorActions';
+import { TypeIndexTracker } from '../lib/utils';
 
-const BASE_PATH = ["Camden Phalen"];
-const BACKGROUND_COLOR = "#ffffff";
-const TEXT_COLOR = "#272727";
+const BASE_PATH = ['Camden Phalen'];
+const BACKGROUND_COLOR = '#ffffff';
+const TEXT_COLOR = '#272727';
 const NUM_ELEMENTS = 23;
+
+const Divider = styled(Div)`
+  height: 0px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 1.5px solid #000;
+`;
 
 class Home extends Component {
   componentWillMount() {
@@ -24,18 +33,18 @@ class Home extends Component {
     setColor(BACKGROUND_COLOR, TEXT_COLOR);
     const scrollListener = () => this.handleScroll();
     this.setState({ scrollListener });
-    window.addEventListener("scroll", scrollListener);
+    window.addEventListener('scroll', scrollListener);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.state.scrollListener);
+    window.removeEventListener('scroll', this.state.scrollListener);
   }
 
   handleScroll() {
     const { typeIndex } = this.props;
     const scroll = window.scrollY;
     const scrollBottom = scroll + window.innerHeight;
-    const dividerLocation = document.getElementById("about").offsetTop - 62;
+    const dividerLocation = document.getElementById('about').offsetTop - 62;
     const bottom = document.documentElement.scrollHeight;
     const { inAboutSection } = this.state;
     const { setAddress } = this.props;
@@ -44,7 +53,7 @@ class Home extends Component {
       (typeIndex === NUM_ELEMENTS && scrollBottom === bottom)
     ) {
       if (!inAboutSection) {
-        setAddress(BASE_PATH.concat(["About"]));
+        setAddress(BASE_PATH.concat(['About']));
         this.setState({ inAboutSection: true });
       }
     } else if (inAboutSection) {
@@ -67,7 +76,7 @@ class Home extends Component {
           <L to="/work" index={tracker.index()} className="view-more-projects">
             View more
           </L>
-          <Div index={tracker.index()} className="divider" id="about" />
+          <Divider index={tracker.index()} id="about" />
           <About tracker={tracker} />
         </div>
       </div>
@@ -78,7 +87,7 @@ class Home extends Component {
 const mapStateToProps = state => {
   return {
     textColor: state.color.textColor,
-    typeIndex: state.typedSection.index
+    typeIndex: state.typedSection.index,
   };
 };
 
@@ -88,7 +97,7 @@ const mapDispatchToProps = dispatch => {
     resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => {
       dispatch(setColor(backgroundColor, textColor));
-    }
+    },
   };
 };
 
