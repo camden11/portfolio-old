@@ -6,11 +6,11 @@ import TypedSection from '../TypedSection';
 
 import mapStateToProps from './mapStateToProps';
 
-const createClass = template => {
-  const StyledComponent = styled.a(template);
+const createClass = (...template) => {
+  const StyledComponent = styled.a(...template);
   class Anchor extends Component {
-    static extend(template) {
-      return createClass(template);
+    static extend(...template) {
+      return createClass(...template);
     }
 
     render() {

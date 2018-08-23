@@ -6,7 +6,9 @@ import { incrementTypedSectionIndex } from '../../actions/TypedSectionActions';
 import { TypedSectionPhases } from '../../constants';
 
 const createClass = template => {
-  const StyledComponent = styled.div(template);
+  const StyledComponent = styled.div`
+    ${template};
+  `;
   class OutlineDiv extends Component {
     constructor(props) {
       super(props);

@@ -7,7 +7,9 @@ import TypedSection from '../TypedSection';
 import mapStateToProps from './mapStateToProps';
 
 const createClass = template => {
-  const StyledComponent = styled.h5(template);
+  const StyledComponent = styled.h5`
+    ${template};
+  `;
   class Heading5 extends Component {
     static extend(template) {
       return createClass(template);

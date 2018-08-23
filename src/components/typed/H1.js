@@ -6,11 +6,11 @@ import TypedSection from '../TypedSection';
 
 import mapStateToProps from './mapStateToProps';
 
-const createClass = template => {
-  const StyledComponent = styled.h1(template);
+const createClass = (...template) => {
+  const StyledComponent = styled.h1(...template);
   class Heading1 extends Component {
-    static extend(template) {
-      return createClass(template);
+    static extend(...template) {
+      return createClass(...template);
     }
 
     render() {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Img from './Img';
@@ -15,18 +15,31 @@ const InnerContainer = styled.div`
   height: 100%;
 `;
 
-export default ({ index, className, src, mobileSrc, alt }) => {
-  return (
-    <OuterContainer>
-      <InnerContainer>
-        <Img
-          index={index}
-          className={className}
-          src={src}
-          mobileSrc={mobileSrc}
-          alt={alt}
-        />
-      </InnerContainer>
-    </OuterContainer>
-  );
+const createClass = (...template) => {
+  const StyledComponent = Img.extend(...template);
+  class InlineImage extends Component {
+    static extend(...template) {
+      return createClass(...template);
+    }
+    render() {
+      const { index, className, src, mobileSrc, alt } = this.props;
+      return (
+        <OuterContainer>
+          <InnerContainer>
+            <StyledComponent
+              index={index}
+              className={className}
+              src={src}
+              mobileSrc={mobileSrc}
+              alt={alt}
+            />
+          </InnerContainer>
+        </OuterContainer>
+      );
+    }
+  }
+  return InlineImage;
 };
+
+const Base = createClass``;
+export default Base;

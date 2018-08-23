@@ -42,6 +42,13 @@ const TextSection = styled.div`
   }
 `;
 
+const AboutImage = InlineImg.extend`
+  ${MediaQueries.small} {
+    display: none
+    margin-bottom: 30px;
+  }
+`;
+
 class About extends Component {
   render() {
     const tracker = new TypeIndexTracker({ tracker: this.props.tracker });
@@ -54,8 +61,7 @@ class About extends Component {
         <GridParent>
           <ImageSection>
             <div className="project-preview-image-container">
-              <InlineImg
-                className="project-preview-image about-image"
+              <AboutImage
                 src={Image.camden}
                 mobileSrc={Image.camdenMobile}
                 index={tracker.index()}

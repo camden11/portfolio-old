@@ -7,8 +7,8 @@ import ImageTypedSection from '../ImageTypedSection';
 import mapStateToProps from './mapStateToProps';
 import { MediaQueries } from '../../style';
 
-const createClass = template => {
-  const StyledComponent = styled.img(template);
+const createClass = (...template) => {
+  const StyledComponent = styled.img(...template);
   const MainImage = StyledComponent.extend`
     ${MediaQueries.small} {
       ${props => (props.hideOnMobile ? 'display: none;' : '')};
@@ -21,15 +21,20 @@ const createClass = template => {
     }
   `;
   class Image extends Component {
-    static extend(template) {
-      return createClass(template);
+    static extend(...template) {
+      return createClass(...template);
     }
 
     render() {
       const { index, className, src, mobileSrc, alt } = this.props;
       return (
         <ImageTypedSection index={index}>
-          <MainImage className={className} src={src} alt={alt} />
+          <MainImage
+            className={className}
+            src={src}
+            alt={alt}
+            hideOnMobile={mobileSrc}
+          />
           {mobileSrc && (
             <MobileImage className={className} src={mobileSrc} alt={alt} />
           )}

@@ -8,7 +8,9 @@ import TypedSection from '../TypedSection';
 import mapStateToProps from './mapStateToProps';
 
 const createClass = template => {
-  const StyledComponent = styled(Link)(template);
+  const StyledComponent = styled(Link)`
+    ${template};
+  `;
   class RouterLink extends Component {
     static extend(template) {
       return createClass(template);
