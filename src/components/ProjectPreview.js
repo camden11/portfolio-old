@@ -33,6 +33,7 @@ const ProjectPreviewDescription = styled(P)`
   line-height: 30px;
   margin-top: 2px;
   margin-bottom: 20px;
+  margin-right: ${props => (props.reverse ? '0' : '20px')}
   transition: margin-bottom 0.2s;
   ${ProjectPreviewContainer}:hover & {
     margin-bottom: 10px;
@@ -104,7 +105,10 @@ class ProjectPreview extends Component {
         <Text index={tracker.index()} reverse={reverse}>
           <div>
             <H5 index={tracker.index()}>{project.name}</H5>
-            <ProjectPreviewDescription index={tracker.index()}>
+            <ProjectPreviewDescription
+              index={tracker.index()}
+              reverse={reverse}
+            >
               {project.header}
             </ProjectPreviewDescription>
           </div>
