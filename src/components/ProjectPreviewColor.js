@@ -18,14 +18,7 @@ const ProjectPreviewColor = styled(ImageTypedSection)`
   }
 
   ${MediaQueries.small} {
-    top: 0;
-    overflow: hidden;
-    left: -100%;
-    z-index: 0;
-
-    .project-preview:hover & {
-      left: -100%;
-    }
+    display: none;
   }
 
   > div {

@@ -9,9 +9,7 @@ import Work from './Work';
 class Routes extends Component {
   renderProject(props) {
     const projectName = props.match.params.project;
-    return (
-      <Project name={projectName} key={projectName} />
-    );
+    return <Project name={projectName} key={projectName} />;
   }
 
   render() {
@@ -25,7 +23,7 @@ class Routes extends Component {
           <Route path="/work/:project" render={this.renderProject} />
         </div>
       </Router>
-    )
+    );
   }
 }
 
