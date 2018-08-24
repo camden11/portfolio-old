@@ -58,8 +58,8 @@ const ImageSection = styled.div`
   grid-column: span 5;
   height: 100%;
   overflow: visible;
-  padding-right: ${props => (props.reverse ? '20px' : '0')};
-  padding-left: ${props => (props.reverse ? '0x' : '20px')};
+  padding-right: ${props => (props.reverse ? '0' : '20px')};
+  padding-left: ${props => (props.reverse ? '20px' : '0')};
   transition: margin-top 0.2s, padding-left 0.2s, padding-right 0.2s;
 
   ${ProjectPreviewContainer}:hover & {
