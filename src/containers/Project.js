@@ -81,6 +81,29 @@ const ProjectContent = styled(OutlineDiv)`
   }
 `;
 
+const ProjectSwitcher = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+`;
+const ProjectSwitcherItem = styled.div`
+  grid-column: span 1;
+  text-align: ${props => (props.right ? 'right' : 'left')};
+`;
+
+const ProjectText = styled(H6)`
+  ${MediaQueries.small} {
+    display: none;
+  }
+`;
+
+const ProjectTextMobile = styled(H6)`
+  display: none;
+  ${MediaQueries.small} {
+    display: block;
+  }
+`;
+
 class Project extends Component {
   constructor(props) {
     super(props);
@@ -154,17 +177,32 @@ class Project extends Component {
                   );
                 })}
               </ProjectDataSection>
-              <L index={tracker.index()} to={project.previousHref}>
-                {`< ${project.previousName}`}
-              </L>
-              <br />
-              <L index={tracker.index()} to={project.nextHref}>
-                {`${project.nextName} >`}
-              </L>
             </Sticky>
           </ProjectData>
           <ProjectContent borderColor={color} index={tracker.index()}>
             <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME} />
+            <ProjectSwitcher>
+              <ProjectSwitcherItem>
+                <ProjectText index={tracker.index()}>
+                  Previous Project
+                </ProjectText>
+                <ProjectTextMobile index={tracker.index()}>
+                  Previous
+                </ProjectTextMobile>
+                <L index={tracker.index()} to={project.previousHref}>
+                  {project.previousName}
+                </L>
+              </ProjectSwitcherItem>
+              <ProjectSwitcherItem right>
+                <ProjectText index={tracker.index()}>Next Project</ProjectText>
+                <ProjectTextMobile index={tracker.index()}>
+                  Next
+                </ProjectTextMobile>
+                <L index={tracker.index()} to={project.nextHref}>
+                  {project.nextName}
+                </L>
+              </ProjectSwitcherItem>
+            </ProjectSwitcher>
           </ProjectContent>
         </GridParent>
       </Container>
