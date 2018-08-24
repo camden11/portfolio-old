@@ -1,8 +1,8 @@
-import React from "react";
-import { P, H4, LI, InlineImg } from "../Tags";
-import { PROJECT_START_INDEX } from "../../constants";
-import { TypeIndexTracker } from "../../lib/utils";
-import Image from "../../img";
+import React from 'react';
+import { P, H4, Ul, Li, InlineImg, PhoneImg, PhotoImg } from '../typed';
+import { PROJECT_START_INDEX } from '../../constants';
+import { TypeIndexTracker } from '../../lib/utils';
+import Image from '../../img';
 
 export default props => {
   const tracker = new TypeIndexTracker({ tracker: props.tracker });
@@ -33,32 +33,32 @@ export default props => {
       <P index={tracker.index()} typeTime={typeTime}>
         The requirements for the mobile app were as follows:
       </P>
-      <ul>
-        <LI index={tracker.index()} typeTime={typeTime}>
+      <Ul>
+        <Li index={tracker.index()} typeTime={typeTime}>
           Provide an interface for users to pair their phone to a TrailTag.
-        </LI>
-        <LI index={tracker.index()} typeTime={typeTime}>
+        </Li>
+        <Li index={tracker.index()} typeTime={typeTime}>
           Provide an interface for users to join groups with others in their
           party for the purpose of communication and emergency signaling
-        </LI>
-        <LI index={tracker.index()} typeTime={typeTime}>
+        </Li>
+        <Li index={tracker.index()} typeTime={typeTime}>
           Display the location of the user and the others in their group on a
           map of the surrounding area, along with whether or not each user has
           signaled an emergency.
-        </LI>
-        <LI index={tracker.index()} typeTime={typeTime}>
+        </Li>
+        <Li index={tracker.index()} typeTime={typeTime}>
           Allow users to get directions to any other member of their group
-        </LI>
-        <LI index={tracker.index()} typeTime={typeTime}>
-          Allow users to text message other users through their TrailTags
-        </LI>
-        <LI index={tracker.index()} typeTime={typeTime}>
+        </Li>
+        <Li index={tracker.index()} typeTime={typeTime}>
+          Allow users to text message other users through their Trailtyped
+        </Li>
+        <Li index={tracker.index()} typeTime={typeTime}>
           Allow users to signal emergency alerts
-        </LI>
-        <LI index={tracker.index()} typeTime={typeTime}>
+        </Li>
+        <Li index={tracker.index()} typeTime={typeTime}>
           Inform users when a member of their group has signaled an emergency
-        </LI>
-      </ul>
+        </Li>
+      </Ul>
       <H4 index={tracker.index()}>Research</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         We spent three weeks conducting research to determine how to best build
@@ -70,11 +70,7 @@ export default props => {
         use cases would be and what limitations may arise. Through our research,
         we were able to create a much better defined vision for TrailTag.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.trailtag.ski}
-        className="image-photo"
-      />
+      <PhotoImg index={tracker.index()} src={Image.trailtag.ski} />
       <P index={tracker.index()} typeTime={typeTime}>
         Many of our findings had serious implications for the design and
         development of the mobile app. We decided that the best use case to
@@ -83,29 +79,21 @@ export default props => {
         streamlined onboarding process for users that likely wouldn’t be using
         the app frequently and tag connection system that could function well
         even with upwards of 100 tags within connection range. The fact that
-        TrailTags would be primarily used in the wilderness also created a few
+        Trailtyped would be primarily used in the wilderness also created a few
         important limitations we’d have to work around: First, users would not
         reliably have internet service, so the app would have to provide some
         way to download and store maps locally. Secondly, we wouldn’t be able to
         use a standard mapping service like Google or Apple since they provide
         little to no detail in wilderness areas.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.trailtag.ux}
-        className="image-photo"
-      />
+      <PhotoImg index={tracker.index()} src={Image.trailtag.ux} />
       <H4 index={tracker.index()}>Wireframing</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         After finalizing our design requirements, we began working on
         wireframing the app. Through this process, we streamlined the app’s
         proposed features and created the it’s final UX and navigational flow.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.trailtag.screen1}
-        className="image-phone"
-      />
+      <PhoneImg index={tracker.index()} src={Image.trailtag.screen1} />
       <H4 index={tracker.index()}>Development</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         As the designers began transitioning the wireframes to high-fidelity
@@ -120,11 +108,7 @@ export default props => {
         with the UI, we updated the app the match the high fidelity mockups
         using a Sass framework for React Native.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.trailtag.screen2}
-        className="image-phone"
-      />
+      <PhoneImg index={tracker.index()} src={Image.trailtag.screen2} />
       <H4 index={tracker.index()}>Results</H4>
       <P index={tracker.index()} typeTime={typeTime}>
         Due to the production of the TrailTag hardware on our client’s end

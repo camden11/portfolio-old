@@ -1,18 +1,85 @@
-import { connect } from "react-redux";
-import React, { Component } from "react";
+import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import content from "../components/content";
-import Div from "../components/TypedOutlineDiv";
-import { P, H1, H3, H6, A, L } from "../components/Tags";
+import content from '../components/content';
+import { P, H1, H3, H6, A, L, OutlineDiv } from '../components/typed';
 
-import Projects from "../data/Projects";
-import { resetTypedSection } from "../actions/TypedSectionActions";
-import { setAddress } from "../actions/AddressBarActions";
-import { setColor } from "../actions/ColorActions";
-import { TypeIndexTracker, getNamePath } from "../lib/utils";
+import Projects from '../data/Projects';
+import { resetTypedSection } from '../actions/TypedSectionActions';
+import { setAddress } from '../actions/AddressBarActions';
+import { setColor } from '../actions/ColorActions';
+import { TypeIndexTracker, getNamePath } from '../lib/utils';
+import { MediaQueries, Container, Colors } from '../style';
 
-const BASE_PATH = [getNamePath(), "Work"];
+const BASE_PATH = [getNamePath(), 'Work'];
 const PARAGRAPH_TYPE_TIME = 1;
+
+const GridParent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  ${MediaQueries.small} {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const ProjectData = styled.div`
+  grid-column: span 4;
+  ${MediaQueries.small} {
+    padding-bottom: 50px;
+  }
+`;
+
+const Sticky = styled.div`
+  position: -webkit-sticky;
+  position: sticky;
+  top: 85px;
+
+  ${MediaQueries.small} {
+    position: static;
+  }
+`;
+
+const ProjectDataSection = styled.div`
+  margin-bottom: 30px;
+`;
+
+const ProjectDataText = styled(P)`
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 2px;
+
+  ${MediaQueries.small} {
+    font-size: 16px;
+  }
+`;
+
+const ProjectDataLink = styled(A)`
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 2px;
+  display: block;
+
+  ${MediaQueries.small} {
+    font-size: 16px;
+  }
+`;
+
+const ProjectContent = styled(OutlineDiv)`
+  grid-column: span 8;
+  border-left: 1.5px solid ${Colors.gray};
+  padding-left: 25px;
+  transition: border-width 0.2s;
+
+  ${MediaQueries.small} {
+    border-top: 1.5px solid $main-gray;
+    border-left: none;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+`;
 
 class Project extends Component {
   constructor(props) {
@@ -22,7 +89,7 @@ class Project extends Component {
     this.state = {
       project: Projects[props.name],
       Content: content[props.name],
-      dataFixed: false
+      dataFixed: false,
     };
   }
 
@@ -41,61 +108,52 @@ class Project extends Component {
     const { color } = this.props;
     const tracker = new TypeIndexTracker();
     return (
-      <div className="project container">
+      <Container>
         <H1 index={tracker.index()}>{project.header}</H1>
-        <div className="grid-parent">
-          <div className="four project-data">
-            <div className="project-data-sticky">
+        <GridParent>
+          <ProjectData className="project-data">
+            <Sticky>
               <H3 index={tracker.index()}>{project.name}</H3>
-              <div className="project-data-section">
+              <ProjectDataSection>
                 <H6 index={tracker.index()}>Date</H6>
-                <P className="project-data-text" index={tracker.index()}>
+                <ProjectDataText index={tracker.index()}>
                   {project.dates}
-                </P>
-              </div>
-              <div className="project-data-section">
+                </ProjectDataText>
+              </ProjectDataSection>
+              <ProjectDataSection>
                 <H6 index={tracker.index()}>Categories</H6>
                 {project.categories.map((category, index) => {
                   return (
-                    <P
-                      className="project-data-text"
-                      index={tracker.index()}
-                      key={index}
-                    >
+                    <ProjectDataText index={tracker.index()} key={index}>
                       {category}
-                    </P>
+                    </ProjectDataText>
                   );
                 })}
-              </div>
-              <div className="project-data-section">
+              </ProjectDataSection>
+              <ProjectDataSection>
                 <H6 index={tracker.index()}>Tech Used</H6>
                 {project.techUsed.map((tech, index) => {
                   return (
-                    <P
-                      className="project-data-text"
-                      index={tracker.index()}
-                      key={index}
-                    >
+                    <ProjectDataText index={tracker.index()} key={index}>
                       {tech}
-                    </P>
+                    </ProjectDataText>
                   );
                 })}
-              </div>
-              <div className="project-data-section">
+              </ProjectDataSection>
+              <ProjectDataSection>
                 <H6 index={tracker.index()}>Links</H6>
                 {project.links.map((link, index) => {
                   return (
-                    <A
+                    <ProjectDataLink
                       href={link.href}
-                      className="project-data-link"
                       index={tracker.index()}
                       key={index}
                     >
                       {link.name}
-                    </A>
+                    </ProjectDataLink>
                   );
                 })}
-              </div>
+              </ProjectDataSection>
               <L index={tracker.index()} to={project.previousHref}>
                 {`< ${project.previousName}`}
               </L>
@@ -103,24 +161,20 @@ class Project extends Component {
               <L index={tracker.index()} to={project.nextHref}>
                 {`${project.nextName} >`}
               </L>
-            </div>
-          </div>
-          <Div
-            className="eight project-content"
-            borderColor={color}
-            index={tracker.index()}
-          >
+            </Sticky>
+          </ProjectData>
+          <ProjectContent borderColor={color} index={tracker.index()}>
             <Content tracker={tracker} typeTime={PARAGRAPH_TYPE_TIME} />
-          </Div>
-        </div>
-      </div>
+          </ProjectContent>
+        </GridParent>
+      </Container>
     );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    color: state.color.textColor
+    color: state.color.textColor,
   };
 };
 
@@ -130,7 +184,7 @@ const mapDispatchToProps = dispatch => {
     resetTypedSection: () => dispatch(resetTypedSection()),
     setColor: (backgroundColor, textColor) => {
       dispatch(setColor(backgroundColor, textColor));
-    }
+    },
   };
 };
 

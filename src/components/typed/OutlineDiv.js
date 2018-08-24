@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
-import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
-import { TypedSectionPhases } from '../constants';
+import { incrementTypedSectionIndex } from '../../actions/TypedSectionActions';
+import { TypedSectionPhases } from '../../constants';
 
-class TypedOutlineDiv extends Component {
+class OutlineDiv extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ready: false
-    }
+      ready: false,
+    };
   }
   componentWillReceiveProps(nextProps) {
     const { index, incrementTypedSectionIndex } = this.props;
@@ -23,27 +23,27 @@ class TypedOutlineDiv extends Component {
   render() {
     const { children, className, borderColor, id } = this.props;
     const { ready } = this.state;
-    const usedStyle = ready ? { borderColor} : { borderWidth: 0 };
+    const usedStyle = ready ? { borderColor } : { borderWidth: 0 };
 
     return (
       <div className={className} style={usedStyle} id={id}>
         {children}
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     currentIndex: state.typedSection.index,
-    started: state.typedSection.phase === TypedSectionPhases.CONTENT
-  }
-}
+    started: state.typedSection.phase === TypedSectionPhases.CONTENT,
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
-  }
-}
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex()),
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(TypedOutlineDiv);
+export default connect(mapStateToProps, mapDispatchToProps)(OutlineDiv);

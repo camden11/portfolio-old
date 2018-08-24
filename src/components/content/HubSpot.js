@@ -1,8 +1,8 @@
-import React from "react";
-import { H4, P, InlineImg } from "../Tags";
-import { PROJECT_START_INDEX } from "../../constants";
-import { TypeIndexTracker } from "../../lib/utils";
-import Image from "../../img";
+import React from 'react';
+import { H4, P, WebImg } from '../typed';
+import { PROJECT_START_INDEX } from '../../constants';
+import { TypeIndexTracker } from '../../lib/utils';
+import Image from '../../img';
 
 export default props => {
   const tracker = new TypeIndexTracker({ tracker: props.tracker });
@@ -29,20 +29,12 @@ export default props => {
         language, as well fixing the inevitable bugs that appear when an app is
         rewritten.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.hubspot.dashboard}
-        className="image-web"
-      />
+      <WebImg index={tracker.index()} src={Image.hubspot.dashboard} />
       <P index={tracker.index()} typeTime={typeTime}>
         During this time, I grew proficient with HubSpot's front-end stack,
         which is primarily composed of React and Redux.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.hubspot.analyze}
-        className="image-web"
-      />
+      <WebImg index={tracker.index()} src={Image.hubspot.analyze} />
       <P index={tracker.index()} typeTime={typeTime}>
         With the skills I had gained from working on the dashboard, I began work
         on my first large-scale project this past September. I was tasked with

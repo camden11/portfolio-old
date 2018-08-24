@@ -1,12 +1,12 @@
 import React from 'react';
-import { P, H4, InlineImg } from '../Tags';
+import { P, H4, PhotoImg } from '../typed';
 import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
 import Image from '../../img';
 
-export default (props) => {
-  const tracker = new TypeIndexTracker({tracker: props.tracker});
-    const { typeTime } = props;
+export default props => {
+  const tracker = new TypeIndexTracker({ tracker: props.tracker });
+  const { typeTime } = props;
   return (
     <div>
       <H4 index={tracker.index()}>Background</H4>
@@ -23,22 +23,14 @@ export default (props) => {
         moving lines that shifts in response to the average angle of pedestrian
         paths in the area.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.openLines.vis}
-        className="image-photo"
-      />
+      <PhotoImg index={tracker.index()} src={Image.openLines.vis} />
       <P index={tracker.index()} typeTime={typeTime}>
         Following its completion, the environment was tested by improvisational
         theater actors to see what kind of behaviors the it could affect in a
         passerby. The professors and I are currently working on a paper to
         dicuss our findings.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.openLines.active}
-        className="image-photo"
-      />
+      <PhotoImg index={tracker.index()} src={Image.openLines.active} />
     </div>
-  )
-}
+  );
+};

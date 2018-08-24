@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Input';
+  src: url('./fonts/InputMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Input Light';
+  src: url('./fonts/InputMono-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Input Bold';
+  src: url('./fonts/InputMono-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Crimson';
+  src: url('./fonts/CrimsonText-Bold.ttf');
+}

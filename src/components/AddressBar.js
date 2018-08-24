@@ -1,27 +1,63 @@
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import styled from "styled-components";
 
-import Background from './Background';
+import Background from "./Background";
 
-import AddressUrls from '../data/AddressUrls';
-import { arrayEquals } from '../lib/utils';
-import { finishAddressBarTyping } from '../actions/TypedSectionActions';
+import AddressUrls from "../data/AddressUrls";
+import { arrayEquals } from "../lib/utils";
+import { finishAddressBarTyping } from "../actions/TypedSectionActions";
+import { MediaQueries, Container, Colors } from "../style";
 
 const BACKSPACE_TIME = 50;
 const TYPE_TIME = 50;
+
+const AddressBarWrapper = styled.div`
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+`;
+
+const AddressBarContainer = styled(Container)`
+  padding-top: 0;
+  ${MediaQueries.small} {
+    min-height: 38px;
+  }
+`;
+
+const Heading = styled.h2`
+  font-size: 24px;
+  font-family: "Input";
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  ${MediaQueries.small} {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+`;
+
+const AddressBarLink = styled(Link)`
+  text-decoration: none;
+  transition: color 0.2s;
+  color: ${Colors.gray};
+`;
 
 class AddressBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: [''],
+      current: [""],
       currentIndex: 0,
       forward: false,
       initiated: false,
       done: false,
       color: props.nextColor
-    }
+    };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -42,17 +78,19 @@ class AddressBar extends Component {
   }
 
   switchInterval() {
-    this.stopTyping()
+    this.stopTyping();
     this.startTyping(TYPE_TIME);
   }
 
   shouldContinueBackspacing() {
     const { current, currentIndex, forward } = this.state;
     const { target } = this.props;
-    return !forward
-      && current.length > 0
-      && current[0].length > 0
-      && !arrayEquals(current, target.slice(0, currentIndex + 1));
+    return (
+      !forward &&
+      current.length > 0 &&
+      current[0].length > 0 &&
+      !arrayEquals(current, target.slice(0, currentIndex + 1))
+    );
   }
 
   typeStep() {
@@ -67,10 +105,10 @@ class AddressBar extends Component {
       }
       const doneTyping = arrayEquals(current, target);
       if (!doneTyping) {
-        this.type()
+        this.type();
       } else {
         this.stopTyping();
-        this.setState({ color: nextColor })
+        this.setState({ color: nextColor });
         finishAddressBarTyping();
       }
     }
@@ -81,7 +119,7 @@ class AddressBar extends Component {
     const { target } = this.props;
     if (current[currentIndex] === target[currentIndex]) {
       const newCurrent = current;
-      newCurrent[currentIndex + 1] = '';
+      newCurrent[currentIndex + 1] = "";
       this.setState({
         current: newCurrent,
         currentIndex: currentIndex + 1
@@ -94,8 +132,10 @@ class AddressBar extends Component {
     const { target } = this.props;
     const { current, currentIndex } = this.state;
     const newCurrent = current;
-    newCurrent[currentIndex] = target[currentIndex]
-      .substring(0, newCurrent[currentIndex].length + 1);
+    newCurrent[currentIndex] = target[currentIndex].substring(
+      0,
+      newCurrent[currentIndex].length + 1
+    );
     this.setState({
       current: newCurrent
     });
@@ -115,15 +155,17 @@ class AddressBar extends Component {
   backspaceCurrentSection() {
     const { current, currentIndex } = this.state;
     const newCurrent = current;
-    newCurrent[currentIndex] = current[currentIndex]
-      .substring(0, current[currentIndex].length - 1);
+    newCurrent[currentIndex] = current[currentIndex].substring(
+      0,
+      current[currentIndex].length - 1
+    );
     this.setState({
       current: newCurrent
     });
   }
 
   linkOnClick(target, index) {
-    return target[index] === 'About' ? () => {} : () => window.scrollTo(0, 0)
+    return target[index] === "About" ? () => {} : () => window.scrollTo(0, 0);
   }
 
   render() {
@@ -131,59 +173,57 @@ class AddressBar extends Component {
     const { target } = this.props;
     if (initiated) {
       return (
-        <div className="address-bar-container">
+        <AddressBarWrapper>
           <Background
-            className ="address-bar-background"
+            addressBar
             containerClassName="address-bar-background-container"
           />
-          <div
-            className='address-bar container'
-            style={{ color: color, borderBottom: `1.5px solid ${color}`}}
+          <AddressBarContainer
+            style={{ color: color, borderBottom: `1.5px solid ${color}` }}
           >
-            <h2 className='address-bar-text'>
+            <Heading className="address-bar-text">
               {current.map((section, index) => {
                 if (index < target.length) {
                   return (
                     <span key={index}>
-                      <Link
+                      <AddressBarLink
                         to={AddressUrls[target[index]]}
-                        className='address-bar-link'
                         style={{ color: color }}
                         onClick={this.linkOnClick(target, index)}
                       >
                         {section}
-                      </Link>
-                      {index !== current.length - 1 && ' / '}
+                      </AddressBarLink>
+                      {index !== current.length - 1 && " / "}
                     </span>
-                  )
+                  );
                 }
                 return (
                   <span key={index}>
                     {section}
-                    {index !== current.length - 1 && ' / '}
+                    {index !== current.length - 1 && " / "}
                   </span>
-                )
+                );
               })}
-            </h2>
-          </div>
-        </div>
-      )
+            </Heading>
+          </AddressBarContainer>
+        </AddressBarWrapper>
+      );
     }
     return null;
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     target: state.addressBar.address,
     nextColor: state.color.textColor
-  }
-}
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     finishAddressBarTyping: () => dispatch(finishAddressBarTyping())
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddressBar);

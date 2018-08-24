@@ -3,26 +3,32 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import About from '../components/About';
-import Div from '../components/TypedOutlineDiv';
 import ProjectPreview from '../components/ProjectPreview';
-import { H1, L } from '../components/Tags';
+import { H1, L, OutlineDiv } from '../components/typed';
 
 import { resetTypedSection } from '../actions/TypedSectionActions';
 import { setAddress } from '../actions/AddressBarActions';
 import { setColor } from '../actions/ColorActions';
 import { TypeIndexTracker } from '../lib/utils';
+import { Container, Wrapper } from '../style';
 
 const BASE_PATH = ['Camden Phalen'];
 const BACKGROUND_COLOR = '#ffffff';
 const TEXT_COLOR = '#272727';
 const NUM_ELEMENTS = 23;
 
-const Divider = styled(Div)`
+const Divider = styled(OutlineDiv)`
   height: 0px;
   margin-top: 50px;
   margin-bottom: 20px;
   width: 100%;
   border-bottom: 1.5px solid #000;
+`;
+
+const ViewMore = styled(L)`
+  font-size: 20px;
+  width: 100%;
+  text-align: right;
 `;
 
 class Home extends Component {
@@ -65,21 +71,21 @@ class Home extends Component {
   render() {
     const tracker = new TypeIndexTracker();
     return (
-      <div className="wrapper">
-        <div className="home container">
+      <Wrapper>
+        <Container>
           <H1 index={tracker.index()}>
             I combine clean code with design thinking to build distinctive user
             experiences.
           </H1>
           <ProjectPreview project="mass-hike" tracker={tracker} />
           <ProjectPreview project="hubspot" tracker={tracker} reverse={true} />
-          <L to="/work" index={tracker.index()} className="view-more-projects">
+          <ViewMore to="/work" index={tracker.index()}>
             View more
-          </L>
+          </ViewMore>
           <Divider index={tracker.index()} id="about" />
           <About tracker={tracker} />
-        </div>
-      </div>
+        </Container>
+      </Wrapper>
     );
   }
 }

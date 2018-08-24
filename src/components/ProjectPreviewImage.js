@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import { Img } from './Tags';
-import ImageTypedSection from './ImageTypedSection';
+import { Img } from './typed';
+import ProjectPreviewColor from './ProjectPreviewColor';
+
+import { MediaQueries } from '../style';
+
+const Container = styled.div`
+  height: 100%;
+  position: relative;
+  overflow: visible;
+`;
 
 class ProjectPreviewImage extends Component {
   render() {
     const { src, color, tracker, reverse } = this.props;
     return (
-      <div className="project-preview-image-container">
-        <Img
-          className="project-preview-image"
-          src={src}
-          index={tracker.index()}
-        />
-        <ImageTypedSection
-          index={tracker.index()}
-          className={`project-preview-color ${reverse ? 'reverse' : ''}`}
-        >
-          <div
-            style={{ backgroundColor: color }}
-          >
-          </div>
-        </ImageTypedSection>
-      </div>
+      <Container>
+        <Img src={src} index={tracker.index()} />
+        <ProjectPreviewColor index={tracker.index()} reverse={reverse}>
+          <div style={{ backgroundColor: color }} />
+        </ProjectPreviewColor>
+      </Container>
     );
   }
 }

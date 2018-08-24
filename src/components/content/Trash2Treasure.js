@@ -1,11 +1,11 @@
 import React from 'react';
-import { P, H4, InlineImg } from '../Tags';
+import { P, H4, PhoneImg, WebImg } from '../typed';
 import { PROJECT_START_INDEX } from '../../constants';
 import { TypeIndexTracker } from '../../lib/utils';
 import Image from '../../img';
 
-export default (props) => {
-  const tracker = new TypeIndexTracker({tracker: props.tracker});
+export default props => {
+  const tracker = new TypeIndexTracker({ tracker: props.tracker });
   const { typeTime } = props;
   return (
     <div>
@@ -29,30 +29,18 @@ export default (props) => {
         decrease checkout time by reducing the amount of work cashiers had to do
         to check someone out.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.t2t.shop}
-        className="image-phone"
-      />
+      <PhoneImg index={tracker.index()} src={Image.t2t.shop} />
       <P index={tracker.index()} typeTime={typeTime}>
         Using my application, shoppers enter items into the app as they pick
         them up. When finished shopping, they tap a “checkout” button, which
         generates a shopper number for them.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.t2t.checkout}
-        className="image-phone"
-      />
+      <PhoneImg index={tracker.index()} src={Image.t2t.checkout} />
       <P index={tracker.index()} typeTime={typeTime}>
         The cashier will be shown everything the shopper has in their cart with
         the price calculated automatically.
       </P>
-      <InlineImg
-        index={tracker.index()}
-        src={Image.t2t.seller}
-        className="image-web"
-      />
+      <WebImg index={tracker.index()} src={Image.t2t.seller} />
       <P index={tracker.index()} typeTime={typeTime}>
         This makes it so they only have to confirm the shopper has what they see
         on screen rather than individually determine the category and price of
@@ -67,5 +55,5 @@ export default (props) => {
         inventory for their sales.
       </P>
     </div>
-  )
-}
+  );
+};

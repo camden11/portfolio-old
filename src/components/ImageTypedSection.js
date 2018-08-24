@@ -1,10 +1,16 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import { incrementTypedSectionIndex } from '../actions/TypedSectionActions';
 import { TypedSectionPhases } from '../constants';
 
 const DEFAULT_TIME = 1;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
 
 class ImageTypedSection extends Component {
   constructor(props) {
@@ -13,8 +19,8 @@ class ImageTypedSection extends Component {
       height: 0,
       finished: false,
       active: false,
-      intervalIds: []
-    }
+      intervalIds: [],
+    };
   }
 
   shouldComponentUpdate() {
@@ -48,8 +54,8 @@ class ImageTypedSection extends Component {
     const { intervalIds } = this.state;
     intervalIds.forEach(intervalId => {
       clearInterval(intervalId);
-    })
-    this.setState({ active: false })
+    });
+    this.setState({ active: false });
   }
 
   step() {
@@ -60,7 +66,7 @@ class ImageTypedSection extends Component {
         this.stop();
         this.increment();
       }
-    })
+    });
   }
 
   increment() {
@@ -72,28 +78,24 @@ class ImageTypedSection extends Component {
     const { height } = this.state;
     const { children, className } = this.props;
     return (
-      <div
-        className={`image-container ${className}`}
-        style={{ height: `${height}%`}}
-      >
-        { children }
-      </div>
-    )
+      <ImageContainer className={className} style={{ height: `${height}%` }}>
+        {children}
+      </ImageContainer>
+    );
   }
-
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     currentIndex: state.typedSection.index,
-    started: state.typedSection.phase === TypedSectionPhases.CONTENT
-  }
-}
+    started: state.typedSection.phase === TypedSectionPhases.CONTENT,
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex())
-  }
-}
+    incrementTypedSectionIndex: () => dispatch(incrementTypedSectionIndex()),
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(ImageTypedSection)
+export default connect(mapStateToProps, mapDispatchToProps)(ImageTypedSection);

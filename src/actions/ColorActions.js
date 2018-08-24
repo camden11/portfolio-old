@@ -5,7 +5,7 @@ export const setColor = (backgroundColor, textColor) => {
     type: ActionTypes.SET_COLOR,
     payload: {
       backgroundColor: backgroundColor,
-      textColor: textColor
-    }
-  }
-}
+      textColor: textColor,
+    },
+  };
+};

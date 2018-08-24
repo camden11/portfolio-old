@@ -1,10 +1,38 @@
-import { connect } from 'react-redux';
-import React, { Component } from 'react';
+import { connect } from "react-redux";
+import React, { Component } from "react";
+import styled from "styled-components";
 
-import { finishBackgroundTyping } from '../actions/TypedSectionActions';
-import { TypedSectionPhases } from '../constants';
+import { finishBackgroundTyping } from "../actions/TypedSectionActions";
+import { TypedSectionPhases } from "../constants";
 
-const TRANSITION_SPEED = 1 ;
+import { MediaQueries } from "../style";
+
+const TRANSITION_SPEED = 1;
+
+const BackgroundColor = styled.div`
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: ${props => (props.addressBar ? "absolute" : "fixed")};
+`;
+
+const BackgroundContainer = styled.div``;
+const AddressBarBackgroundContainer = styled.div`
+  position: absolute;
+  height: 59px;
+  width: 100%;
+  z-index: -1;
+
+  > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  ${MediaQueries.small} {
+    height: 38px;
+  }
+`;
 
 class Background extends Component {
   constructor(props) {
@@ -12,24 +40,27 @@ class Background extends Component {
     this.state = {
       bg1pos: 0,
       bg2pos: -100,
-      bg1color: '#ffffff',
+      bg1color: "#ffffff",
       bg2color: props.color,
       bg1active: true,
       transitionActive: false
-    }
+    };
   }
 
   componentWillReceiveProps(nextProps) {
     const { finishBackgroundTyping } = this.props;
     const { bg1active } = this.state;
-    const activeBgColor = this.state[bg1active ? 'bg1color' : 'bg2color'];
+    const activeBgColor = this.state[bg1active ? "bg1color" : "bg2color"];
     if (nextProps.color !== activeBgColor && nextProps.ready) {
       const { bg1active } = this.state;
-      this.setState({
-        bg1active: !bg1active,
-        bg1color: bg1active ? activeBgColor : nextProps.color,
-        bg2color: bg1active ? nextProps.color : activeBgColor
-      }, () => this.transition());
+      this.setState(
+        {
+          bg1active: !bg1active,
+          bg1color: bg1active ? activeBgColor : nextProps.color,
+          bg2color: bg1active ? nextProps.color : activeBgColor
+        },
+        () => this.transition()
+      );
     } else if (nextProps.ready) {
       finishBackgroundTyping();
     }
@@ -42,15 +73,15 @@ class Background extends Component {
         () => this.transitionStep(),
         TRANSITION_SPEED
       );
-      this.setState({ intervalId, transitionActive: true })
+      this.setState({ intervalId, transitionActive: true });
     }
   }
 
   transitionStep() {
     const { bg1active, intervalId } = this.state;
     const { finishBackgroundTyping } = this.props;
-    const activeBgPos = bg1active ? 'bg1pos' : 'bg2pos';
-    const inactiveBgPos = bg1active ? 'bg2pos' : 'bg1pos';
+    const activeBgPos = bg1active ? "bg1pos" : "bg2pos";
+    const inactiveBgPos = bg1active ? "bg2pos" : "bg1pos";
     const newState = {};
     newState[activeBgPos] = this.state[activeBgPos] + 2;
     if (newState[activeBgPos] === 0) {
@@ -63,43 +94,46 @@ class Background extends Component {
   }
 
   render() {
-    const { className, containerClassName } = this.props;
+    const { addressBar } = this.props;
     const { bg1pos, bg2pos, bg1color, bg2color, bg1active } = this.state;
+    const Container = addressBar
+      ? AddressBarBackgroundContainer
+      : BackgroundContainer;
     return (
-      <div className={`background-container ${containerClassName}`}>
+      <Container>
         <div>
-          <div
-            className={`background ${className}`}
+          <BackgroundColor
+            addressBar={addressBar}
             style={{
               background: bg1color,
               left: `${bg1pos}%`,
               zIndex: bg1active ? -2 : -3
             }}
-          ></div>
-          <div
-            className={`background ${className}`}
+          />
+          <BackgroundColor
+            addressBar={addressBar}
             style={{
               background: bg2color,
               left: `${bg2pos}%`,
               zIndex: bg1active ? -3 : -2
             }}
-          ></div>
+          />
         </div>
-      </div>
-    )
+      </Container>
+    );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     color: state.color.backgroundColor,
     ready: state.typedSection.phase === TypedSectionPhases.BACKGROUND
-  }
-}
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     finishBackgroundTyping: () => dispatch(finishBackgroundTyping())
-  }
-}
+  };
+};
 export default connect(mapStateToProps, mapDispatchToProps)(Background);
