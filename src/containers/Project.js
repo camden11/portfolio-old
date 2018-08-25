@@ -108,7 +108,6 @@ class Project extends Component {
   constructor(props) {
     super(props);
     window.scrollTo(0, 0);
-    console.log(props.name);
     this.state = {
       project: Projects[props.name],
       Content: content[props.name],

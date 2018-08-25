@@ -1,14 +1,14 @@
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import React, { Component } from "react";
-import styled from "styled-components";
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import Background from "./Background";
+import Background from './Background';
 
-import AddressUrls from "../data/AddressUrls";
-import { arrayEquals } from "../lib/utils";
-import { finishAddressBarTyping } from "../actions/TypedSectionActions";
-import { MediaQueries, Container, Colors } from "../style";
+import AddressUrls from '../data/AddressUrls';
+import { arrayEquals } from '../lib/utils';
+import { finishAddressBarTyping } from '../actions/TypedSectionActions';
+import { MediaQueries, Container, Colors } from '../style';
 
 const BACKSPACE_TIME = 50;
 const TYPE_TIME = 50;
@@ -29,7 +29,7 @@ const AddressBarContainer = styled(Container)`
 
 const Heading = styled.h2`
   font-size: 24px;
-  font-family: "Input";
+  font-family: 'Input';
   margin-top: 15px;
   margin-bottom: 15px;
 
@@ -51,16 +51,17 @@ class AddressBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: [""],
+      current: [''],
       currentIndex: 0,
       forward: false,
       initiated: false,
       done: false,
-      color: props.nextColor
+      color: props.nextColor,
     };
   }
 
   componentWillReceiveProps(nextProps) {
+    this.stopTyping();
     if (!arrayEquals(nextProps.target, this.props.target)) {
       this.setState({ forward: false, initiated: true });
       this.startTyping(BACKSPACE_TIME);
@@ -119,10 +120,10 @@ class AddressBar extends Component {
     const { target } = this.props;
     if (current[currentIndex] === target[currentIndex]) {
       const newCurrent = current;
-      newCurrent[currentIndex + 1] = "";
+      newCurrent[currentIndex + 1] = '';
       this.setState({
         current: newCurrent,
-        currentIndex: currentIndex + 1
+        currentIndex: currentIndex + 1,
       });
     }
     this.typeCurrentSection();
@@ -137,7 +138,7 @@ class AddressBar extends Component {
       newCurrent[currentIndex].length + 1
     );
     this.setState({
-      current: newCurrent
+      current: newCurrent,
     });
   }
 
@@ -147,7 +148,7 @@ class AddressBar extends Component {
     if (current[currentIndex].length === 0) {
       this.setState({
         current: current.slice(0, currentIndex),
-        currentIndex: currentIndex - 1
+        currentIndex: currentIndex - 1,
       });
     }
   }
@@ -160,12 +161,12 @@ class AddressBar extends Component {
       current[currentIndex].length - 1
     );
     this.setState({
-      current: newCurrent
+      current: newCurrent,
     });
   }
 
   linkOnClick(target, index) {
-    return target[index] === "About" ? () => {} : () => window.scrollTo(0, 0);
+    return target[index] === 'About' ? () => {} : () => window.scrollTo(0, 0);
   }
 
   render() {
@@ -193,14 +194,14 @@ class AddressBar extends Component {
                       >
                         {section}
                       </AddressBarLink>
-                      {index !== current.length - 1 && " / "}
+                      {index !== current.length - 1 && ' / '}
                     </span>
                   );
                 }
                 return (
                   <span key={index}>
                     {section}
-                    {index !== current.length - 1 && " / "}
+                    {index !== current.length - 1 && ' / '}
                   </span>
                 );
               })}
@@ -216,13 +217,13 @@ class AddressBar extends Component {
 const mapStateToProps = state => {
   return {
     target: state.addressBar.address,
-    nextColor: state.color.textColor
+    nextColor: state.color.textColor,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    finishAddressBarTyping: () => dispatch(finishAddressBarTyping())
+    finishAddressBarTyping: () => dispatch(finishAddressBarTyping()),
   };
 };
 

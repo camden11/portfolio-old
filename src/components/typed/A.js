@@ -11,9 +11,10 @@ const Anchor = styled.a`
   text-decoration: underline;
 `;
 
-const A = ({ children, index, className, href, color }) => {
+const A = ({ children, index, className, href, color, mail }) => {
+  const target = mail ? '_self' : 'blank';
   return (
-    <Anchor className={className} href={href} target="_blank" style={{ color }}>
+    <Anchor className={className} href={href} target={target} style={{ color }}>
       <TypedSection index={index}>{children}</TypedSection>
     </Anchor>
   );

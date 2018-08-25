@@ -96,8 +96,17 @@ class About extends Component {
               not working on projects I enjoy listening to music, biking, and
               generally hanging out.
             </P>
-            <SocialHeader index={tracker.index()}>Find me on</SocialHeader>
+            <SocialHeader index={tracker.index()}>Get in Touch</SocialHeader>
             <ul>
+              <li>
+                <A
+                  mail
+                  index={tracker.index()}
+                  href="mailto:camdenphalen@gmail.com"
+                >
+                  Email
+                </A>
+              </li>
               <li>
                 <A
                   index={tracker.index()}
@@ -120,12 +129,12 @@ class About extends Component {
                 </A>
               </li>
             </ul>
-            <A
+            {/* <A
               index={tracker.index()}
               href="https://drive.google.com/file/d/0B-RHHMn7HqGwbVlxQU9GbENYbms/view?usp=sharing"
             >
               View my resume
-            </A>
+            </A> */}
           </TextSection>
         </GridParent>
       </div>
