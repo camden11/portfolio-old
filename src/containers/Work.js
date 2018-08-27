@@ -39,7 +39,7 @@ class Work extends Component {
       <Wrapper>
         <Container>
           <H1 index={tracker.index()}>
-            I've worked on a lot of cool projects. Here are a few of them.
+            I've tackeled a variety of unique design and development challenges.
           </H1>
           <ProjectPreviews>
             {allProjects.map((project, index) => {
