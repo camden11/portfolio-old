@@ -34,7 +34,7 @@ const Heading = styled.h2`
   margin-bottom: 15px;
 
   ${MediaQueries.small} {
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 16px;
     margin-top: 12px;
     margin-bottom: 10px;
