@@ -7,8 +7,6 @@ const Container = styled.div`
   margin: 0 auto;
   display: grid;
   padding-top: 55px;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
 
   ${MediaQueries.medium} {
     width: 90%;
