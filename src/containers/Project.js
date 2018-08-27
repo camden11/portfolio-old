@@ -20,15 +20,15 @@ const GridParent = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
-  ${MediaQueries.small} {
+  ${MediaQueries.medSmall} {
     grid-template-columns: 1fr;
   }
 `;
 
 const ProjectData = styled.div`
   grid-column: span 4;
-  ${MediaQueries.small} {
-    padding-bottom: 50px;
+  ${MediaQueries.medSmall} {
+    padding-bottom: 10px;
   }
 `;
 
@@ -37,13 +37,29 @@ const Sticky = styled.div`
   position: sticky;
   top: 85px;
 
-  ${MediaQueries.small} {
+  ${MediaQueries.medSmall} {
     position: static;
   }
 `;
 
+const ProjectDataGrid = styled.div`
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+`;
+
 const ProjectDataSection = styled.div`
   margin-bottom: 30px;
+  grid-column: span 2;
+
+  ${MediaQueries.medSmall} {
+    grid-column: span 1;
+    margin-bottom: 20px;
+  }
+
+  ${MediaQueries.extraSmall} {
+    grid-column: span 2;
+  }
 `;
 
 const ProjectDataText = styled(P)`
@@ -51,7 +67,7 @@ const ProjectDataText = styled(P)`
   margin: 0;
   margin-bottom: 2px;
 
-  ${MediaQueries.small} {
+  ${MediaQueries.medSmall} {
     font-size: 16px;
   }
 `;
@@ -62,7 +78,7 @@ const ProjectDataLink = styled(A)`
   margin-bottom: 2px;
   display: block;
 
-  ${MediaQueries.small} {
+  ${MediaQueries.medSmall} {
     font-size: 16px;
   }
 `;
@@ -73,11 +89,11 @@ const ProjectContent = styled(OutlineDiv)`
   padding-left: 25px;
   transition: border-width 0.2s;
 
-  ${MediaQueries.small} {
-    border-top: 1.5px solid $main-gray;
+  ${MediaQueries.medSmall} {
+    border-top: 1.5px solid ${Colors.gray};
     border-left: none;
     padding-left: 0;
-    padding-top: 20px;
+    padding-top: 40px;
   }
 `;
 
@@ -92,14 +108,14 @@ const ProjectSwitcherItem = styled.div`
 `;
 
 const ProjectText = styled(H6)`
-  ${MediaQueries.small} {
+  ${MediaQueries.medSmall} {
     display: none;
   }
 `;
 
 const ProjectTextMobile = styled(H6)`
   display: none;
-  ${MediaQueries.small} {
+  ${MediaQueries.medSmall} {
     display: block;
   }
 `;
@@ -138,46 +154,48 @@ class Project extends Component {
               <H3 index={tracker.index()}>
                 {project.displayName || project.name}
               </H3>
-              <ProjectDataSection>
-                <H6 index={tracker.index()}>Date</H6>
-                <ProjectDataText index={tracker.index()}>
-                  {project.dates}
-                </ProjectDataText>
-              </ProjectDataSection>
-              <ProjectDataSection>
-                <H6 index={tracker.index()}>Categories</H6>
-                {project.categories.map((category, index) => {
-                  return (
-                    <ProjectDataText index={tracker.index()} key={index}>
-                      {category}
-                    </ProjectDataText>
-                  );
-                })}
-              </ProjectDataSection>
-              <ProjectDataSection>
-                <H6 index={tracker.index()}>Tech Used</H6>
-                {project.techUsed.map((tech, index) => {
-                  return (
-                    <ProjectDataText index={tracker.index()} key={index}>
-                      {tech}
-                    </ProjectDataText>
-                  );
-                })}
-              </ProjectDataSection>
-              <ProjectDataSection>
-                <H6 index={tracker.index()}>Links</H6>
-                {project.links.map((link, index) => {
-                  return (
-                    <ProjectDataLink
-                      href={link.href}
-                      index={tracker.index()}
-                      key={index}
-                    >
-                      {link.name}
-                    </ProjectDataLink>
-                  );
-                })}
-              </ProjectDataSection>
+              <ProjectDataGrid>
+                <ProjectDataSection>
+                  <H6 index={tracker.index()}>Date</H6>
+                  <ProjectDataText index={tracker.index()}>
+                    {project.dates}
+                  </ProjectDataText>
+                </ProjectDataSection>
+                <ProjectDataSection>
+                  <H6 index={tracker.index()}>Categories</H6>
+                  {project.categories.map((category, index) => {
+                    return (
+                      <ProjectDataText index={tracker.index()} key={index}>
+                        {category}
+                      </ProjectDataText>
+                    );
+                  })}
+                </ProjectDataSection>
+                <ProjectDataSection>
+                  <H6 index={tracker.index()}>Tech Used</H6>
+                  {project.techUsed.map((tech, index) => {
+                    return (
+                      <ProjectDataText index={tracker.index()} key={index}>
+                        {tech}
+                      </ProjectDataText>
+                    );
+                  })}
+                </ProjectDataSection>
+                <ProjectDataSection>
+                  <H6 index={tracker.index()}>Links</H6>
+                  {project.links.map((link, index) => {
+                    return (
+                      <ProjectDataLink
+                        href={link.href}
+                        index={tracker.index()}
+                        key={index}
+                      >
+                        {link.name}
+                      </ProjectDataLink>
+                    );
+                  })}
+                </ProjectDataSection>
+              </ProjectDataGrid>
             </Sticky>
           </ProjectData>
           <ProjectContent borderColor={color} index={tracker.index()}>
