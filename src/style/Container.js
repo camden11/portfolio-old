@@ -7,9 +7,26 @@ const Container = styled.div`
   margin: 0 auto;
   display: grid;
   padding-top: 55px;
+  padding-bottom: env(safe-area-inset-bottom);
 
   ${MediaQueries.medium} {
     width: 90%;
+
+    @supports (padding-left: constant(safe-area-inset-left)) {
+      --safe-area-inset-left: constant(safe-area-inset-left);
+      --safe-area-inset-right: constant(safe-area-inset-right);
+      width: calc(
+        90% - var(--safe-area-inset-left) - var(safe-area-inset-right)
+      );
+    }
+
+    @supports (padding-left: env(safe-area-inset-left)) {
+      --safe-area-inset-left: env(safe-area-inset-left);
+      --safe-area-inset-right: env(safe-area-inset-right);
+      width: calc(
+        90% - var(--safe-area-inset-left) - var(safe-area-inset-right)
+      );
+    }
   }
 
   ${MediaQueries.small} {
