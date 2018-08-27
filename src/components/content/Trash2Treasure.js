@@ -11,7 +11,7 @@ export default props => {
     <div>
       <H4 index={tracker.index()}>Background</H4>
       <P index={tracker.index()} typeTime={typeTime}>
-        At the end of every school year, Northeastern’s Trash to Treasure
+        At the end of every school year, Northeastern’s Trash2Treasure
         organization runs a collection of unwanted items from residents of
         on-campus housing. The following fall, they hold a massive sale of all
         the donated items, with the proceeds going to Northeastern student
@@ -24,7 +24,7 @@ export default props => {
       </P>
       <H4 index={tracker.index()}>Design</H4>
       <P index={tracker.index()} typeTime={typeTime}>
-        I worked with the Trash to Treasure committee to try to solve this
+        I worked with the Trash2Treasure committee to try to solve this
         problem. My solution was an in-browser online checkout system designed
         to decrease checkout time by reducing the amount of work cashiers had to
         do to check someone out.
@@ -50,7 +50,7 @@ export default props => {
       <P index={tracker.index()} typeTime={typeTime}>
         The application made its debut with a trial run at the fall 2016 Trash
         to Treasure sale. It was used by only a small portion of shoppers, but
-        the ones that did use it gave positive feedback. NU Trash to Treasure
+        the ones that did use it gave positive feedback. NU Trash2Treasure
         has since continued using the seller-side portion of the app to keep
         inventory for their sales.
       </P>

@@ -135,7 +135,9 @@ class Project extends Component {
         <GridParent>
           <ProjectData className="project-data">
             <Sticky>
-              <H3 index={tracker.index()}>{project.name}</H3>
+              <H3 index={tracker.index()}>
+                {project.displayName || project.name}
+              </H3>
               <ProjectDataSection>
                 <H6 index={tracker.index()}>Date</H6>
                 <ProjectDataText index={tracker.index()}>

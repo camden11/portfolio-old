@@ -27,7 +27,7 @@ export default {
     HubSpot: hubspotPreview,
     Idea: ideaPreview,
     Alignable: alignablePreview,
-    'Trash to Treasure': trash2treasurePreview,
+    'Trash2Treasure': trash2treasurePreview,
     'Open Lines': openlinesPreview,
   },
   camden,

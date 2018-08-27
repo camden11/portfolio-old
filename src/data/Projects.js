@@ -83,10 +83,11 @@ export default {
     previousName: 'Idea',
   },
   trash2treasure: {
-    name: 'Trash to Treasure',
+    name: 'Trash2Treasure',
+    displayName: 'Trash2\u200bTreasure',
     href: '/work/trash2treasure',
     header:
-      "Design and development of an online checkout app for Northeastern's Trash to Treasure sale.",
+      "Design and development of an online checkout app for Northeastern's Trash2Treasure sale.",
     dates: 'July 2016 - September 2016',
     categories: ['Full Stack Development', 'UI/UX Design'],
     techUsed: ['Ruby on Rails', 'Sql'],
