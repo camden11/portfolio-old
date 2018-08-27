@@ -30,13 +30,16 @@ const AddressBarContainer = styled(Container)`
 
 const Heading = styled.h2`
   font-size: 24px;
+  line-height: 24px;
+  min-height: 24px;
   font-family: 'Input';
   margin-top: 14px;
   margin-bottom: 14px;
 
   ${MediaQueries.small} {
-    font-size: 16px !important;
+    font-size: 16px;
     line-height: 16px;
+    min-height: 16px;
     margin-top: 12px;
     margin-bottom: 10px;
   }

@@ -7,7 +7,7 @@ export const arrayEquals = (a, b) => {
     if (a[i] !== b[i]) return false;
   }
   return true;
-}
+};
 
 export class TypeIndexTracker {
   constructor(options) {
@@ -27,8 +27,8 @@ export class TypeIndexTracker {
 }
 
 export const getNamePath = () => {
-  if (window.innerWidth > 480) {
-    return "Camden Phalen";
+  if (window.innerWidth > 812) {
+    return 'Camden Phalen';
   }
-  return "CP";
-}
+  return 'CP';
+};
