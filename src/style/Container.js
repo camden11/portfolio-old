@@ -10,13 +10,13 @@ const Container = styled.div`
   padding-bottom: env(safe-area-inset-bottom);
 
   ${MediaQueries.medium} {
-    width: 90%;
+    width: 88%;
 
     @supports (padding-left: constant(safe-area-inset-left)) {
       --safe-area-inset-left: constant(safe-area-inset-left);
       --safe-area-inset-right: constant(safe-area-inset-right);
       width: calc(
-        90% - var(--safe-area-inset-left) - var(safe-area-inset-right)
+        88% - var(--safe-area-inset-left) - var(safe-area-inset-right)
       );
     }
 
@@ -24,7 +24,7 @@ const Container = styled.div`
       --safe-area-inset-left: env(safe-area-inset-left);
       --safe-area-inset-right: env(safe-area-inset-right);
       width: calc(
-        90% - var(--safe-area-inset-left) - var(safe-area-inset-right)
+        88% - var(--safe-area-inset-left) - var(safe-area-inset-right)
       );
     }
   }

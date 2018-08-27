@@ -22,6 +22,7 @@ const AddressBarWrapper = styled.div`
 
 const AddressBarContainer = styled(Container)`
   padding-top: 0;
+  padding-bottom: 0;
   ${MediaQueries.small} {
     min-height: 38px;
   }
@@ -30,8 +31,8 @@ const AddressBarContainer = styled(Container)`
 const Heading = styled.h2`
   font-size: 24px;
   font-family: 'Input';
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 
   ${MediaQueries.small} {
     font-size: 16px !important;
