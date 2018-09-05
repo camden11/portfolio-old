@@ -33,8 +33,8 @@ const Heading = styled.h2`
   line-height: 24px;
   min-height: 24px;
   font-family: 'Input';
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 16px;
+  margin-bottom: 17px;
 
   ${MediaQueries.small} {
     font-size: 16px;
