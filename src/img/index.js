@@ -19,6 +19,13 @@ import trailtagUX from './trailtag_ux.png';
 import trailtagSki from './trailtag_ski.jpg';
 import trailtagScreen1 from './trailtag_screen1.png';
 import trailtagScreen2 from './trailtag_screen2.png';
+import massHikeHike from './mass-hike_hike.jpg';
+import massHikeBrandWork from './mass-hike_brand_work.jpg';
+import massHikeLogo from './mass-hike_logo.png';
+import massHikeWireframesMobile from './mass-hike_wireframes_mobile.png';
+import massHikeDesktop from './mass-hike_desktop.png';
+import massHikeMobile from './mass-hike_mobile.png';
+import massHikeCode from './mass-hike_code.jpg';
 
 export default {
   preview: {
@@ -27,7 +34,7 @@ export default {
     HubSpot: hubspotPreview,
     Idea: ideaPreview,
     Alignable: alignablePreview,
-    'Trash2Treasure': trash2treasurePreview,
+    Trash2Treasure: trash2treasurePreview,
     'Open Lines': openlinesPreview,
   },
   camden,
@@ -51,5 +58,14 @@ export default {
     ski: trailtagSki,
     screen1: trailtagScreen1,
     screen2: trailtagScreen2,
+  },
+  massHike: {
+    hike: massHikeHike,
+    brandWork: massHikeBrandWork,
+    logo: massHikeLogo,
+    wireframesMobile: massHikeWireframesMobile,
+    desktop: massHikeDesktop,
+    mobile: massHikeMobile,
+    code: massHikeCode,
   },
 };

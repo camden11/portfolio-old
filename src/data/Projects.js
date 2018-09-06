@@ -4,11 +4,13 @@ export default {
     href: '/work/mass-hike',
     header:
       'Project leadership, UX design, and development for a nonprofit that brings people closer to nature.',
-    dates: 'January 2018 - May 2018',
+    dates: 'January 2018 - July 2018',
     categories: ['Project Leadership', 'UX Design', 'Full Stack Development'],
     techUsed: ['Javascript', 'React', 'Redux', 'Node'],
     links: [
+      { name: 'Mass Hike Website', href: 'https://masshike.org' },
       { name: 'Scout Website', href: 'https://web.northeastern.edu/scout/' },
+      { name: 'Prismic', href: 'https://prismic.io' },
     ],
     backgroundColor: '#F8F4E8',
     textColor: '#548859',
