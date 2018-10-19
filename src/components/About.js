@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ProjectPreviewColor from '../components/ProjectPreviewColor';
 import { H1, H3, H4, InlineImg, A, P } from '../components/typed';
 
+import Documents from '../documents';
 import Image from '../img';
 import { TypeIndexTracker } from '../lib/utils';
 import { MediaQueries } from '../style';
@@ -129,12 +130,9 @@ class About extends Component {
                 </A>
               </li>
             </ul>
-            {/* <A
-              index={tracker.index()}
-              href="https://drive.google.com/file/d/0B-RHHMn7HqGwbVlxQU9GbENYbms/view?usp=sharing"
-            >
+            <A index={tracker.index()} href={Documents.resume}>
               View my resume
-            </A> */}
+            </A>
           </TextSection>
         </GridParent>
       </div>
