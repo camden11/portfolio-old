@@ -9,6 +9,7 @@ export default {
     techUsed: ['Javascript', 'React', 'Redux', 'Node'],
     links: [
       { name: 'Mass Hike Website', href: 'https://masshike.org' },
+      { name: 'Github Repos', href: 'https://github.com/masshikedev' },
       { name: 'Scout Website', href: 'https://web.northeastern.edu/scout/' },
       { name: 'Prismic', href: 'https://prismic.io' },
     ],
