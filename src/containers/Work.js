@@ -39,7 +39,7 @@ class Work extends Component {
       <Wrapper>
         <Container>
           <H1 index={tracker.index()}>
-            I've tackeled a variety of unique design and development challenges.
+            I've tackled a variety of unique design and development challenges.
           </H1>
           <ProjectPreviews>
             {allProjects.map((project, index) => {
