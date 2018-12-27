@@ -1,6 +1,6 @@
 {
-  "main.js": "static/js/main.bda685e5.js",
-  "main.js.map": "static/js/main.bda685e5.js.map",
+  "main.js": "static/js/main.e64ef151.js",
+  "main.js.map": "static/js/main.e64ef151.js.map",
   "static/media/alignable_preview.jpg": "static/media/alignable_preview.b9041be1.jpg",
   "static/media/camden-mobile.jpg": "static/media/camden-mobile.7f8a2ce0.jpg",
   "static/media/camden.jpg": "static/media/camden.db83fd46.jpg",
@@ -29,5 +29,6 @@
   "static/media/trailtag_screen2.png": "static/media/trailtag_screen2.24d7fe87.png",
   "static/media/trailtag_ski.jpg": "static/media/trailtag_ski.1f75e75b.jpg",
   "static/media/trailtag_ux.png": "static/media/trailtag_ux.f671b54b.png",
-  "static/media/trash2treasure_preview.jpg": "static/media/trash2treasure_preview.cdd0cfac.jpg"
+  "static/media/trash2treasure_preview.jpg": "static/media/trash2treasure_preview.cdd0cfac.jpg",
+  "static/media/upstatement_preview.jpg": "static/media/upstatement_preview.7541ac6d.jpg"
 }
