@@ -77,8 +77,12 @@ class Home extends Component {
             I combine clean code with design thinking to build distinctive user
             experiences.
           </H1>
-          <ProjectPreview project="mass-hike" tracker={tracker} />
-          <ProjectPreview project="hubspot" tracker={tracker} reverse={true} />
+          <ProjectPreview project="upstatement" tracker={tracker} />
+          <ProjectPreview
+            project="mass-hike"
+            tracker={tracker}
+            reverse={true}
+          />
           <ViewMore to="/work" index={tracker.index()}>
             View more
           </ViewMore>
@@ -107,4 +111,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

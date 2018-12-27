@@ -4,6 +4,7 @@ export default {
   Work: '/work',
   About: '/#about',
   'Mass Hike': '/work/mass-hike',
+  Upstatement: '/work/upstatement',
   TrailTag: '/work/trailtag',
   HubSpot: '/work/hubspot',
   Trash2Treasure: '/work/trash2treasure',

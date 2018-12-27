@@ -1,4 +1,21 @@
 export default {
+  upstatement: {
+    name: 'Upstatement',
+    href: '/work/upstatement',
+    header:
+      'Engineering and stategy for a client-focused digital transformation studio.',
+    dates: 'November 2018 - Present',
+    categories: ['Professional Experience', 'Full Stack Development'],
+    techUsed: ['Craft CMS', 'Shopify', 'Vue.js', 'PHP'],
+    links: [{ name: 'Upstatement.com', href: 'https://www.upstatement.com/' }],
+    backgroundColor: '#0045ff',
+    textColor: '#ffffff',
+    previewColor: '#0045ff',
+    nextHref: '/work/mass-hike',
+    nextName: 'Mass Hike',
+    previousHref: '/work/openlines',
+    previousName: 'Open Lines',
+  },
   'mass-hike': {
     name: 'Mass Hike',
     href: '/work/mass-hike',
@@ -18,14 +35,14 @@ export default {
     previewColor: '#548859',
     nextHref: '/work/hubspot',
     nextName: 'HubSpot',
-    previousHref: '/work/openlines',
-    previousName: 'Open Lines',
+    previousHref: '/work/upstatement',
+    previousName: 'Upstatement',
   },
   hubspot: {
     name: 'HubSpot',
     href: '/work/hubspot',
     header: 'Front end engineering for HubSpot’s Content Management System.',
-    dates: 'July 2017 - December 2017',
+    dates: 'July 2017 - November 2018',
     categories: ['Professional Experience', 'Front End Development'],
     techUsed: ['Javascript', 'React', 'Redux'],
     links: [{ name: 'HubSpot Website', href: 'https://www.hubspot.com/' }],
@@ -131,14 +148,15 @@ export default {
     ],
     backgroundColor: '#272727',
     textColor: '#ffffff',
-    nextHref: '/work/mass-hike',
-    nextName: 'Mass Hike',
+    nextHref: '/work/upstatement',
+    nextName: 'Upstatement',
     previousHref: '/work/trash2treasure',
     previousName: 'Trash2Treasure',
   },
 };
 
 export const allProjects = [
+  'upstatement',
   'mass-hike',
   'hubspot',
   'trailtag',

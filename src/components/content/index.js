@@ -1,3 +1,4 @@
+import Upstatement from './Upstatement';
 import MassHike from './MassHike';
 import TrailTag from './TrailTag';
 import HubSpot from './HubSpot';
@@ -7,6 +8,7 @@ import Trash2Treasure from './Trash2Treasure';
 import OpenLines from './OpenLines';
 
 export default {
+  upstatement: Upstatement,
   'mass-hike': MassHike,
   trailtag: TrailTag,
   hubspot: HubSpot,

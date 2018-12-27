@@ -1,3 +1,4 @@
+import upstatementPreview from './upstatement_preview.jpg';
 import massHikePreview from './mass-hike_preview.jpg';
 import trailtagPreview from './trailtag_preview.jpg';
 import hubspotPreview from './hubspot_preview.jpg';
@@ -29,6 +30,7 @@ import massHikeCode from './mass-hike_code.jpg';
 
 export default {
   preview: {
+    Upstatement: upstatementPreview,
     'Mass Hike': massHikePreview,
     TrailTag: trailtagPreview,
     HubSpot: hubspotPreview,
